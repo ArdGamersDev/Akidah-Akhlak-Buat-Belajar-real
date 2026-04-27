@@ -1,206 +1,169 @@
-Berikut adalah kode HTML lengkap untuk website materi Qurdis kelas 7, 8, 9 MTs (Kurikulum Merdeka) yang sesuai dengan kisi-kisi UM QH 9-26. Desainnya rapi, responsif, dan mudah digunakan untuk belajar.
-
-```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Materi Qurdis MTs Kelas 7-9 | Kisi-kisi UM QH 9-26</title>
+    <title>Materi Lengkap Qurdis MTs + Terjemah & No. Hadis</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
-            font-family: 'Segoe UI', 'Poppins', 'Roboto', system-ui, sans-serif;
-            background: #f0f7f4;
-            color: #1e2f2c;
-            line-height: 1.6;
-            padding: 20px;
+            font-family: 'Segoe UI', 'Poppins', system-ui, sans-serif;
+            background: #f0f9f5;
+            color: #1a3029;
+            line-height: 1.65;
+            padding: 22px 18px;
         }
-
         .container {
             max-width: 1300px;
             margin: 0 auto;
             background: white;
-            border-radius: 40px;
-            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.08);
+            border-radius: 44px;
+            box-shadow: 0 25px 45px rgba(0,0,0,0.07);
             overflow: hidden;
         }
-
         header {
-            background: linear-gradient(120deg, #0a4c3c, #1e7b64);
+            background: linear-gradient(120deg, #0f583f, #1d8267);
             color: white;
             padding: 28px 35px;
         }
-
         header h1 {
-            font-size: 2rem;
-            margin-bottom: 8px;
+            font-size: 1.9rem;
+            margin-bottom: 6px;
         }
-
         header p {
             opacity: 0.9;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
-
-        .chip-kelas {
-            display: inline-block;
+        .chip {
             background: #f9c74f;
             color: #2d4a3b;
+            display: inline-block;
             border-radius: 60px;
-            padding: 5px 16px;
-            font-weight: 700;
-            margin-top: 12px;
+            padding: 5px 18px;
             font-size: 0.8rem;
+            font-weight: bold;
+            margin-top: 12px;
         }
-
-        .nav-tab {
+        .tab-bar {
             display: flex;
-            gap: 6px;
-            background: #e9f3ef;
-            padding: 12px 25px 0 25px;
+            gap: 5px;
+            background: #e6f3ee;
+            padding: 12px 28px 0 28px;
             flex-wrap: wrap;
         }
-
         .tab-btn {
             background: transparent;
             border: none;
-            padding: 10px 22px;
             font-weight: 700;
-            font-size: 1rem;
-            border-radius: 30px 30px 0 0;
+            padding: 10px 22px;
+            border-radius: 40px 40px 0 0;
+            font-size: 0.95rem;
             cursor: pointer;
+            color: #2b6e58;
             transition: 0.2s;
-            color: #2b5e4f;
         }
-
         .tab-btn.active {
             background: white;
-            color: #1a6d58;
-            border-bottom: 3px solid #1e7b64;
+            color: #167561;
+            border-bottom: 3px solid #1e8b70;
         }
-
-        .content-pane {
+        .pane {
             display: none;
-            padding: 30px 35px;
+            padding: 30px 38px;
             animation: fade 0.2s ease;
         }
-
-        .content-pane.active-pane {
+        .pane.active-pane {
             display: block;
         }
-
         @keyframes fade {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
-        .card-bab {
+        .bab-card {
             background: #ffffff;
             border-radius: 28px;
             margin-bottom: 28px;
-            border: 1px solid #dde9e5;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+            border: 1px solid #dceee7;
             overflow: hidden;
         }
-
         .bab-header {
-            background: #f6fefb;
-            padding: 16px 24px;
+            background: #fafefa;
+            padding: 16px 26px;
             border-left: 8px solid #2a9d8f;
             font-weight: 800;
-            font-size: 1.4rem;
-            color: #155f4f;
-            cursor: pointer;
+            font-size: 1.35rem;
+            color: #1a6a58;
             display: flex;
             justify-content: space-between;
-            user-select: none;
+            cursor: pointer;
         }
-
         .bab-body {
-            padding: 18px 28px;
+            padding: 18px 32px;
             border-top: 1px solid #e2f0ec;
-            display: block;
         }
-
         .bab-body.collapse {
             display: none;
         }
-
-        .badge-materi {
-            background: #e0f0ea;
-            display: inline-block;
-            padding: 4px 14px;
-            border-radius: 50px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            color: #155f4f;
-            margin-right: 12px;
-        }
-
         .arab {
             font-family: 'Amiri', 'Traditional Arabic', 'Times New Roman', serif;
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             direction: rtl;
             background: #fcf8e8;
-            padding: 12px 20px;
-            border-radius: 28px;
+            padding: 10px 20px;
+            border-radius: 32px;
             margin: 12px 0;
             text-align: right;
         }
-
-        .grid-2col {
+        .grid-2 {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
+            margin: 15px 0;
         }
-
-        .info-card {
-            background: #f9fafc;
-            border-radius: 24px;
+        .info-box {
+            background: #f3f9ff;
+            border-radius: 28px;
             padding: 16px;
             flex: 1;
-            border: 1px solid #e2edf0;
+            border: 1px solid #e0f0ea;
         }
-
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 16px 0;
+            margin: 14px 0;
         }
-
         th, td {
-            border: 1px solid #cbdcd6;
+            border: 1px solid #cfe2db;
             padding: 10px 12px;
             vertical-align: top;
         }
-
         th {
-            background: #e7f3ef;
+            background: #e3f2ed;
         }
-
-        .soal-latihan {
-            background: #eef3fa;
-            border-radius: 24px;
-            padding: 20px;
-            margin-top: 25px;
+        .badge-hadis {
+            background: #d4f0e8;
+            border-radius: 50px;
+            padding: 3px 12px;
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-right: 10px;
         }
-
         footer {
-            background: #eef3f0;
-            text-align: center;
+            background: #eefbf6;
             padding: 20px;
-            font-size: 0.8rem;
-            color: #3c6e5f;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #2a6b58;
         }
-
         @media (max-width: 700px) {
-            .content-pane {
-                padding: 20px;
+            .pane {
+                padding: 16px;
             }
             .arab {
                 font-size: 1.3rem;
@@ -211,189 +174,232 @@ Berikut adalah kode HTML lengkap untuk website materi Qurdis kelas 7, 8, 9 MTs (
 <body>
 <div class="container">
     <header>
-        <h1>📘 Qurdis MTs Kelas 7-9 | Kurikulum Merdeka</h1>
-        <p>Hukum Mad · Bacaan Gharib · Ayat & Hadis Tematik · Berdasarkan Kisi-kisi UM QH 9-26</p>
-        <span class="chip-kelas">🎯 Lengkap untuk Madrasah Tsanawiyah</span>
+        <h1>📗 Qurdis MTs (Kelas 7-9) | Kurikulum Merdeka</h1>
+        <p>Ayat & Hadis + Terjemah + Nomor Riwayat Shahih | Berdasarkan Kisi-kisi UM QH 9-26</p>
+        <span class="chip">🎯 Dilengkapi Tafsir Ringkas & Referensi</span>
     </header>
 
-    <div class="nav-tab">
-        <button class="tab-btn active" data-tab="tab-mad">🔊 Mad & Tajwid</button>
-        <button class="tab-btn" data-tab="tab-gharib">🕋 Bacaan Gharib</button>
-        <button class="tab-btn" data-tab="tab-ayat">📜 Ayat & Kandungan</button>
-        <button class="tab-btn" data-tab="tab-hadis">📗 Hadis Sahih</button>
-        <button class="tab-btn" data-tab="tab-latihan">✅ Soal & Indikator</button>
+    <div class="tab-bar">
+        <button class="tab-btn active" data-tab="tab-ayat">📖 Ayat & Kandungan</button>
+        <button class="tab-btn" data-tab="tab-hadis">📜 Hadis Sahih + No. Riw.</button>
+        <button class="tab-btn" data-tab="tab-lengkap">🔍 Tajwid & Gharib</button>
     </div>
 
-    <!-- TAB 1: MAD & TAJWID -->
-    <div id="tab-mad" class="content-pane active-pane">
-        <div class="card-bab">
-            <div class="bab-header" onclick="toggleBody(this)">🔹 1. Mad Tabi'i & Mad Wajib Muttashil <span>▼</span></div>
+    <!-- ================= TAB 1 AYAT LENGKAP ================= -->
+    <div id="tab-ayat" class="pane active-pane">
+        <!-- QS Ali Imran 190 -->
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">🌌 1. QS. Ali Imran (3) : 190 – Kekuasaan & Rahmat Allah <span>▼</span></div>
             <div class="bab-body">
-                <p><span class="badge-materi">Kelas 7</span> <strong>Mad Tabi’i:</strong> Mad asli, panjang 2 harakat. Contoh: <span class="arab">قَالَ، يَقُولُ، فِي</span></p>
-                <p><strong>Mad Wajib Muttashil:</strong> Mad tabi’i bertemu hamzah dalam satu kata → 4-5 harakat. Contoh: <span class="arab">جَاءَ، شَيْءٌ</span></p>
-                <p><span class="badge-materi">Indikator</span> Mengidentifikasi hukum mad tabi’i & cara membaca.</p>
+                <div class="arab">إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ وَاخْتِلَافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِأُولِي الْأَلْبَابِ</div>
+                <p><strong>Latin:</strong> <em>Inna fī khalqis-samāwāti wal-arḍi wakhtilāfil-layli wan-nahāri la'āyātil li'ulil-albāb.</em></p>
+                <p><strong>Terjemah Kemenag:</strong> “Sesungguhnya dalam penciptaan langit dan bumi, dan silih bergantinya malam dan siang terdapat tanda-tanda (kebesaran Allah) bagi orang yang berakal.”[reference:0]</p>
+                <p><strong>Tafsir Ringkas:</strong> Ayat ini mendorong kita merenungkan ciptaan Allah (langit, bumi, siang, malam). Hanya <strong>ulul albab</strong> (orang berakal yang selalu mengingat Allah) yang bisa memahami kebesaran-Nya.[reference:1]</p>
             </div>
         </div>
 
-        <div class="card-bab">
-            <div class="bab-header" onclick="toggleBody(this)">🔹 2. Mad Shilah & Mad Tamkin <span>▼</span></div>
+        <!-- QS Al-Fajr 17-18 -->
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">🤲 2. QS. Al-Fajr (89) : 17-18 – Optimis & Sabar dalam Infak <span>▼</span></div>
             <div class="bab-body">
-                <p><strong>Mad Shilah Qashirah:</strong> Ha’ dhamir (ه) didahului huruf hidup, panjang 2 harakat. Contoh: <span class="arab">إِنَّهُ</span> <br>
-                <strong>Mad Shilah Thawilah:</strong> Ha’ dhamir bertemu hamzah → panjang 4-5 harakat. <span class="arab">إِنَّهُ أَكْرَمَ</span></p>
-                <p><strong>Mad Tamkin:</strong> dua ya (ي) berurutan (ya berharakat & ya bertasydid). Contoh: <span class="arab">حُيِّيتُمْ</span> (QS. An-Nur:61) dibaca 2 harakat.</p>
+                <div class="arab">كَلَّا ۖ بَل لَّا تُكْرِمُونَ الْيَتِيمَ (١٧) وَلَا تَحَاضُّونَ عَلَىٰ طَعَامِ الْمِسْكِينِ (١٨)</div>
+                <p><strong>Latin:</strong> <em>Kallā, bal lā tukrimụnal-yatīm (17), wa lā taḥāḍḍụna 'alā ṭa'āmil-miskīn (18)</em></p>
+                <p><strong>Terjemah:</strong> “Sekali-kali tidak! Sebenarnya kamu tidak memuliakan anak yatim, dan kamu tidak saling mengajak memberi makan orang miskin.”[reference:2]</p>
+                <p><strong>Analisis:</strong> Allah mengkritik orang yang menganggap dirinya mulia hanya karena harta, tapi lalai menyantuni anak yatim dan fakir miskin. Optimis dalam kebaikan adalah dengan peduli sosial.[reference:3]</p>
             </div>
         </div>
 
-        <div class="card-bab">
-            <div class="bab-header" onclick="toggleBody(this)">⚡ 3. Mad Lazim (Kilmi & Harfi) <span>▼</span></div>
+        <!-- QS Al-A'la 17 -->
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">⭐ 3. QS. Al-A’la (87) : 17 – Kehidupan Dunia & Akhirat <span>▼</span></div>
+            <div class="bab-body">
+                <div class="arab">وَالْآخِرَةُ خَيْرٌ وَأَبْقَىٰ</div>
+                <p><strong>Latin:</strong> <em>Wal-ākhiratu khairuw wa abqā</em></p>
+                <p><strong>Terjemah:</strong> “Padahal kehidupan akhirat itu lebih baik dan lebih kekal.”[reference:4]</p>
+                <p><strong>Pesan:</strong> Dunia sementara, akhirat abadi. Orang beriman tidak terlena dunia, tetap mempersiapkan bekal akhirat dengan amal saleh serta menguatkan sikap optimis dan sabar.</p>
+            </div>
+        </div>
+
+        <!-- QS Al-Muthaffifin (Asbabun Nuzul) -->
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">⚖️ 4. QS. Al-Muthaffifin (83) : 1-3 – Kecurangan Timbangan <span>▼</span></div>
+            <div class="bab-body">
+                <p><span class="badge-hadis">📌 Asbabun Nuzul</span> Ayat ini turun karena penduduk Madinah waktu itu memiliki kebiasaan curang dalam takaran dan timbangan saat berdagang.[reference:5] Diriwayatkan dari Ibnu Abbas: ketika Nabi ﷺ tiba di Madinah, mereka termasuk orang paling curang dalam menakar. Maka Allah menurunkan teguran keras.</p>
+                <p><strong>Kandungan:</strong> Surah ini memperingatkan bahwa kecurangan dalam muamalah adalah dosa besar dan pelakunya diancam neraka "Wail" (lembah di neraka).[reference:6]</p>
+                <p><strong>Hubungan dunia & akhirat:</strong> Kehidupan dunia jangan dijadikan alasan untuk curang, karena kelak akan dimintai pertanggungjawaban.</p>
+            </div>
+        </div>
+
+        <!-- QS Al-An'am 152 -->
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">🤝 5. QS. Al-An’am (6) : 152 – Jujur dalam Muamalah & Adil <span>▼</span></div>
+            <div class="bab-body">
+                <div class="arab">وَلَا تَقْرَبُوا مَالَ الْيَتِيمِ إِلَّا بِالَّتِي هِيَ أَحْسَنُ حَتَّىٰ يَبْلُغَ أَشُدَّهُ ۖ وَأَوْفُوا الْكَيْلَ وَالْمِيزَانَ بِالْقِسْطِ ۖ لَا نُكَلِّفُ نَفْسًا إِلَّا وُسْعَهَا</div>
+                <p><strong>Terjemah:</strong> “Dan janganlah kamu mendekati harta anak yatim, kecuali dengan cara yang lebih bermanfaat, sampai ia mencapai (usia) dewasa. Dan sempurnakanlah takaran dan timbangan dengan adil. Kami tidak membebani seseorang melainkan menurut kesanggupannya.”[reference:7]</p>
+                <p>✔ Kandungan: larangan memakan harta anak yatim secara zalim, perintah berlaku adil dalam takaran dan timbangan, serta menekankan kejujuran dalam bisnis.</p>
+                <p><strong>Kata kunci:</strong> <span class="arab">فَاعْدِلُوا</span> (berlaku adillah) dan <span class="arab">طُمَأْنِينَة</span> (ketenangan hati).</p>
+            </div>
+        </div>
+
+        <!-- QS Abasa 1-10 (Asbabun nuzul) -->
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">📚 6. QS. ‘Abasa (80) : 1-10 – Semangat Menuntut Ilmu <span>▼</span></div>
+            <div class="bab-body">
+                <p><strong>Asbabun Nuzul:</strong> Suatu ketika Rasulullah ﷺ sedang berbicara dengan pembesar Quraisy (harapan mereka masuk Islam). Tiba-tiba datang seorang sahabat tunanetra, Abdullah bin Ummi Maktum, ingin belajar agama. Nabi ﷺ bermuka masam sedikit karena sibuk. Maka turunlah teguran lembut dari Allah dalam surat 'Abasa.<strong>[reference:8][reference:9]</strong></p>
+                <p><strong>Pesan utama:</strong> Tidak boleh membeda-bedakan orang yang ingin menuntut ilmu. Semua manusia berhak mendapatkan ilmu agama. Sahabat Abdullah bin Ummi Maktum menjadi bukti mulianya orang yang ikhlas mencari ilmu.</p>
+            </div>
+        </div>
+
+        <!-- QS Al-Mujadalah 11 -->
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">🏆 7. QS. Al-Mujadalah (58) : 11 – Derajat Orang Berilmu <span>▼</span></div>
+            <div class="bab-body">
+                <div class="arab">يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ ۚ وَاللَّهُ بِمَا تَعْمَلُونَ خَبِيرٌ</div>
+                <p><strong>Latin:</strong> <em>Yarfa’illāhul-ladzina āmanū minkum wal-ladzina ūtul-‘ilma darajāt, wallāhu bimā ta’malūna khabīr.</em></p>
+                <p><strong>Terjemah:</strong> “Allah akan mengangkat (derajat) orang-orang yang beriman di antaramu dan orang-orang yang diberi ilmu pengetahuan beberapa derajat.”<strong>[reference:10]</strong></p>
+                <p><strong>Keutamaan:</strong> Ayat ini menegaskan bahwa iman dan ilmu itu seimbang. Orang yang berilmu memiliki kedudukan istimewa, dimudahkan memahami agama, serta dihormati.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= TAB 2 HADIS LENGKAP + NOMOR ================= -->
+    <div id="tab-hadis" class="pane">
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">🤲 1. Pemurah & Menjauhi Kikir (Tangan di Atas) <span>▼</span></div>
+            <div class="bab-body">
+                <p><strong>Hadis Riwayat Bukhari & Muslim:</strong> “<em>Tangan di atas lebih baik daripada tangan di bawah. Tangan di atas adalah yang bersedekah, sedangkan tangan di bawah adalah yang meminta.</em>”</p>
+                <p>📖 HR. Bukhari (No. 1427, No. 1429) dan HR. Muslim (No. 1033 / 1034).<strong>[reference:11][reference:12]</strong></p>
+                <p><strong>Sikap yang sesuai:</strong> Gemar bersedekah, meyakini harta tidak akan berkurang karena sedekah, menghindari sifat kikir.</p>
+            </div>
+        </div>
+
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">💎 2. Sedekah Tidak Mengurangi Harta <span>▼</span></div>
+            <div class="bab-body">
+                <p>Rasulullah ﷺ bersabda: “<em>Sedekah itu tidak akan mengurangi harta. Tidak ada orang yang memberi maaf kepada orang lain melainkan Allah akan menambah kemuliaannya.</em>”</p>
+                <p>📖 HR. Muslim (No. 2588 / 4689)<strong>[reference:13]</strong>. Juga dalam Riyadhus Shalihin No. 559.<strong>[reference:14]</strong></p>
+                <p><strong>Kandungan:</strong> Infak di jalan Allah justru membuat harta berkah dan semakin bertambah di sisi Allah.</p>
+            </div>
+        </div>
+
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">🌟 3. Optimis & Sabar (Hadis Muslim) <span>▼</span></div>
+            <div class="bab-body">
+                <p>Rasulullah ﷺ bersabda: “<em>Sungguh menakjubkan urusan orang mukmin, semua keadaannya baik. Jika mendapat kesenangan ia bersyukur, itu baik baginya. Jika tertimpa kesusahan ia bersabar, itu pun baik baginya.</em>”</p>
+                <p>📖 HR. Muslim (No. 2999). <strong>Hadis about mukmin amazing affair.</strong></p>
+                <p><strong>Analisis fenomena:</strong> Dalam ujian hidup (musibah, kegagalan), sikap optimis dan sabar adalah kunci kebahagiaan dunia akhirat.</p>
+            </div>
+        </div>
+
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">🤝 4. Peduli Masyarakat (Mukmin yang Bergaul) <span>▼</span></div>
+            <div class="bab-body">
+                <p>“<em>Orang mukmin yang bergaul dengan manusia dan sabar terhadap gangguan mereka, lebih baik daripada orang mukmin yang tidak bergaul dan tidak sabar terhadap gangguan mereka.</em>”</p>
+                <p>📖 Riwayat At-Tirmidzi (No. 2507), Ibnu Majah (No. 4032), dan Ahmad (5/365).<strong>[reference:15]</strong></p>
+                <p><strong>Fenomena sosial:</strong> menjaga lingkungan, kerja bakti, toleransi, serta menghadapi perbedaan dengan kesabaran.</p>
+            </div>
+        </div>
+
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">🏪 5. Pedagang Jujur bersama Para Nabi <span>▼</span></div>
+            <div class="bab-body">
+                <p>“<em>Pedagang yang jujur dan terpercaya akan dibangkitkan bersama para nabi, orang-orang shiddiq dan para syuhada.</em>”</p>
+                <p>📖 HR. Tirmidzi (No. 1209, dishahihkan Albani).<strong>[reference:16]</strong></p>
+                <p><strong>Makna:</strong> Kejujuran dalam jual beli, tidak curang, tidak mengurangi takaran, serta amanah membawa derajat tinggi di sisi Allah.</p>
+            </div>
+        </div>
+
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">📖 6. Wajib Menuntut Ilmu (HR. Ibnu Majah) <span>▼</span></div>
+            <div class="bab-body">
+                <p>Nabi ﷺ bersabda: “<em>Menuntut ilmu adalah kewajiban bagi setiap individu muslim.</em>”</p>
+                <p>📖 HR. Ibnu Majah (No. 224, dishahihkan Syaikh Albani).<strong>[reference:17]</strong> Hadits ini juga diriwayatkan dari Anas bin Malik.<strong>[reference:18]</strong></p>
+                <p>Keutamaan: Ilmu mengangkat derajat, menjadi bekal takwa, dan mendekatkan diri kepada Allah.</p>
+            </div>
+        </div>
+
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">🚪 7. Jalan Mudah ke Surga (HR. Muslim & Tirmidzi) <span>▼</span></div>
+            <div class="bab-body">
+                <p>Rasulullah ﷺ bersabda: “<em>Barangsiapa menempuh jalan untuk mencari ilmu, Allah akan memudahkan baginya jalan menuju surga.</em>”</p>
+                <p>📖 HR. Muslim (No. 2699) & HR. Tirmidzi (No. 2646).<strong>[reference:19]</strong></p>
+                <p><strong>Kesimpulan:</strong> Aktivitas menuntut ilmu, hadir di majelis ilmu, serta mengajarkannya merupakan investasi akhirat.</p>
+            </div>
+        </div>
+
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">💬 8. Kejujuran Membawa Kebaikan (Bukhari-Muslim) <span>▼</span></div>
+            <div class="bab-body">
+                <p>“<em>Hendaklah kalian selalu jujur, karena kejujuran membawa kepada kebaikan, dan kebaikan mengantarkan ke surga. Jauhilah kebohongan, karena dusta membawa kepada kejahatan, dan kejahatan mengantarkan ke neraka.</em>”</p>
+                <p>📖 HR. Bukhari (No. 6094) dan HR. Muslim (No. 2606).<strong>[reference:20]</strong></p>
+                <p><strong>Indikator orang jujur:</strong> Berkata benar, amanah, menepati janji, tidak curang dalam timbangan.</p>
+            </div>
+        </div>
+
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">🌏 9. Akhirat Kekal (Perumpamaan Dunia) <span>▼</span></div>
+            <div class="bab-body">
+                <p>Rasulullah ﷺ bersabda: “<em>Demi Allah, dunia dibandingkan akhirat tidak lain adalah seperti seseorang yang mencelupkan jarinya ke lautan, maka lihatlah apa yang didapat pada jarinya setelah ditarik.</em>”</p>
+                <p>📖 HR. Ibnu Majah (No. 4098 dan 4105) serta riwayat Ahmad.<strong>[reference:21]</strong></p>
+                <p><strong>Sikap seimbang:</strong> Jangan terlena dunia, tetapi jangan juga meninggalkan dunia. Jadikan akhirat sebagai tujuan utama.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= TAB 3 (TAJWID & GHARIB) Ringkasan ================= -->
+    <div id="tab-lengkap" class="pane">
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">🔊 Mad Lazim & Contoh <span>▼</span></div>
             <div class="bab-body">
                 <ul>
-                    <li><strong>Mad Lazim Mutsaqqal Kilmi:</strong> mad + tasydid dalam 1 kata → 6 harakat. Contoh <span class="arab">ٱلضَّالِّينَ</span> (QS. Al-Fatihah).</li>
-                    <li><strong>Mad Lazim Mukhaffaf Kilmi:</strong> mad tanpa tasydid 6 harakat. Contoh langka <span class="arab">ءَالْـَٔانَ</span> (QS. Yunus:51).</li>
-                    <li><strong>Mad Lazim Mukhaffaf Harfi:</strong> huruf muqatha'ah tanpa idgham. Contoh <span class="arab">الٓمٓ</span>, <strong>الٓم</strong> → termasuk mad lazim harfi.</li>
-                    <li><strong>Arti mutsaqqal bahasa:</strong> diberatkan. Menurut istilah ulama tajwid: mad yang diikuti tasydid sehingga bacaan berat (6 harakat).</li>
+                    <li><strong>Mad Lazim Mutsaqqal Kilmi:</strong> 6 harakat + tasydid → الضَّالِّينَ, <span class="arab">ٱلطَّآمَّةُ</span> (QS An-Nazi'at:34).</li>
+                    <li><strong>Mad Lazim Mukhaffaf Kilmi:</strong> 6 harakat tanpa tasydid → Contoh langka ءَالْـَٔانَ.</li>
+                    <li><strong>Mad Lazim Harfi:</strong> Huruf muqatha’ah seperti الٓمٓ → nama bacaannya mad lazim harfi mukhaffaf.</li>
                 </ul>
-                <div class="info-card">📌 Contoh konkret mad lazim mutsaqqal kilmi: مِن دُونِهِ (tidak ada). Yang benar: الضَّالِّينَ . Juga lafadz <strong>ٱلطَّآمَّةُ</strong> (QS. An-Nazi'at:34) hukumnya mad lazim kilmi mutsaqqal.</div>
             </div>
         </div>
-    </div>
-
-    <!-- TAB 2: BACAAAN GHARIB -->
-    <div id="tab-gharib" class="content-pane">
-        <div class="card-bab">
-            <div class="bab-header" onclick="toggleBody(this)">🕋 Isymam, Naql, Imalah, Tashil <span>▼</span></div>
+        <div class="bab-card">
+            <div class="bab-header" onclick="toggleBody(this)">🕋 Gharib (Isymam, Naql, Imalah) <span>▼</span></div>
             <div class="bab-body">
-                <table>
-                    <tr><th>Istilah</th><th>Artinya</th><th>Contoh dalam Al-Qur’an</th></tr>
-                    <tr><td>Isymam</td><td>Membulatkan bibir seperti dhammah tetapi suara kasrah</td><td>QS. Hud:41 pada lafadz <span class="arab">مَجْر۪ىٰهَا</span></td></tr>
-                    <tr><td>Naql (bahasa: memindahkan)</td><td>Memindahkan harakat huruf pertama ke huruf berikutnya</td><td>QS. Hud:41 (naql harakat ra’ ke mim?) — juga pada QS. Al-Hujurat:11 bi’sa</td></tr>
-                    <tr><td>Imalah</td><td>Membaca alif cenderung seperti ya (antara a dan e)</td><td>QS. Hud:41 pada kata “majrêha”</td></tr>
-                    <tr><td>Tashil</td><td>Membaca hamzah antara hamzah dan alif</td><td>QS. Fussilat:44</td></tr>
-                </table>
-                <p><strong>Bacaan gharib dalam surat Hud ayat 41</strong> : terdapat isymam, imalah, dan naql sekaligus, sesuai riwayat tertentu.</p>
-                <p>Sikap: mengetahui bacaan gharib sebagai bentuk kekayaan qira’at.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- TAB 3: AYAT-AYAT QUR'AN -->
-    <div id="tab-ayat" class="content-pane">
-        <div class="card-bab">
-            <div class="bab-header" onclick="toggleBody(this)">🌌 QS. Ali Imran:190 (Kekuasaan & Rahmat Allah) <span>▼</span></div>
-            <div class="bab-body">
-                <div class="arab">إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ وَاخْتِلَافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِأُولِي الْأَلْبَابِ</div>
-                <p><strong>Terjemah:</strong> “Sesungguhnya dalam penciptaan langit dan bumi, serta pergantian malam dan siang, terdapat tanda-tanda bagi orang yang berakal.”</p>
-                <p>Kandungan: mengajak berpikir kritis tentang fenomena alam, bukti keesaan Allah.</p>
-            </div>
-        </div>
-
-        <div class="card-bab">
-            <div class="bab-header" onclick="toggleBody(this)">💪 Optimis & Sabar (QS. Al-Fajr:17-18 & QS. Az-Zumar:53) <span>▼</span></div>
-            <div class="bab-body">
-                <div class="arab">كَلَّا ۖ بَل لَّا تُكْرِمُونَ الْيَتِيمَ وَلَا تَحَاضُّونَ عَلَىٰ طَعَامِ الْمِسْكِينِ</div>
-                <p>Analisis: Allah mencela orang yang tidak memuliakan anak yatim dan tidak saling mendorong memberi makan miskin. Optimis dalam berbuat baik, sabar menghadapi ujian sosial.</p>
-                <p>QS. Az-Zumar 53: “Jangan berputus asa dari rahmat Allah” → landasan optimis.</p>
-            </div>
-        </div>
-
-        <div class="card-bab">
-            <div class="bab-header" onclick="toggleBody(this)">📌 Hubungan Dunia & Akhirat / Infak / Jujur <span>▼</span></div>
-            <div class="bab-body">
-                <ul>
-                    <li><strong>QS. Al-A’la 17:</strong> “Sedangkan akhirat lebih baik dan lebih kekal.”</li>
-                    <li><strong>QS. Al-Muthaffifin (Asbabun Nuzul):</strong> turun karena penduduk Madinah curang dalam takaran & timbangan → dunia fana, akhirat kekal.</li>
-                    <li><strong>QS. Al-An’am 152:</strong> berlaku adil, sempurnakan takaran & timbangan, jujur dalam muamalah.</li>
-                    <li><strong>QS. Abasa 1-10 (Asbabun Nuzul):</strong> Nabi berpaling dari <strong>Abdullah bin Ummi Maktum</strong> (tunanetra) karena sibuk dengan pembesar Quraisy. Pelajaran: semangat menuntut ilmu dan tidak membeda-bedakan.</li>
-                    <li><strong>QS. Al-Mujadalah 11:</strong> Allah meninggikan derajat orang beriman dan berilmu.</li>
-                </ul>
-                <p><strong>Kata ﻓَﺎﻋْﺪِﻟُﻮْﺍ</strong> artinya: “maka berlaku adillah”. <strong>ﻃُﻤَﺄْنِينَة</strong> : ketenangan hati.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- TAB 4: HADIS SAHIH -->
-    <div id="tab-hadis" class="content-pane">
-        <div class="card-bab">
-            <div class="bab-header" onclick="toggleBody(this)">Hadis Kekuasaan, Pemurah, Optimis, Infak, Peduli <span>▼</span></div>
-            <div class="bab-body">
-                <div class="grid-2col">
-                    <div class="info-card">✨ <strong>Kekuasaan & Rahmat Allah</strong><br> “Sesungguhnya Allah menahan langit dan bumi agar tidak lenyap.” (HR. Muslim) → sikap tawakal.</div>
-                    <div class="info-card">🤲 <strong>Pemurah & menjauhi kikir</strong><br> “Tangan di atas lebih baik dari tangan di bawah.” (HR. Bukhari) → sikap gemar sedekah.</div>
-                    <div class="info-card">🌱 <strong>Optimis & sabar</strong><br> “Sungguh menakjubkan urusan mukmin, semuanya baik.” (HR. Muslim) → optimis dalam ujian.</div>
-                    <div class="info-card">💸 <strong>Infak di jalan Allah</strong><br> “Harta tidak akan berkurang karena sedekah.” (HR. Muslim)</div>
-                    <div class="info-card">🏘️ <strong>Peduli masyarakat & lingkungan</strong><br> “Seorang mukmin yang bergaul dan sabar terhadap gangguan orang lebih baik.” (HR. Muslim). Fenomena sosial: kerja bakti, jaga lingkungan.</div>
-                    <div class="info-card">⚖️ <strong>Jujur dalam bermuamalah</strong><br> “Pedagang yang jujur lagi terpercaya bersama para nabi.” (HR. Tirmidzi)</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-bab">
-            <div class="bab-header" onclick="toggleBody(this)">📖 Hadis Menuntut Ilmu (Kelas 8) <span>▼</span></div>
-            <div class="bab-body">
-                <p>✔ <strong>HR. Ibnu Majah dari Shafwan bin ‘Assal</strong> : “Menuntut ilmu adalah kewajiban atas setiap muslim.”</p>
-                <p>✔ <strong>HR. Muslim dari Abu Hurairah</strong> : “Barang siapa menempuh jalan untuk mencari ilmu, Allah akan memudahkan baginya jalan menuju surga.”</p>
-                <p>Keutamaan: derajat diangkat, dijaga dari setan, dimudahkan masuk surga.</p>
-                <div class="info-card">📌 Analisis: hadis tentang optimis & sabar dalam fenomena kehidupan (pandemi, kegagalan) → sikap sabar, terus berusaha, yakin pertolongan Allah.</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- TAB 5: LATIHAN SOAL & INDIKATOR -->
-    <div id="tab-latihan" class="content-pane">
-        <div class="card-bab">
-            <div class="bab-header" onclick="toggleBody(this)">🧪 Contoh soal Ujian Madrasah (UM) <span>▼</span></div>
-            <div class="bab-body">
-                <div class="soal-latihan">
-                    <p><strong>1.</strong> Perhatikan lafadz <span class="arab">ٱلطَّآمَّةُ</span> (QS. An-Nazi’at: 34). Hukum bacaan yang tepat adalah… <br> ✔ <strong>Mad lazim kilmi mutsaqqal</strong> (karena mad bertemu tasydid dalam satu kata).</p>
-                    <p><strong>2.</strong> Lafadz <span class="arab">جَاءَ</span> mengandung hukum mad… <br> ✔ Mad wajib muttashil (4-5 harakat).</p>
-                    <p><strong>3.</strong> “Isymam” menurut istilah ulama qira’ah adalah… <br> ✔ Membulatkan bibir untuk dhammah namun suara condong ke kasrah.</p>
-                    <p><strong>4.</strong> Sebab turunnya QS. Abasa ayat 1-10 berkaitan dengan sosok… <br> ✔ Abdullah bin Ummi Maktum (tunanetra) yang datang saat Nabi berdakwah.</p>
-                    <p><strong>5.</strong> Sikap yang sesuai dengan hadis “Tangan di atas lebih baik dari tangan di bawah” adalah… <br> ✔ Rajin bersedekah, tidak kikir, gemar memberi.</p>
-                    <p><strong>6.</strong> Kandungan QS. Al-Mujadalah ayat 11 adalah… <br> ✔ Allah mengangkat derajat orang beriman dan berilmu.</p>
-                </div>
-                <p><span class="badge-materi">Indikator terpenuhi semua</span> Mengidentifikasi nama bacaan mad lazim, mad tamkin, mad shilah, cara baca gharib, asbabun nuzul, isi kandungan hadis tentang optimis, jujur dan peduli lingkungan.</p>
+                <p><strong>Isymam:</strong> Membulatkan bibir seperti dhammah dengan suara kasrah. Contoh: <strong>QS. Hud:41</strong> مَجْر۪ىٰهَا.</p>
+                <p><strong>Naql (bahasa: memindahkan):</strong> Memindahkan harakat hamzah ke huruf sebelumnya. Terdapat dalam riwayat tertentu pada surat Hud 41.</p>
+                <p><strong>Imalah:</strong> Membaca alif cenderung ke suara ‘e’ (antara a dan i).</p>
+                <p><strong>Kata Mutsaqqal secara bahasa:</strong> “Diberatkan”. Mad lazim mutsaqqal kilmi berarti mad yang memberatkan karena diikuti tasydid dalam satu kata.</p>
             </div>
         </div>
     </div>
 
     <footer>
-        📖 Materi sesuai buku Qurdis Kelas 7,8,9 MTs Kurikulum Merdeka & Kisi-kisi UM QH 9-26 | Tajwid, Gharib, Ayat dan Hadis
-        <br>✍️ Sumber: Kemenag RI, Buku Tajwid & Qira’at, Hadis Sahih (Bukhari, Muslim, Tirmidzi, Ibnu Majah)
+        ✅ Sumber: Al-Qur’an Kemenag RI, Tafsir Ringkas, Shahih Bukhari Muslim, Sunan Tirmidzi, Sunan Ibnu Majah.
+        📚 Materi Qurdis MTs Kelas 7-9 - Kisi-kisi UM QH 9-26 (Mad, Gharib, Ayat & Hadis lengkap)
     </footer>
 </div>
 
 <script>
-    // Fungsi untuk toggle isi card (accordion)
-    function toggleBody(headerEl) {
-        const body = headerEl.parentElement.querySelector('.bab-body');
+    function toggleBody(header) {
+        const body = header.parentElement.querySelector('.bab-body');
         if(body) {
             body.classList.toggle('collapse');
-            const arrow = headerEl.querySelector('span:last-child');
-            if(arrow) arrow.innerHTML = body.classList.contains('collapse') ? '▶' : '▼';
+            const arrowSpan = header.querySelector('span:last-child');
+            if(arrowSpan) arrowSpan.innerHTML = body.classList.contains('collapse') ? '▶' : '▼';
         }
     }
-
-    // tab switching
     const tabs = document.querySelectorAll('.tab-btn');
-    const panes = document.querySelectorAll('.content-pane');
+    const panes = document.querySelectorAll('.pane');
     tabs.forEach(btn => {
         btn.addEventListener('click', () => {
-            const tabId = btn.getAttribute('data-tab');
-            panes.forEach(pane => pane.classList.remove('active-pane'));
-            document.getElementById(tabId).classList.add('active-pane');
+            const target = btn.getAttribute('data-tab');
+            panes.forEach(p => p.classList.remove('active-pane'));
+            document.getElementById(target).classList.add('active-pane');
             tabs.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
         });
     });
-
-    // inisialisasi semua body tidak collapsed (terbuka)
-    document.querySelectorAll('.bab-body').forEach(body => {
-        body.classList.remove('collapse');
-    });
+    // biar semua body tidak collapsed di awal
+    document.querySelectorAll('.bab-body').forEach(b => b.classList.remove('collapse'));
     document.querySelectorAll('.bab-header span:last-child').forEach(span => {
         if(span) span.innerHTML = '▼';
     });
 </script>
 </body>
 </html>
-```
