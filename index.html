@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>20 Sifat Wajib Allah | Akidah Akhlak MTs Kelas 7 Kumer</title>
-    <!-- Google Fonts & Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Noto+Nastaliq+Urdu&family=Noto+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Latihan Soal IPA - Ujian Madrasah MTs</title>
     <style>
         * {
             margin: 0;
@@ -15,371 +12,446 @@
         }
 
         body {
-            background: linear-gradient(145deg, #fef9e6 0%, #fff6e8 100%);
-            font-family: 'Inter', 'Segoe UI', sans-serif;
-            color: #1e2a2e;
-            line-height: 1.5;
-            scroll-behavior: smooth;
-        }
-
-        /* Dekorasi islami halus */
-        .bg-pattern {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.03;
-            pointer-events: none;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><path d="M20,20 L30,10 L40,20 L30,30 Z M70,70 L80,60 L90,70 L80,80 Z M50,45 L60,35 L70,45 L60,55 Z" fill="%238B5A2B"/><circle cx="85" cy="15" r="4" fill="%238B5A2B"/><circle cx="15" cy="85" r="5" fill="%238B5A2B"/></svg>');
-            background-repeat: repeat;
-            background-size: 42px;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f0f7ff;
+            color: #1e293b;
+            padding: 20px;
         }
 
         .container {
-            max-width: 1300px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 2rem 1.5rem 3rem;
-            position: relative;
-            z-index: 2;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 20px 25px 40px;
         }
 
-        /* Header / Intro */
-        .hero {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            padding: 1.5rem 0.5rem;
-            background: rgba(255, 248, 235, 0.75);
-            backdrop-filter: blur(3px);
-            border-radius: 56px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
-            border: 1px solid rgba(196, 151, 86, 0.2);
-        }
-
-        .hero h1 {
-            font-size: 2.1rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #b7791f, #7c4e1a);
-            background-clip: text;
+        h1 {
+            font-size: 1.9rem;
+            background: linear-gradient(135deg, #0f2b3d, #1b4a6e);
             -webkit-background-clip: text;
+            background-clip: text;
             color: transparent;
-            letter-spacing: -0.3px;
-            display: inline-flex;
+            margin-bottom: 5px;
+        }
+
+        .subhead {
+            color: #2c5a7a;
+            border-left: 5px solid #2c7da0;
+            padding-left: 18px;
+            margin: 10px 0 25px 0;
+            font-weight: 500;
+        }
+
+        .section-title {
+            background: #e2f0fa;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 25px 0 20px 0;
+            color: #0f3b5c;
+            display: inline-block;
+        }
+
+        .soal-card {
+            background: #ffffff;
+            border-radius: 24px;
+            margin-bottom: 20px;
+            padding: 18px 22px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #dceaf5;
+            transition: 0.2s;
+        }
+
+        .soal-card:hover {
+            border-color: #90c8e0;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+        }
+
+        .soal-nomor {
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: #1f6392;
+            color: white;
+            display: inline-block;
+            padding: 2px 12px;
+            border-radius: 50px;
+            margin-bottom: 12px;
+        }
+
+        .soal-teks {
+            font-size: 1rem;
+            line-height: 1.45;
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #0b3b4f;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 8px;
+            margin-bottom: 6px;
+        }
+
+        .option {
+            display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
+            background: #f8fafc;
+            padding: 6px 14px;
+            border-radius: 40px;
+            border: 1px solid #cbdde9;
+        }
+
+        .option input {
+            margin: 0;
+            transform: scale(1);
+            accent-color: #1f6392;
+        }
+
+        input[type="text"] {
+            padding: 8px 15px;
+            border-radius: 40px;
+            border: 1px solid #bdd4e2;
+            width: 100%;
+            max-width: 400px;
+            font-size: 0.95rem;
+            background: #fefefe;
+        }
+
+        .feedback {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: #f1f5f9;
+            display: inline-block;
+        }
+
+        .correct-feedback {
+            background: #dcfce7;
+            color: #15803d;
+        }
+
+        .wrong-feedback {
+            background: #ffe4e2;
+            color: #b91c1c;
+        }
+
+        .btn-group {
+            margin: 35px 0 20px;
+            display: flex;
+            gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
         }
 
-        .hero h1 i {
-            background: none;
-            color: #b87a2c;
-            font-size: 2rem;
-            background-clip: unset;
-            -webkit-background-clip: unset;
-            color: #b7791f;
-        }
-
-        .badge-book {
-            display: inline-block;
-            background: #f3e1be;
-            color: #7a4c1a;
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            margin-top: 12px;
-            letter-spacing: 0.3px;
-            backdrop-filter: blur(2px);
-        }
-
-        .description {
-            max-width: 720px;
-            margin: 1rem auto 0;
-            color: #4a3b28;
+        button {
+            background: #1f6392;
+            border: none;
+            padding: 12px 28px;
             font-size: 1rem;
-            font-weight: 500;
-            background: #fffcf5;
-            padding: 0.75rem 1.5rem;
-            border-radius: 60px;
-            display: inline-block;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-        }
-
-        .ayat {
-            font-family: 'Noto Sans Arabic', 'Noto Nastaliq Urdu', serif;
-            font-size: 1.25rem;
-            color: #a5712c;
-            margin-top: 12px;
-            background: #fff2e1;
-            display: inline-block;
-            padding: 6px 18px;
-            border-radius: 40px;
-        }
-
-        /* Grid Card */
-        .grid-sifat {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-            gap: 1.6rem;
-            margin-top: 1rem;
-        }
-
-        .card {
-            background: #ffffffdd;
-            backdrop-filter: blur(2px);
-            background: linear-gradient(145deg, #ffffff, #fffbf4);
-            border-radius: 32px;
-            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.08);
-            transition: transform 0.25s ease, box-shadow 0.3s;
-            border: 1px solid rgba(210, 170, 100, 0.3);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 22px 32px -12px rgba(110, 60, 20, 0.15);
-            border-color: #e6c99c;
-        }
-
-        .card-header {
-            padding: 1.2rem 1.5rem 0.6rem;
-            border-bottom: 2px solid #f5e5cf;
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            background: #fffaf2;
-        }
-
-        .no-sifat {
-            background: #dbb87920;
-            color: #ca9622;
-            font-weight: 800;
-            font-size: 0.85rem;
-            padding: 4px 10px;
+            font-weight: bold;
+            color: white;
             border-radius: 50px;
-            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border: none;
         }
 
-        .arabic-name {
-            font-family: 'Noto Sans Arabic', 'Noto Nastaliq Urdu', 'Traditional Arabic', serif;
-            font-size: 1.65rem;
-            font-weight: 500;
-            text-align: right;
-            color: #7c541e;
-            line-height: 1.3;
-            word-break: break-word;
+        button:hover {
+            background: #0f4b6e;
+            transform: scale(0.97);
         }
 
-        .card-body {
-            padding: 1.2rem 1.5rem 1.5rem;
-            flex: 1;
+        .reset-btn {
+            background: #4b5563;
         }
 
-        .latin-sifat {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #2c3a2b;
-            margin-bottom: 0.45rem;
-            letter-spacing: -0.2px;
-            display: inline-block;
-            border-left: 4px solid #e4b363;
-            padding-left: 12px;
+        .reset-btn:hover {
+            background: #2d3a48;
         }
 
-        .arti-sifat {
-            font-weight: 600;
-            color: #b4651a;
-            margin: 0.6rem 0 0.7rem 0;
-            font-size: 1rem;
-            background: #fff2e2;
-            display: inline-block;
-            padding: 0.2rem 0.9rem;
-            border-radius: 24px;
+        .score-area {
+            background: #eef4ff;
+            border-radius: 32px;
+            padding: 16px 22px;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 20px 0 10px;
         }
 
-        .explanation {
-            font-size: 0.9rem;
-            color: #3e3a33;
-            margin-top: 0.7rem;
-            line-height: 1.5;
-            border-top: 1px dashed #f0dfc7;
-            padding-top: 0.8rem;
-        }
-
-        .explanation i {
-            color: #ba8434;
-            font-size: 0.75rem;
-            margin-right: 4px;
+        hr {
+            margin: 20px 0;
+            border-color: #cde3ef;
         }
 
         footer {
             text-align: center;
-            margin-top: 3rem;
-            padding: 1.8rem 0.5rem 1rem;
-            border-top: 1px solid rgba(151, 105, 38, 0.2);
-            font-size: 0.85rem;
-            color: #836e48;
-            background: #fffaf2aa;
-            border-radius: 60px 60px 0 0;
-        }
-
-        .footer-ref {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-            margin-top: 8px;
             font-size: 0.8rem;
+            color: #5f7f9e;
+            margin-top: 20px;
         }
 
-        @media (max-width: 640px) {
+        @media (max-width: 700px) {
             .container {
-                padding: 1.2rem 1rem 2rem;
+                padding: 15px;
             }
-            .hero h1 {
-                font-size: 1.6rem;
+            .soal-card {
+                padding: 14px;
             }
-            .latin-sifat {
-                font-size: 1.1rem;
+            .options {
+                gap: 10px;
             }
-            .arabic-name {
-                font-size: 1.4rem;
-            }
-            .card-header {
-                flex-direction: row;
-                align-items: center;
-            }
-        }
-
-        .btn-extra {
-            background: transparent;
-            border: none;
-            color: #bb823d;
-            font-size: 0.7rem;
-            cursor: default;
-        }
-
-        hr {
-            background: #ddc7a4;
-            height: 1px;
-            border: none;
-            margin: 0.7rem 0;
-        }
-
-        .highlight {
-            background: linear-gradient(120deg, #f9efde, #fff3e6);
-            border-radius: 28px;
         }
     </style>
 </head>
 <body>
-<div class="bg-pattern"></div>
 <div class="container">
-    <div class="hero">
-        <h1>
-            <i class="fas fa-star-of-life"></i> 
-            Sifat Wajib Allah
-            <i class="fas fa-dove"></i>
-        </h1>
-        <div class="badge-book">
-            <i class="fas fa-book-open"></i> Buku Akidah Akhlak MTs Kelas 7 | Kurikulum Merdeka (Kumer)
-        </div>
-        <div class="description">
-            <i class="fas fa-hand-sparkles"></i> 20 Sifat yang pasti ada pada Allah SWT.  
-            Landasan keimanan Ahlussunnah wal Jama'ah.
-        </div>
-        <div class="ayat">
-            ﴿ لَيْسَ كَمِثْلِهِ شَيْءٌ ۖ وَهُوَ السَّمِيعُ الْبَصِيرُ ﴾
-        </div>
-        <div style="font-size: 0.8rem; margin-top: 6px;">QS. Asy-Syura:11 (Sifat Mukhalafatu lil hawaditsi)</div>
-    </div>
+    <h1>📘 Latihan Soal IPA</h1>
+    <div class="subhead">Ujian Madrasah MTs Negeri 1 Karanganyar — Kurikulum Merdeka <br> ✅ 25 PG | ☑️ 10 Benar/Salah | ✍️ 5 Isian Singkat</div>
 
-    <div id="sifatGrid" class="grid-sifat">
-        <!-- Konten akan di-generate dengan JavaScript -->
-        <div class="card" style="justify-content: center; align-items: center; background: #faf5ea;">
-            <i class="fas fa-spinner fa-pulse" style="font-size: 2rem; color:#b77c2a; margin: 2rem;"></i>
-            <p style="padding: 1rem;">Memuat 20 Sifat Wajib Allah...</p>
-        </div>
-    </div>
+    <div id="soal-container"></div>
 
-    <footer>
-        <i class="fas fa-mosque"></i> Berdasarkan kitab klasik & Buku Siswa Akidah Akhlak MTs Kelas 7 (KMA 183) Kurikulum Merdeka
-        <div class="footer-ref">
-            <span><i class="fas fa-check-circle"></i> Sifat Nafsiyah · Salbiyah · Ma'ani · Ma'nawiyah</span>
-            <span><i class="fas fa-gem"></i> Dalil Aqli & Naqli</span>
-        </div>
-        <div style="margin-top: 12px;">© untuk pembelajaran | Santri & Pelajar | 20 Sifat Wajib</div>
-    </footer>
+    <div class="btn-group">
+        <button id="cek-skor">✅ Periksa Jawaban</button>
+        <button id="reset-jawaban" class="reset-btn">🔄 Reset Semua Jawaban</button>
+    </div>
+    <div id="hasil-score" class="score-area" style="display: none;"></div>
+    <footer>Klik "Periksa Jawaban" untuk melihat skor dan jawaban yang benar/salah. Isian singkat dicocokkan secara fleksibel.</footer>
 </div>
 
 <script>
-    // Data 20 Sifat Wajib Allah sesuai urutan Ahlussunnah
-    // Referensi Buku Akidah Akhlak MTs Kelas 7 Kumer
-    const sifatList = [
-        { no: 1, arab: "الوُجُود", latin: "Wujud", arti: "Ada", penjelasan: "Allah Ta'ala wujud (ada) bukan karena diciptakan, mustahil tidak ada. Bukti adanya alam semesta menunjukkan keberadaan-Nya." },
-        { no: 2, arab: "القِدَم", latin: "Qidam", arti: "Terdahulu / Tiada awal", penjelasan: "Allah Maha Terdahulu tanpa permulaan. Mustahil Allah baru (huduts). Dialah yang awal sebelum segala sesuatu." },
-        { no: 3, arab: "البَقَاء", latin: "Baqa'", arti: "Kekal", penjelasan: "Allah kekal abadi tanpa akhir. Mustahil binasa/fana. Keabadian-Nya sempurna dan mutlak." },
-        { no: 4, arab: "مُخَالَفَتُهُ لِلْحَوَادِثِ", latin: "Mukhalafatu lil hawaditsi", arti: "Berbeda dengan makhluk", penjelasan: "Allah tidak serupa dengan makhluk-Nya dalam zat, sifat, maupun perbuatan. Tidak ada sesuatu pun yang menyamai-Nya." },
-        { no: 5, arab: "قِيَامُهُ بِنَفْسِهِ", latin: "Qiyamuhu binafsihi", arti: "Berdiri sendiri", penjelasan: "Allah tidak bergantung pada apapun dan siapapun. Mustahil butuh pada yang lain. Dia Maha Kaya." },
-        { no: 6, arab: "الوَحْدَانِيَّة", latin: "Wahdaniyah", arti: "Esa / Tunggal", penjelasan: "Allah Maha Esa dalam zat, sifat, dan perbuatan. Tidak ada sekutu bagi-Nya." },
-        { no: 7, arab: "القُدْرَة", latin: "Qudrat", arti: "Maha Kuasa", penjelasan: "Allah berkuasa atas segala sesuatu. Mustahil lemah ('ajz). Kuasa-Nya tanpa batas." },
-        { no: 8, arab: "الإِرَادَة", latin: "Iradat", arti: "Maha Berkehendak", penjelasan: "Allah menentukan dan menghendaki segala yang terjadi di alam semesta sesuai kehendak mutlak-Nya." },
-        { no: 9, arab: "العِلْمُ", latin: "Ilmu", arti: "Maha Mengetahui", penjelasan: "Allah mengetahui segala sesuatu yang telah, sedang, dan akan terjadi. Ilmu-Nya tidak terbatas." },
-        { no: 10, arab: "الحَيَاة", latin: "Hayat", arti: "Maha Hidup", penjelasan: "Allah Maha Hidup dengan kehidupan sempurna, kekal, tanpa kematian. Mustahil mati." },
-        { no: 11, arab: "السَّمْع", latin: "Sama'", arti: "Maha Mendengar", penjelasan: "Allah mendengar semua suara dan getaran, tanpa alat, meliputi segala yang terdengar." },
-        { no: 12, arab: "البَصَر", latin: "Basar", arti: "Maha Melihat", penjelasan: "Allah melihat segala sesuatu, yang tampak maupun yang tersembunyi, tanpa alat bantu." },
-        { no: 13, arab: "الكَلاَم", latin: "Kalam", arti: "Maha Berbicara", penjelasan: "Allah berfirman dengan Kalam azali (tidak berupa huruf dan suara seperti makhluk), antara lain Al-Qur'an adalah kalamullah." },
-        { no: 14, arab: "كَوْنُهُ قَادِرًا", latin: "Kaunuhu Qaadiran", arti: "Allah Yang Maha Kuasa", penjelasan: "Sifat qudrat-Nya merupakan kesempurnaan dzat; Allah senantiasa bersifat Kuasa sejak azali." },
-        { no: 15, arab: "كَوْنُهُ مُرِيدًا", latin: "Kaunuhu Muridan", arti: "Allah Maha Berkehendak", penjelasan: "Kehendak-Nya mutlak atas segala yang ada. Tidak ada yang terjadi di luar iradat-Nya." },
-        { no: 16, arab: "كَوْنُهُ عَلِيمًا", latin: "Kaunuhu 'Aliman", arti: "Allah Maha Mengetahui", penjelasan: "Ilmu Allah meliputi yang lahir dan batin, yang ghaib dan yang nyata. Mustahil jahil (bodoh)." },
-        { no: 17, arab: "كَوْنُهُ حَيًّا", latin: "Kaunuhu Hayyan", arti: "Allah Maha Hidup", penjelasan: "Kehidupan Allah sempurna, tidak pernah tidur dan tidak mati. Dialah Al-Hayy." },
-        { no: 18, arab: "كَوْنُهُ سَمِيعًا", latin: "Kaunuhu Sami'an", arti: "Allah Maha Mendengar", penjelasan: "Pendengaran Allah meliputi suara apapun tanpa batas ruang dan waktu." },
-        { no: 19, arab: "كَوْنُهُ بَصِيرًا", latin: "Kaunuhu Bashiran", arti: "Allah Maha Melihat", penjelasan: "Allah melihat segala sesuatu, sekecil apapun, tanpa ada yang tersembunyi." },
-        { no: 20, arab: "كَوْنُهُ مُتَكَلِّمًا", latin: "Kaunuhu Mutakalliman", arti: "Allah Maha Berfirman", penjelasan: "Allah berbicara dengan firman azali. Kitab-kitab suci adalah firman Allah, sebagai bentuk perkataan-Nya." }
+    // ======================= DATA SOAL LENGKAP ========================
+    // Soal Pilihan Ganda (1-25)
+    const soalPG = [
+        { nomor: 1, teks: "Perhatikan gambar berikut! (biji berkecambah menjadi kecambah, lalu tumbuh kecil). Berdasarkan gambar tersebut, makhluk hidup menunjukkan ciri....", options: ["A. Bernapas", "B. Tumbuh dan berkembang", "C. Bergerak", "D. Peka terhadap rangsang"], jawaban: "B" },
+        { nomor: 2, teks: "Hubungan antara bunga dengan kupu-kupu dalam suatu ekosistem merupakan contoh interaksi yang saling menguntungkan karena....", options: ["A. Kupu-kupu mendapat madu, bunga terbantu penyerbukannya", "B. Kupu-kupu terlindungi di dalam bunga, bunga mendapat pupuk", "C. Bunga mendapat air, kupu-kupu mendapat tempat bertelur", "D. Keduanya sama-sama mendapat makanan dari nektar"], jawaban: "A" },
+        { nomor: 3, teks: "Perhatikan gambar sel hewan! (organel berbentuk kacang dengan krista). Fungsi organel yang ditunjuk adalah....", options: ["A. Sintesis protein", "B. Pembentukan energi (respirasi sel)", "C. Pengaturan seluruh aktivitas sel", "D. Pencernaan intraseluler"], jawaban: "B" },
+        { nomor: 4, teks: "Pada penampang daun dikotil, bagian X (jaringan tiang), Y (floem), Z (lapisan lilin). Bagian yang berfungsi mengangkut hasil fotosintesis dan perlindungan jaringan secara berurutan adalah....", options: ["A. X dan Y", "B. Y dan Z", "C. Z dan X", "D. X dan Z"], jawaban: "B" },
+        { nomor: 5, teks: "Produsen makanan menambahkan zat pewarna berbahaya. Contoh zat pewarna buatan yang dilarang karena berbahaya adalah....", options: ["A. Karoten", "B. Klorofil", "C. Rhodamin B", "D. Kurkumin"], jawaban: "C" },
+        { nomor: 6, teks: "Pasien demam, batuk berdahak, nyeri dada, alveolus terinfeksi cairan. Penyebab penyakit Pneumonia adalah....", options: ["A. Virus influenza", "B. Bakteri Mycobacterium tuberculosis", "C. Bakteri Streptococcus pneumoniae", "D. Jamur Aspergillus"], jawaban: "C" },
+        { nomor: 7, teks: "Organ pencernaan tambahan berbentuk kantong di bawah hati. Fungsi organ tersebut adalah....", options: ["A. Menghasilkan enzim lipase", "B. Menyimpan empedu", "C. Menghasilkan getah pankreas", "D. Menyerap sari makanan"], jawaban: "B" },
+        { nomor: 8, teks: "Urutan pengangkutan darah kaya oksigen dari paru-paru menuju seluruh tubuh adalah....", options: ["A. Paru-paru → serambi kanan → bilik kanan → paru-paru", "B. Paru-paru → serambi kiri → bilik kiri → aorta", "C. Paru-paru → bilik kiri → serambi kiri → vena cava", "D. Paru-paru → aorta → serambi kiri → bilik kiri"], jawaban: "B" },
+        { nomor: 9, teks: "Urutan perjalanan sperma dari testis hingga keluar: 1 testis, 2 epididimis, 3 vas deferens, 4 uretra. Urutan yang benar adalah....", options: ["A. 1 – 2 – 3 – 4", "B. 2 – 1 – 3 – 4", "C. 3 – 2 – 1 – 4", "D. 1 – 3 – 2 – 4"], jawaban: "A" },
+        { nomor: 10, teks: "Petani menyambung pucuk tanaman mangga unggul ke batang bawah lokal. Teknik ini disebut....", options: ["A. Okulasi", "B. Stek", "C. Merunduk", "D. Mengenten"], jawaban: "D" },
+        { nomor: 11, teks: "Persilangan monohibrid dominan penuh BB × bb, perbandingan fenotip F2 adalah....", options: ["A. 1 bulat : 3 keriput", "B. 3 bulat : 1 keriput", "C. 1 bulat : 2 antara : 1 keriput", "D. Semua bulat"], jawaban: "B" },
+        { nomor: 12, teks: "Ragi pada adonan roti menghasilkan gas yang membuat roti mengembang. Gas tersebut adalah....", options: ["A. Oksigen", "B. Nitrogen", "C. Karbon dioksida", "D. Hidrogen"], jawaban: "C" },
+        { nomor: 13, teks: "Berikut yang termasuk besaran pokok adalah....", options: ["A. Gaya, massa, waktu", "B. Panjang, suhu, kecepatan", "C. Massa, panjang, waktu", "D. Volume, suhu, tekanan"], jawaban: "C" },
+        { nomor: 14, teks: "Massa 2 kg dipanaskan 30°C→80°C, kalor jenis 400 J/kg°C. Kalor yang diperlukan?", options: ["A. 20.000 J", "B. 32.000 J", "C. 40.000 J", "D. 80.000 J"], jawaban: "C" },
+        { nomor: 15, teks: "Benda 2 kg di ketinggian 10 m, g=10 m/s². Energi potensial pada ketinggian 4 m dari tanah adalah....", options: ["A. 80 J", "B. 120 J", "C. 200 J", "D. 320 J"], jawaban: "A" },
+        { nomor: 16, teks: "Mobil 1000 kg kecepatan 20 m/s berhenti dalam 5 detik. Percepatan yang dialami mobil adalah....", options: ["A. 2 m/s²", "B. 4 m/s²", "C. –4 m/s²", "D. –2 m/s²"], jawaban: "C" },
+        { nomor: 17, teks: "Bidang miring panjang 5 m, tinggi 2 m, beban 600 N. Gaya kuasa minimum adalah....", options: ["A. 120 N", "B. 240 N", "C. 300 N", "D. 1.500 N"], jawaban: "B" },
+        { nomor: 18, teks: "Bejana: air 50cm (ρ=1000) + minyak 20cm (ρ=800). Tekanan total di titik 10 cm di bawah permukaan air? (g=10)", options: ["A. 1.600 Pa", "B. 2.600 Pa", "C. 4.000 Pa", "D. 5.000 Pa"], jawaban: "B" },
+        { nomor: 19, teks: "Bandul dari A ke C melalui B dalam 0,5 dtk, jarak A-C=10 cm. Amplitudo dan frekuensi....", options: ["A. 5 cm dan 1 Hz", "B. 10 cm dan 0,5 Hz", "C. 5 cm dan 2 Hz", "D. 10 cm dan 2 Hz"], jawaban: "A" },
+        { nomor: 20, teks: "Gambar mata: sinar sejajar difokuskan di belakang retina. Cacat mata dan kacamata?", options: ["A. Miopi, lensa cekung", "B. Hipermetropi, lensa cembung", "C. Presbiopi, lensa bifokal", "D. Astigmatisma, lensa silinder"], jawaban: "B" },
+        { nomor: 21, teks: "Penggaris digosok rambut, menarik serpihan kertas. Perpindahan elektron?", options: ["A. Elektron dari rambut ke penggaris (penggaris negatif)", "B. Elektron dari penggaris ke rambut (positif)", "C. Proton dari rambut ke penggaris", "D. Proton dari penggaris ke rambut"], jawaban: "A" },
+        { nomor: 22, teks: "Muatan +4μC dan +9μC, jarak 6 cm, gaya 90 N. Jika jarak menjadi 2 cm, gaya menjadi?", options: ["A. 10 N", "B. 30 N", "C. 270 N", "D. 810 N"], jawaban: "D" },
+        { nomor: 23, teks: "Rangkaian seri R1=2Ω, R2=3Ω, R3=5Ω, tegangan 20 V. Beda potensial pada R2?", options: ["A. 2 V", "B. 4 V", "C. 6 V", "D. 10 V"], jawaban: "C" },
+        { nomor: 24, teks: "Gambar pembuatan magnet dengan kawat berarus. Berdasarkan arah arus, kutub magnet di A dan B? (asumsi aturan kaidah)", options: ["A. A = Utara, B = Selatan", "B. A = Selatan, B = Utara", "C. A = Utara, B = Utara", "D. Tidak terbentuk kutub"], jawaban: "A" },
+        { nomor: 25, teks: "Kelompok zat berikut yang semuanya termasuk senyawa adalah....", options: ["A. Oksigen, air, garam dapur", "B. Air, gula pasir, natrium klorida", "C. Hidrogen, karbon dioksida, besi", "D. Amonia, alkohol, udara"], jawaban: "B" }
     ];
 
-    function generateCards() {
-        const gridContainer = document.getElementById('sifatGrid');
-        if (!gridContainer) return;
+    // Soal Benar/Salah (26-35)
+    const soalBS = [
+        { nomor: 26, teks: "Organisme uniseluler tanpa membran inti, hidup di ekstrem, berkembang biak dengan pembelahan biner termasuk Kingdom Protista.", jawaban: "S" },
+        { nomor: 27, teks: "Semakin besar amplitudo suatu getaran, semakin besar pula frekuensinya.", jawaban: "S" },
+        { nomor: 28, teks: "Malam hari bunyi klakson kereta terdengar lebih jelas dan jauh karena kelembapan udara tinggi sehingga cepat rambat bunyi bertambah.", jawaban: "B" },
+        { nomor: 29, teks: "Sendi pada gelang bahu (tulang belikat dan lengan atas) memungkinkan gerakan ke segala arah dan disebut sendi peluru.", jawaban: "B" },
+        { nomor: 30, teks: "Melimpahnya eceng gondok di danau karena kadar fosfat & nitrogen tinggi disebut eutrofikasi.", jawaban: "B" },
+        { nomor: 31, teks: "Planaria dipotong menjadi beberapa bagian tumbuh individu baru. Perkembangbiakan ini termasuk fragmentasi vegetatif buatan.", jawaban: "S" }, // seharusnya vegetatif alami
+        { nomor: 32, teks: "Dua muatan sejenis didekatkan saling tarik-menarik. Besar gaya sebanding dengan jarak kuadrat.", jawaban: "S" },
+        { nomor: 33, teks: "Kawat 50 cm, arus 2 A, medan magnet 0,5 T. Gaya Lorentz maksimum 0,5 N.", jawaban: "B" },
+        { nomor: 34, teks: "Vasektomi adalah prosedur kontrasepsi dengan memotong dan mengikat saluran epididimis.", jawaban: "S" },
+        { nomor: 35, teks: "Biogas dari fermentasi kotoran ternak terutama mengandung gas metana (CH₄).", jawaban: "B" }
+    ];
 
-        let cardsHTML = '';
-        for (let s of sifatList) {
-            cardsHTML += `
-                <div class="card">
-                    <div class="card-header">
-                        <span class="no-sifat"><i class="fas fa-certificate"></i> Sifat ke-${s.no}</span>
-                        <div class="arabic-name">${s.arab}</div>
-                    </div>
-                    <div class="card-body">
-                        <div class="latin-sifat">${s.latin}</div>
-                        <div class="arti-sifat"><i class="fas fa-gem"></i> ${s.arti}</div>
-                        <div class="explanation">
-                            <i class="fas fa-feather-alt"></i> ${s.penjelasan}
-                        </div>
-                        <hr />
-                        <div style="font-size: 0.7rem; color: #ad8c5a;"><i class="fas fa-dharmachakra"></i> Landasan: Al-Qur'an & Ijma' Ulama</div>
-                    </div>
+    // Soal Isian (36-40)
+    const soalIsian = [
+        { nomor: 36, teks: "Sebutkan tiga tahapan proses pembentukan urine di dalam nefron ginjal secara berurutan!", jawaban: ["filtrasi", "reabsorpsi", "augmentasi"], alternatif: ["filtrasi, reabsorpsi, augmentasi", "penyaringan, penyerapan kembali, pengeluaran zat", "filtrasi, reabsorpsi, augmentasi"] },
+        { nomor: 37, teks: "Persilangan monohibrid BB × bb, F1 Bb disilangkan sesamanya. Berapa persen kemungkinan keturunan F2 yang berbiji keriput?", jawaban: "25%", alternatif: ["25%", "25 persen", "25"] },
+        { nomor: 38, teks: "Sebuah tuas dengan lengan beban 0,5 m dan lengan kuasa 2 m digunakan mengangkat batu 800 N. Berapa gaya kuasa yang diperlukan? (dalam N)", jawaban: "200", alternatif: ["200 N", "200", "200 N"] },
+        { nomor: 39, teks: "Benda diletakkan 15 cm di depan lensa cembung jarak fokus 10 cm. Hitung jarak bayangan (cm)!", jawaban: "30", alternatif: ["30 cm", "30", "30"] },
+        { nomor: 40, teks: "4 lampu 20W menyala 10h/hari, TV 100W 5h/hari, kulkas 150W 24h/hari. Tarif Rp1.500/kWh. Biaya listrik selama 30 hari? (Rp)", jawaban: "220500", alternatif: ["220500", "220.500", "Rp220.500"] }
+    ];
+
+    // ================== RENDER SOAL KE HTML ==================
+    function renderSoal() {
+        const container = document.getElementById('soal-container');
+        container.innerHTML = '';
+
+        // Pilihan Ganda
+        const pgTitle = document.createElement('div');
+        pgTitle.className = 'section-title';
+        pgTitle.innerText = '🔘 Pilihan Ganda (1-25)';
+        container.appendChild(pgTitle);
+
+        soalPG.forEach((soal, idx) => {
+            const card = document.createElement('div');
+            card.className = 'soal-card';
+            card.id = `pg-${soal.nomor}`;
+            card.innerHTML = `
+                <div class="soal-nomor">PG ${soal.nomor}</div>
+                <div class="soal-teks">${soal.teks}</div>
+                <div class="options" id="opsi-pg-${soal.nomor}">
+                    ${soal.options.map(opt => `
+                        <label class="option">
+                            <input type="radio" name="pg${soal.nomor}" value="${opt.charAt(0)}"> ${opt}
+                        </label>
+                    `).join('')}
                 </div>
+                <div class="feedback" id="feedback-pg-${soal.nomor}"></div>
             `;
-        }
-        gridContainer.innerHTML = cardsHTML;
+            container.appendChild(card);
+        });
+
+        // Benar/Salah
+        const bsTitle = document.createElement('div');
+        bsTitle.className = 'section-title';
+        bsTitle.innerText = '✔️ Benar / Salah (26-35)';
+        container.appendChild(bsTitle);
+        soalBS.forEach((soal) => {
+            const card = document.createElement('div');
+            card.className = 'soal-card';
+            card.id = `bs-${soal.nomor}`;
+            card.innerHTML = `
+                <div class="soal-nomor">BS ${soal.nomor}</div>
+                <div class="soal-teks">${soal.teks}</div>
+                <div class="options">
+                    <label class="option"><input type="radio" name="bs${soal.nomor}" value="B"> Benar (B)</label>
+                    <label class="option"><input type="radio" name="bs${soal.nomor}" value="S"> Salah (S)</label>
+                </div>
+                <div class="feedback" id="feedback-bs-${soal.nomor}"></div>
+            `;
+            container.appendChild(card);
+        });
+
+        // Isian Singkat
+        const isianTitle = document.createElement('div');
+        isianTitle.className = 'section-title';
+        isianTitle.innerText = '✍️ Isian Singkat (36-40)';
+        container.appendChild(isianTitle);
+        soalIsian.forEach((soal) => {
+            const card = document.createElement('div');
+            card.className = 'soal-card';
+            card.id = `isian-${soal.nomor}`;
+            card.innerHTML = `
+                <div class="soal-nomor">Isian ${soal.nomor}</div>
+                <div class="soal-teks">${soal.teks}</div>
+                <div><input type="text" id="input-isian-${soal.nomor}" placeholder="Tulis jawabanmu ..." style="width:100%; max-width:450px;"></div>
+                <div class="feedback" id="feedback-isian-${soal.nomor}"></div>
+            `;
+            container.appendChild(card);
+        });
     }
 
-    // Jika perlu tambahan hiasan atau efek little
-    document.addEventListener('DOMContentLoaded', () => {
-        generateCards();
+    // Fungsi cek jawaban dan beri skor
+    function periksaJawaban() {
+        let totalSoal = soalPG.length + soalBS.length + soalIsian.length;
+        let benarCount = 0;
 
-        // Menambahkan tooltip manis sederhana secara elegan (opsional)
-        let cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', (e) => {
-                // just for subtle decorative - no extra weight
-            });
+        // Cek PG
+        soalPG.forEach(soal => {
+            const selected = document.querySelector(`input[name="pg${soal.nomor}"]:checked`);
+            const userAnswer = selected ? selected.value : null;
+            const feedbackDiv = document.getElementById(`feedback-pg-${soal.nomor}`);
+            const isCorrect = (userAnswer === soal.jawaban);
+            if (isCorrect && userAnswer !== null) {
+                benarCount++;
+                feedbackDiv.innerHTML = `✅ Jawaban Benar (${soal.jawaban})`;
+                feedbackDiv.className = "feedback correct-feedback";
+            } else if (userAnswer === null) {
+                feedbackDiv.innerHTML = `❌ Belum dijawab. Kunci: ${soal.jawaban}`;
+                feedbackDiv.className = "feedback wrong-feedback";
+            } else {
+                feedbackDiv.innerHTML = `❌ Salah. Jawaban benar: ${soal.jawaban}`;
+                feedbackDiv.className = "feedback wrong-feedback";
+            }
         });
+
+        // Cek Benar/Salah
+        soalBS.forEach(soal => {
+            const selected = document.querySelector(`input[name="bs${soal.nomor}"]:checked`);
+            const userAnswer = selected ? selected.value : null;
+            const feedbackDiv = document.getElementById(`feedback-bs-${soal.nomor}`);
+            const isCorrect = (userAnswer === soal.jawaban);
+            if (isCorrect && userAnswer !== null) {
+                benarCount++;
+                feedbackDiv.innerHTML = `✅ Benar (Kunci ${soal.jawaban})`;
+                feedbackDiv.className = "feedback correct-feedback";
+            } else if (!userAnswer) {
+                feedbackDiv.innerHTML = `❌ Belum dijawab. Jawaban: ${soal.jawaban}`;
+                feedbackDiv.className = "feedback wrong-feedback";
+            } else {
+                feedbackDiv.innerHTML = `❌ Salah. Kunci: ${soal.jawaban}`;
+                feedbackDiv.className = "feedback wrong-feedback";
+            }
+        });
+
+        // Cek Isian (soft match)
+        soalIsian.forEach(soal => {
+            const inputElem = document.getElementById(`input-isian-${soal.nominal}`);
+            if (!inputElem) {
+                // fallback
+                const alternativeId = document.getElementById(`input-isian-${soal.nomor}`);
+                var userText = alternativeId ? alternativeId.value.trim().toLowerCase() : "";
+            } else {
+                var userText = "";
+            }
+            const realInput = document.getElementById(`input-isian-${soal.nomor}`);
+            let jawabanUser = realInput ? realInput.value.trim().toLowerCase() : "";
+            // bersihkan spasi dan tanda baca
+            jawabanUser = jawabanUser.replace(/[.,%]/g, '').replace(/\s+/g, ' ').trim();
+            let cocok = false;
+            const kunciUtama = soal.jawaban.toString().toLowerCase();
+            const alternatifList = soal.alternatif.map(a => a.toString().toLowerCase().replace(/[.,%]/g, '').replace(/\s+/g, ' '));
+            if (jawabanUser === kunciUtama || alternatifList.some(alt => jawabanUser === alt || jawabanUser.includes(alt) && alt.length > 2)) {
+                cocok = true;
+            }
+            // tambahan untuk soal 36 multi kata
+            if (soal.nomor === 36 && (jawabanUser.includes("filtrasi") && jawabanUser.includes("reabsorpsi") && jawabanUser.includes("augmentasi"))) cocok = true;
+            if (cocok) {
+                benarCount++;
+                document.getElementById(`feedback-isian-${soal.nomor}`).innerHTML = `✅ Benar (${soal.jawaban})`;
+                document.getElementById(`feedback-isian-${soal.nomor}`).className = "feedback correct-feedback";
+            } else {
+                document.getElementById(`feedback-isian-${soal.nomor}`).innerHTML = `❌ Salah. Jawaban: ${soal.jawaban}`;
+                document.getElementById(`feedback-isian-${soal.nomor}`).className = "feedback wrong-feedback";
+            }
+        });
+
+        const scoreDiv = document.getElementById('hasil-score');
+        scoreDiv.style.display = 'block';
+        scoreDiv.innerHTML = `📊 Skor Anda: ${benarCount} dari ${totalSoal} (${Math.round((benarCount/totalSoal)*100)}%)<br> 💡 Klik reset jika ingin mencoba lagi.`;
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function resetSemuaJawaban() {
+        // reset semua radio button
+        document.querySelectorAll('input[type="radio"]').forEach(radio => radio.checked = false);
+        document.querySelectorAll('input[type="text"]').forEach(input => input.value = '');
+        // kosongkan semua feedback
+        document.querySelectorAll('.feedback').forEach(fb => {
+            fb.innerHTML = '';
+            fb.className = 'feedback';
+        });
+        const scoreDiv = document.getElementById('hasil-score');
+        scoreDiv.style.display = 'none';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Perbaiki typo di isian 36-40 access
+    window.addEventListener('DOMContentLoaded', () => {
+        renderSoal();
+        document.getElementById('cek-skor').addEventListener('click', periksaJawaban);
+        document.getElementById('reset-jawaban').addEventListener('click', resetSemuaJawaban);
     });
 </script>
 </body>
