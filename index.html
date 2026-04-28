@@ -3,402 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Materi Lengkap Qurdis MTs + Terjemah & No. Hadis</title>
+    <title>20 Sifat Wajib Allah | Akidah Akhlak MTs Kelas 7 Kumer</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Noto+Nastaliq+Urdu&family=Noto+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            font-family: 'Segoe UI', 'Poppins', system-ui, sans-serif;
-            background: #f0f9f5;
-            color: #1a3029;
-            line-height: 1.65;
-            padding: 22px 18px;
+            background: linear-gradient(145deg, #fef9e6 0%, #fff6e8 100%);
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            color: #1e2a2e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
         }
+
+        /* Dekorasi islami halus */
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><path d="M20,20 L30,10 L40,20 L30,30 Z M70,70 L80,60 L90,70 L80,80 Z M50,45 L60,35 L70,45 L60,55 Z" fill="%238B5A2B"/><circle cx="85" cy="15" r="4" fill="%238B5A2B"/><circle cx="15" cy="85" r="5" fill="%238B5A2B"/></svg>');
+            background-repeat: repeat;
+            background-size: 42px;
+        }
+
         .container {
             max-width: 1300px;
             margin: 0 auto;
-            background: white;
-            border-radius: 44px;
-            box-shadow: 0 25px 45px rgba(0,0,0,0.07);
-            overflow: hidden;
+            padding: 2rem 1.5rem 3rem;
+            position: relative;
+            z-index: 2;
         }
-        header {
-            background: linear-gradient(120deg, #0f583f, #1d8267);
-            color: white;
-            padding: 28px 35px;
+
+        /* Header / Intro */
+        .hero {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding: 1.5rem 0.5rem;
+            background: rgba(255, 248, 235, 0.75);
+            backdrop-filter: blur(3px);
+            border-radius: 56px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+            border: 1px solid rgba(196, 151, 86, 0.2);
         }
-        header h1 {
-            font-size: 1.9rem;
-            margin-bottom: 6px;
-        }
-        header p {
-            opacity: 0.9;
-            font-size: 0.95rem;
-        }
-        .chip {
-            background: #f9c74f;
-            color: #2d4a3b;
-            display: inline-block;
-            border-radius: 60px;
-            padding: 5px 18px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-top: 12px;
-        }
-        .tab-bar {
-            display: flex;
-            gap: 5px;
-            background: #e6f3ee;
-            padding: 12px 28px 0 28px;
+
+        .hero h1 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #b7791f, #7c4e1a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
             flex-wrap: wrap;
+            justify-content: center;
         }
-        .tab-btn {
+
+        .hero h1 i {
+            background: none;
+            color: #b87a2c;
+            font-size: 2rem;
+            background-clip: unset;
+            -webkit-background-clip: unset;
+            color: #b7791f;
+        }
+
+        .badge-book {
+            display: inline-block;
+            background: #f3e1be;
+            color: #7a4c1a;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            margin-top: 12px;
+            letter-spacing: 0.3px;
+            backdrop-filter: blur(2px);
+        }
+
+        .description {
+            max-width: 720px;
+            margin: 1rem auto 0;
+            color: #4a3b28;
+            font-size: 1rem;
+            font-weight: 500;
+            background: #fffcf5;
+            padding: 0.75rem 1.5rem;
+            border-radius: 60px;
+            display: inline-block;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .ayat {
+            font-family: 'Noto Sans Arabic', 'Noto Nastaliq Urdu', serif;
+            font-size: 1.25rem;
+            color: #a5712c;
+            margin-top: 12px;
+            background: #fff2e1;
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 40px;
+        }
+
+        /* Grid Card */
+        .grid-sifat {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            gap: 1.6rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            background: #ffffffdd;
+            backdrop-filter: blur(2px);
+            background: linear-gradient(145deg, #ffffff, #fffbf4);
+            border-radius: 32px;
+            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.3s;
+            border: 1px solid rgba(210, 170, 100, 0.3);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 22px 32px -12px rgba(110, 60, 20, 0.15);
+            border-color: #e6c99c;
+        }
+
+        .card-header {
+            padding: 1.2rem 1.5rem 0.6rem;
+            border-bottom: 2px solid #f5e5cf;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            background: #fffaf2;
+        }
+
+        .no-sifat {
+            background: #dbb87920;
+            color: #ca9622;
+            font-weight: 800;
+            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 50px;
+            letter-spacing: 0.5px;
+        }
+
+        .arabic-name {
+            font-family: 'Noto Sans Arabic', 'Noto Nastaliq Urdu', 'Traditional Arabic', serif;
+            font-size: 1.65rem;
+            font-weight: 500;
+            text-align: right;
+            color: #7c541e;
+            line-height: 1.3;
+            word-break: break-word;
+        }
+
+        .card-body {
+            padding: 1.2rem 1.5rem 1.5rem;
+            flex: 1;
+        }
+
+        .latin-sifat {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2c3a2b;
+            margin-bottom: 0.45rem;
+            letter-spacing: -0.2px;
+            display: inline-block;
+            border-left: 4px solid #e4b363;
+            padding-left: 12px;
+        }
+
+        .arti-sifat {
+            font-weight: 600;
+            color: #b4651a;
+            margin: 0.6rem 0 0.7rem 0;
+            font-size: 1rem;
+            background: #fff2e2;
+            display: inline-block;
+            padding: 0.2rem 0.9rem;
+            border-radius: 24px;
+        }
+
+        .explanation {
+            font-size: 0.9rem;
+            color: #3e3a33;
+            margin-top: 0.7rem;
+            line-height: 1.5;
+            border-top: 1px dashed #f0dfc7;
+            padding-top: 0.8rem;
+        }
+
+        .explanation i {
+            color: #ba8434;
+            font-size: 0.75rem;
+            margin-right: 4px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.8rem 0.5rem 1rem;
+            border-top: 1px solid rgba(151, 105, 38, 0.2);
+            font-size: 0.85rem;
+            color: #836e48;
+            background: #fffaf2aa;
+            border-radius: 60px 60px 0 0;
+        }
+
+        .footer-ref {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.2rem 1rem 2rem;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .latin-sifat {
+                font-size: 1.1rem;
+            }
+            .arabic-name {
+                font-size: 1.4rem;
+            }
+            .card-header {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        .btn-extra {
             background: transparent;
             border: none;
-            font-weight: 700;
-            padding: 10px 22px;
-            border-radius: 40px 40px 0 0;
-            font-size: 0.95rem;
-            cursor: pointer;
-            color: #2b6e58;
-            transition: 0.2s;
-        }
-        .tab-btn.active {
-            background: white;
-            color: #167561;
-            border-bottom: 3px solid #1e8b70;
-        }
-        .pane {
-            display: none;
-            padding: 30px 38px;
-            animation: fade 0.2s ease;
-        }
-        .pane.active-pane {
-            display: block;
-        }
-        @keyframes fade {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .bab-card {
-            background: #ffffff;
-            border-radius: 28px;
-            margin-bottom: 28px;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.02);
-            border: 1px solid #dceee7;
-            overflow: hidden;
-        }
-        .bab-header {
-            background: #fafefa;
-            padding: 16px 26px;
-            border-left: 8px solid #2a9d8f;
-            font-weight: 800;
-            font-size: 1.35rem;
-            color: #1a6a58;
-            display: flex;
-            justify-content: space-between;
-            cursor: pointer;
-        }
-        .bab-body {
-            padding: 18px 32px;
-            border-top: 1px solid #e2f0ec;
-        }
-        .bab-body.collapse {
-            display: none;
-        }
-        .arab {
-            font-family: 'Amiri', 'Traditional Arabic', 'Times New Roman', serif;
-            font-size: 1.7rem;
-            direction: rtl;
-            background: #fcf8e8;
-            padding: 10px 20px;
-            border-radius: 32px;
-            margin: 12px 0;
-            text-align: right;
-        }
-        .grid-2 {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin: 15px 0;
-        }
-        .info-box {
-            background: #f3f9ff;
-            border-radius: 28px;
-            padding: 16px;
-            flex: 1;
-            border: 1px solid #e0f0ea;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 14px 0;
-        }
-        th, td {
-            border: 1px solid #cfe2db;
-            padding: 10px 12px;
-            vertical-align: top;
-        }
-        th {
-            background: #e3f2ed;
-        }
-        .badge-hadis {
-            background: #d4f0e8;
-            border-radius: 50px;
-            padding: 3px 12px;
-            display: inline-block;
+            color: #bb823d;
             font-size: 0.7rem;
-            font-weight: 700;
-            margin-right: 10px;
+            cursor: default;
         }
-        footer {
-            background: #eefbf6;
-            padding: 20px;
-            text-align: center;
-            font-size: 0.75rem;
-            color: #2a6b58;
+
+        hr {
+            background: #ddc7a4;
+            height: 1px;
+            border: none;
+            margin: 0.7rem 0;
         }
-        @media (max-width: 700px) {
-            .pane {
-                padding: 16px;
-            }
-            .arab {
-                font-size: 1.3rem;
-            }
+
+        .highlight {
+            background: linear-gradient(120deg, #f9efde, #fff3e6);
+            border-radius: 28px;
         }
     </style>
 </head>
 <body>
+<div class="bg-pattern"></div>
 <div class="container">
-    <header>
-        <h1>📗 Qurdis MTs (Kelas 7-9) | Kurikulum Merdeka</h1>
-        <p>Ayat & Hadis + Terjemah + Nomor Riwayat Shahih | Berdasarkan Kisi-kisi UM QH 9-26</p>
-        <span class="chip">🎯 Dilengkapi Tafsir Ringkas & Referensi</span>
-    </header>
-
-    <div class="tab-bar">
-        <button class="tab-btn active" data-tab="tab-ayat">📖 Ayat & Kandungan</button>
-        <button class="tab-btn" data-tab="tab-hadis">📜 Hadis Sahih + No. Riw.</button>
-        <button class="tab-btn" data-tab="tab-lengkap">🔍 Tajwid & Gharib</button>
+    <div class="hero">
+        <h1>
+            <i class="fas fa-star-of-life"></i> 
+            Sifat Wajib Allah
+            <i class="fas fa-dove"></i>
+        </h1>
+        <div class="badge-book">
+            <i class="fas fa-book-open"></i> Buku Akidah Akhlak MTs Kelas 7 | Kurikulum Merdeka (Kumer)
+        </div>
+        <div class="description">
+            <i class="fas fa-hand-sparkles"></i> 20 Sifat yang pasti ada pada Allah SWT.  
+            Landasan keimanan Ahlussunnah wal Jama'ah.
+        </div>
+        <div class="ayat">
+            ﴿ لَيْسَ كَمِثْلِهِ شَيْءٌ ۖ وَهُوَ السَّمِيعُ الْبَصِيرُ ﴾
+        </div>
+        <div style="font-size: 0.8rem; margin-top: 6px;">QS. Asy-Syura:11 (Sifat Mukhalafatu lil hawaditsi)</div>
     </div>
 
-    <!-- ================= TAB 1 AYAT LENGKAP ================= -->
-    <div id="tab-ayat" class="pane active-pane">
-        <!-- QS Ali Imran 190 -->
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">🌌 1. QS. Ali Imran (3) : 190 – Kekuasaan & Rahmat Allah <span>▼</span></div>
-            <div class="bab-body">
-                <div class="arab">إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ وَاخْتِلَافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِأُولِي الْأَلْبَابِ</div>
-                <p><strong>Latin:</strong> <em>Inna fī khalqis-samāwāti wal-arḍi wakhtilāfil-layli wan-nahāri la'āyātil li'ulil-albāb.</em></p>
-                <p><strong>Terjemah Kemenag:</strong> “Sesungguhnya dalam penciptaan langit dan bumi, dan silih bergantinya malam dan siang terdapat tanda-tanda (kebesaran Allah) bagi orang yang berakal.”[reference:0]</p>
-                <p><strong>Tafsir Ringkas:</strong> Ayat ini mendorong kita merenungkan ciptaan Allah (langit, bumi, siang, malam). Hanya <strong>ulul albab</strong> (orang berakal yang selalu mengingat Allah) yang bisa memahami kebesaran-Nya.[reference:1]</p>
-            </div>
-        </div>
-
-        <!-- QS Al-Fajr 17-18 -->
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">🤲 2. QS. Al-Fajr (89) : 17-18 – Optimis & Sabar dalam Infak <span>▼</span></div>
-            <div class="bab-body">
-                <div class="arab">كَلَّا ۖ بَل لَّا تُكْرِمُونَ الْيَتِيمَ (١٧) وَلَا تَحَاضُّونَ عَلَىٰ طَعَامِ الْمِسْكِينِ (١٨)</div>
-                <p><strong>Latin:</strong> <em>Kallā, bal lā tukrimụnal-yatīm (17), wa lā taḥāḍḍụna 'alā ṭa'āmil-miskīn (18)</em></p>
-                <p><strong>Terjemah:</strong> “Sekali-kali tidak! Sebenarnya kamu tidak memuliakan anak yatim, dan kamu tidak saling mengajak memberi makan orang miskin.”[reference:2]</p>
-                <p><strong>Analisis:</strong> Allah mengkritik orang yang menganggap dirinya mulia hanya karena harta, tapi lalai menyantuni anak yatim dan fakir miskin. Optimis dalam kebaikan adalah dengan peduli sosial.[reference:3]</p>
-            </div>
-        </div>
-
-        <!-- QS Al-A'la 17 -->
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">⭐ 3. QS. Al-A’la (87) : 17 – Kehidupan Dunia & Akhirat <span>▼</span></div>
-            <div class="bab-body">
-                <div class="arab">وَالْآخِرَةُ خَيْرٌ وَأَبْقَىٰ</div>
-                <p><strong>Latin:</strong> <em>Wal-ākhiratu khairuw wa abqā</em></p>
-                <p><strong>Terjemah:</strong> “Padahal kehidupan akhirat itu lebih baik dan lebih kekal.”[reference:4]</p>
-                <p><strong>Pesan:</strong> Dunia sementara, akhirat abadi. Orang beriman tidak terlena dunia, tetap mempersiapkan bekal akhirat dengan amal saleh serta menguatkan sikap optimis dan sabar.</p>
-            </div>
-        </div>
-
-        <!-- QS Al-Muthaffifin (Asbabun Nuzul) -->
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">⚖️ 4. QS. Al-Muthaffifin (83) : 1-3 – Kecurangan Timbangan <span>▼</span></div>
-            <div class="bab-body">
-                <p><span class="badge-hadis">📌 Asbabun Nuzul</span> Ayat ini turun karena penduduk Madinah waktu itu memiliki kebiasaan curang dalam takaran dan timbangan saat berdagang.[reference:5] Diriwayatkan dari Ibnu Abbas: ketika Nabi ﷺ tiba di Madinah, mereka termasuk orang paling curang dalam menakar. Maka Allah menurunkan teguran keras.</p>
-                <p><strong>Kandungan:</strong> Surah ini memperingatkan bahwa kecurangan dalam muamalah adalah dosa besar dan pelakunya diancam neraka "Wail" (lembah di neraka).[reference:6]</p>
-                <p><strong>Hubungan dunia & akhirat:</strong> Kehidupan dunia jangan dijadikan alasan untuk curang, karena kelak akan dimintai pertanggungjawaban.</p>
-            </div>
-        </div>
-
-        <!-- QS Al-An'am 152 -->
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">🤝 5. QS. Al-An’am (6) : 152 – Jujur dalam Muamalah & Adil <span>▼</span></div>
-            <div class="bab-body">
-                <div class="arab">وَلَا تَقْرَبُوا مَالَ الْيَتِيمِ إِلَّا بِالَّتِي هِيَ أَحْسَنُ حَتَّىٰ يَبْلُغَ أَشُدَّهُ ۖ وَأَوْفُوا الْكَيْلَ وَالْمِيزَانَ بِالْقِسْطِ ۖ لَا نُكَلِّفُ نَفْسًا إِلَّا وُسْعَهَا</div>
-                <p><strong>Terjemah:</strong> “Dan janganlah kamu mendekati harta anak yatim, kecuali dengan cara yang lebih bermanfaat, sampai ia mencapai (usia) dewasa. Dan sempurnakanlah takaran dan timbangan dengan adil. Kami tidak membebani seseorang melainkan menurut kesanggupannya.”[reference:7]</p>
-                <p>✔ Kandungan: larangan memakan harta anak yatim secara zalim, perintah berlaku adil dalam takaran dan timbangan, serta menekankan kejujuran dalam bisnis.</p>
-                <p><strong>Kata kunci:</strong> <span class="arab">فَاعْدِلُوا</span> (berlaku adillah) dan <span class="arab">طُمَأْنِينَة</span> (ketenangan hati).</p>
-            </div>
-        </div>
-
-        <!-- QS Abasa 1-10 (Asbabun nuzul) -->
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">📚 6. QS. ‘Abasa (80) : 1-10 – Semangat Menuntut Ilmu <span>▼</span></div>
-            <div class="bab-body">
-                <p><strong>Asbabun Nuzul:</strong> Suatu ketika Rasulullah ﷺ sedang berbicara dengan pembesar Quraisy (harapan mereka masuk Islam). Tiba-tiba datang seorang sahabat tunanetra, Abdullah bin Ummi Maktum, ingin belajar agama. Nabi ﷺ bermuka masam sedikit karena sibuk. Maka turunlah teguran lembut dari Allah dalam surat 'Abasa.<strong>[reference:8][reference:9]</strong></p>
-                <p><strong>Pesan utama:</strong> Tidak boleh membeda-bedakan orang yang ingin menuntut ilmu. Semua manusia berhak mendapatkan ilmu agama. Sahabat Abdullah bin Ummi Maktum menjadi bukti mulianya orang yang ikhlas mencari ilmu.</p>
-            </div>
-        </div>
-
-        <!-- QS Al-Mujadalah 11 -->
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">🏆 7. QS. Al-Mujadalah (58) : 11 – Derajat Orang Berilmu <span>▼</span></div>
-            <div class="bab-body">
-                <div class="arab">يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ ۚ وَاللَّهُ بِمَا تَعْمَلُونَ خَبِيرٌ</div>
-                <p><strong>Latin:</strong> <em>Yarfa’illāhul-ladzina āmanū minkum wal-ladzina ūtul-‘ilma darajāt, wallāhu bimā ta’malūna khabīr.</em></p>
-                <p><strong>Terjemah:</strong> “Allah akan mengangkat (derajat) orang-orang yang beriman di antaramu dan orang-orang yang diberi ilmu pengetahuan beberapa derajat.”<strong>[reference:10]</strong></p>
-                <p><strong>Keutamaan:</strong> Ayat ini menegaskan bahwa iman dan ilmu itu seimbang. Orang yang berilmu memiliki kedudukan istimewa, dimudahkan memahami agama, serta dihormati.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ================= TAB 2 HADIS LENGKAP + NOMOR ================= -->
-    <div id="tab-hadis" class="pane">
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">🤲 1. Pemurah & Menjauhi Kikir (Tangan di Atas) <span>▼</span></div>
-            <div class="bab-body">
-                <p><strong>Hadis Riwayat Bukhari & Muslim:</strong> “<em>Tangan di atas lebih baik daripada tangan di bawah. Tangan di atas adalah yang bersedekah, sedangkan tangan di bawah adalah yang meminta.</em>”</p>
-                <p>📖 HR. Bukhari (No. 1427, No. 1429) dan HR. Muslim (No. 1033 / 1034).<strong>[reference:11][reference:12]</strong></p>
-                <p><strong>Sikap yang sesuai:</strong> Gemar bersedekah, meyakini harta tidak akan berkurang karena sedekah, menghindari sifat kikir.</p>
-            </div>
-        </div>
-
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">💎 2. Sedekah Tidak Mengurangi Harta <span>▼</span></div>
-            <div class="bab-body">
-                <p>Rasulullah ﷺ bersabda: “<em>Sedekah itu tidak akan mengurangi harta. Tidak ada orang yang memberi maaf kepada orang lain melainkan Allah akan menambah kemuliaannya.</em>”</p>
-                <p>📖 HR. Muslim (No. 2588 / 4689)<strong>[reference:13]</strong>. Juga dalam Riyadhus Shalihin No. 559.<strong>[reference:14]</strong></p>
-                <p><strong>Kandungan:</strong> Infak di jalan Allah justru membuat harta berkah dan semakin bertambah di sisi Allah.</p>
-            </div>
-        </div>
-
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">🌟 3. Optimis & Sabar (Hadis Muslim) <span>▼</span></div>
-            <div class="bab-body">
-                <p>Rasulullah ﷺ bersabda: “<em>Sungguh menakjubkan urusan orang mukmin, semua keadaannya baik. Jika mendapat kesenangan ia bersyukur, itu baik baginya. Jika tertimpa kesusahan ia bersabar, itu pun baik baginya.</em>”</p>
-                <p>📖 HR. Muslim (No. 2999). <strong>Hadis about mukmin amazing affair.</strong></p>
-                <p><strong>Analisis fenomena:</strong> Dalam ujian hidup (musibah, kegagalan), sikap optimis dan sabar adalah kunci kebahagiaan dunia akhirat.</p>
-            </div>
-        </div>
-
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">🤝 4. Peduli Masyarakat (Mukmin yang Bergaul) <span>▼</span></div>
-            <div class="bab-body">
-                <p>“<em>Orang mukmin yang bergaul dengan manusia dan sabar terhadap gangguan mereka, lebih baik daripada orang mukmin yang tidak bergaul dan tidak sabar terhadap gangguan mereka.</em>”</p>
-                <p>📖 Riwayat At-Tirmidzi (No. 2507), Ibnu Majah (No. 4032), dan Ahmad (5/365).<strong>[reference:15]</strong></p>
-                <p><strong>Fenomena sosial:</strong> menjaga lingkungan, kerja bakti, toleransi, serta menghadapi perbedaan dengan kesabaran.</p>
-            </div>
-        </div>
-
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">🏪 5. Pedagang Jujur bersama Para Nabi <span>▼</span></div>
-            <div class="bab-body">
-                <p>“<em>Pedagang yang jujur dan terpercaya akan dibangkitkan bersama para nabi, orang-orang shiddiq dan para syuhada.</em>”</p>
-                <p>📖 HR. Tirmidzi (No. 1209, dishahihkan Albani).<strong>[reference:16]</strong></p>
-                <p><strong>Makna:</strong> Kejujuran dalam jual beli, tidak curang, tidak mengurangi takaran, serta amanah membawa derajat tinggi di sisi Allah.</p>
-            </div>
-        </div>
-
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">📖 6. Wajib Menuntut Ilmu (HR. Ibnu Majah) <span>▼</span></div>
-            <div class="bab-body">
-                <p>Nabi ﷺ bersabda: “<em>Menuntut ilmu adalah kewajiban bagi setiap individu muslim.</em>”</p>
-                <p>📖 HR. Ibnu Majah (No. 224, dishahihkan Syaikh Albani).<strong>[reference:17]</strong> Hadits ini juga diriwayatkan dari Anas bin Malik.<strong>[reference:18]</strong></p>
-                <p>Keutamaan: Ilmu mengangkat derajat, menjadi bekal takwa, dan mendekatkan diri kepada Allah.</p>
-            </div>
-        </div>
-
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">🚪 7. Jalan Mudah ke Surga (HR. Muslim & Tirmidzi) <span>▼</span></div>
-            <div class="bab-body">
-                <p>Rasulullah ﷺ bersabda: “<em>Barangsiapa menempuh jalan untuk mencari ilmu, Allah akan memudahkan baginya jalan menuju surga.</em>”</p>
-                <p>📖 HR. Muslim (No. 2699) & HR. Tirmidzi (No. 2646).<strong>[reference:19]</strong></p>
-                <p><strong>Kesimpulan:</strong> Aktivitas menuntut ilmu, hadir di majelis ilmu, serta mengajarkannya merupakan investasi akhirat.</p>
-            </div>
-        </div>
-
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">💬 8. Kejujuran Membawa Kebaikan (Bukhari-Muslim) <span>▼</span></div>
-            <div class="bab-body">
-                <p>“<em>Hendaklah kalian selalu jujur, karena kejujuran membawa kepada kebaikan, dan kebaikan mengantarkan ke surga. Jauhilah kebohongan, karena dusta membawa kepada kejahatan, dan kejahatan mengantarkan ke neraka.</em>”</p>
-                <p>📖 HR. Bukhari (No. 6094) dan HR. Muslim (No. 2606).<strong>[reference:20]</strong></p>
-                <p><strong>Indikator orang jujur:</strong> Berkata benar, amanah, menepati janji, tidak curang dalam timbangan.</p>
-            </div>
-        </div>
-
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">🌏 9. Akhirat Kekal (Perumpamaan Dunia) <span>▼</span></div>
-            <div class="bab-body">
-                <p>Rasulullah ﷺ bersabda: “<em>Demi Allah, dunia dibandingkan akhirat tidak lain adalah seperti seseorang yang mencelupkan jarinya ke lautan, maka lihatlah apa yang didapat pada jarinya setelah ditarik.</em>”</p>
-                <p>📖 HR. Ibnu Majah (No. 4098 dan 4105) serta riwayat Ahmad.<strong>[reference:21]</strong></p>
-                <p><strong>Sikap seimbang:</strong> Jangan terlena dunia, tetapi jangan juga meninggalkan dunia. Jadikan akhirat sebagai tujuan utama.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ================= TAB 3 (TAJWID & GHARIB) Ringkasan ================= -->
-    <div id="tab-lengkap" class="pane">
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">🔊 Mad Lazim & Contoh <span>▼</span></div>
-            <div class="bab-body">
-                <ul>
-                    <li><strong>Mad Lazim Mutsaqqal Kilmi:</strong> 6 harakat + tasydid → الضَّالِّينَ, <span class="arab">ٱلطَّآمَّةُ</span> (QS An-Nazi'at:34).</li>
-                    <li><strong>Mad Lazim Mukhaffaf Kilmi:</strong> 6 harakat tanpa tasydid → Contoh langka ءَالْـَٔانَ.</li>
-                    <li><strong>Mad Lazim Harfi:</strong> Huruf muqatha’ah seperti الٓمٓ → nama bacaannya mad lazim harfi mukhaffaf.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="bab-card">
-            <div class="bab-header" onclick="toggleBody(this)">🕋 Gharib (Isymam, Naql, Imalah) <span>▼</span></div>
-            <div class="bab-body">
-                <p><strong>Isymam:</strong> Membulatkan bibir seperti dhammah dengan suara kasrah. Contoh: <strong>QS. Hud:41</strong> مَجْر۪ىٰهَا.</p>
-                <p><strong>Naql (bahasa: memindahkan):</strong> Memindahkan harakat hamzah ke huruf sebelumnya. Terdapat dalam riwayat tertentu pada surat Hud 41.</p>
-                <p><strong>Imalah:</strong> Membaca alif cenderung ke suara ‘e’ (antara a dan i).</p>
-                <p><strong>Kata Mutsaqqal secara bahasa:</strong> “Diberatkan”. Mad lazim mutsaqqal kilmi berarti mad yang memberatkan karena diikuti tasydid dalam satu kata.</p>
-            </div>
+    <div id="sifatGrid" class="grid-sifat">
+        <!-- Konten akan di-generate dengan JavaScript -->
+        <div class="card" style="justify-content: center; align-items: center; background: #faf5ea;">
+            <i class="fas fa-spinner fa-pulse" style="font-size: 2rem; color:#b77c2a; margin: 2rem;"></i>
+            <p style="padding: 1rem;">Memuat 20 Sifat Wajib Allah...</p>
         </div>
     </div>
 
     <footer>
-        ✅ Sumber: Al-Qur’an Kemenag RI, Tafsir Ringkas, Shahih Bukhari Muslim, Sunan Tirmidzi, Sunan Ibnu Majah.
-        📚 Materi Qurdis MTs Kelas 7-9 - Kisi-kisi UM QH 9-26 (Mad, Gharib, Ayat & Hadis lengkap)
+        <i class="fas fa-mosque"></i> Berdasarkan kitab klasik & Buku Siswa Akidah Akhlak MTs Kelas 7 (KMA 183) Kurikulum Merdeka
+        <div class="footer-ref">
+            <span><i class="fas fa-check-circle"></i> Sifat Nafsiyah · Salbiyah · Ma'ani · Ma'nawiyah</span>
+            <span><i class="fas fa-gem"></i> Dalil Aqli & Naqli</span>
+        </div>
+        <div style="margin-top: 12px;">© untuk pembelajaran | Santri & Pelajar | 20 Sifat Wajib</div>
     </footer>
 </div>
 
 <script>
-    function toggleBody(header) {
-        const body = header.parentElement.querySelector('.bab-body');
-        if(body) {
-            body.classList.toggle('collapse');
-            const arrowSpan = header.querySelector('span:last-child');
-            if(arrowSpan) arrowSpan.innerHTML = body.classList.contains('collapse') ? '▶' : '▼';
+    // Data 20 Sifat Wajib Allah sesuai urutan Ahlussunnah
+    // Referensi Buku Akidah Akhlak MTs Kelas 7 Kumer
+    const sifatList = [
+        { no: 1, arab: "الوُجُود", latin: "Wujud", arti: "Ada", penjelasan: "Allah Ta'ala wujud (ada) bukan karena diciptakan, mustahil tidak ada. Bukti adanya alam semesta menunjukkan keberadaan-Nya." },
+        { no: 2, arab: "القِدَم", latin: "Qidam", arti: "Terdahulu / Tiada awal", penjelasan: "Allah Maha Terdahulu tanpa permulaan. Mustahil Allah baru (huduts). Dialah yang awal sebelum segala sesuatu." },
+        { no: 3, arab: "البَقَاء", latin: "Baqa'", arti: "Kekal", penjelasan: "Allah kekal abadi tanpa akhir. Mustahil binasa/fana. Keabadian-Nya sempurna dan mutlak." },
+        { no: 4, arab: "مُخَالَفَتُهُ لِلْحَوَادِثِ", latin: "Mukhalafatu lil hawaditsi", arti: "Berbeda dengan makhluk", penjelasan: "Allah tidak serupa dengan makhluk-Nya dalam zat, sifat, maupun perbuatan. Tidak ada sesuatu pun yang menyamai-Nya." },
+        { no: 5, arab: "قِيَامُهُ بِنَفْسِهِ", latin: "Qiyamuhu binafsihi", arti: "Berdiri sendiri", penjelasan: "Allah tidak bergantung pada apapun dan siapapun. Mustahil butuh pada yang lain. Dia Maha Kaya." },
+        { no: 6, arab: "الوَحْدَانِيَّة", latin: "Wahdaniyah", arti: "Esa / Tunggal", penjelasan: "Allah Maha Esa dalam zat, sifat, dan perbuatan. Tidak ada sekutu bagi-Nya." },
+        { no: 7, arab: "القُدْرَة", latin: "Qudrat", arti: "Maha Kuasa", penjelasan: "Allah berkuasa atas segala sesuatu. Mustahil lemah ('ajz). Kuasa-Nya tanpa batas." },
+        { no: 8, arab: "الإِرَادَة", latin: "Iradat", arti: "Maha Berkehendak", penjelasan: "Allah menentukan dan menghendaki segala yang terjadi di alam semesta sesuai kehendak mutlak-Nya." },
+        { no: 9, arab: "العِلْمُ", latin: "Ilmu", arti: "Maha Mengetahui", penjelasan: "Allah mengetahui segala sesuatu yang telah, sedang, dan akan terjadi. Ilmu-Nya tidak terbatas." },
+        { no: 10, arab: "الحَيَاة", latin: "Hayat", arti: "Maha Hidup", penjelasan: "Allah Maha Hidup dengan kehidupan sempurna, kekal, tanpa kematian. Mustahil mati." },
+        { no: 11, arab: "السَّمْع", latin: "Sama'", arti: "Maha Mendengar", penjelasan: "Allah mendengar semua suara dan getaran, tanpa alat, meliputi segala yang terdengar." },
+        { no: 12, arab: "البَصَر", latin: "Basar", arti: "Maha Melihat", penjelasan: "Allah melihat segala sesuatu, yang tampak maupun yang tersembunyi, tanpa alat bantu." },
+        { no: 13, arab: "الكَلاَم", latin: "Kalam", arti: "Maha Berbicara", penjelasan: "Allah berfirman dengan Kalam azali (tidak berupa huruf dan suara seperti makhluk), antara lain Al-Qur'an adalah kalamullah." },
+        { no: 14, arab: "كَوْنُهُ قَادِرًا", latin: "Kaunuhu Qaadiran", arti: "Allah Yang Maha Kuasa", penjelasan: "Sifat qudrat-Nya merupakan kesempurnaan dzat; Allah senantiasa bersifat Kuasa sejak azali." },
+        { no: 15, arab: "كَوْنُهُ مُرِيدًا", latin: "Kaunuhu Muridan", arti: "Allah Maha Berkehendak", penjelasan: "Kehendak-Nya mutlak atas segala yang ada. Tidak ada yang terjadi di luar iradat-Nya." },
+        { no: 16, arab: "كَوْنُهُ عَلِيمًا", latin: "Kaunuhu 'Aliman", arti: "Allah Maha Mengetahui", penjelasan: "Ilmu Allah meliputi yang lahir dan batin, yang ghaib dan yang nyata. Mustahil jahil (bodoh)." },
+        { no: 17, arab: "كَوْنُهُ حَيًّا", latin: "Kaunuhu Hayyan", arti: "Allah Maha Hidup", penjelasan: "Kehidupan Allah sempurna, tidak pernah tidur dan tidak mati. Dialah Al-Hayy." },
+        { no: 18, arab: "كَوْنُهُ سَمِيعًا", latin: "Kaunuhu Sami'an", arti: "Allah Maha Mendengar", penjelasan: "Pendengaran Allah meliputi suara apapun tanpa batas ruang dan waktu." },
+        { no: 19, arab: "كَوْنُهُ بَصِيرًا", latin: "Kaunuhu Bashiran", arti: "Allah Maha Melihat", penjelasan: "Allah melihat segala sesuatu, sekecil apapun, tanpa ada yang tersembunyi." },
+        { no: 20, arab: "كَوْنُهُ مُتَكَلِّمًا", latin: "Kaunuhu Mutakalliman", arti: "Allah Maha Berfirman", penjelasan: "Allah berbicara dengan firman azali. Kitab-kitab suci adalah firman Allah, sebagai bentuk perkataan-Nya." }
+    ];
+
+    function generateCards() {
+        const gridContainer = document.getElementById('sifatGrid');
+        if (!gridContainer) return;
+
+        let cardsHTML = '';
+        for (let s of sifatList) {
+            cardsHTML += `
+                <div class="card">
+                    <div class="card-header">
+                        <span class="no-sifat"><i class="fas fa-certificate"></i> Sifat ke-${s.no}</span>
+                        <div class="arabic-name">${s.arab}</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="latin-sifat">${s.latin}</div>
+                        <div class="arti-sifat"><i class="fas fa-gem"></i> ${s.arti}</div>
+                        <div class="explanation">
+                            <i class="fas fa-feather-alt"></i> ${s.penjelasan}
+                        </div>
+                        <hr />
+                        <div style="font-size: 0.7rem; color: #ad8c5a;"><i class="fas fa-dharmachakra"></i> Landasan: Al-Qur'an & Ijma' Ulama</div>
+                    </div>
+                </div>
+            `;
         }
+        gridContainer.innerHTML = cardsHTML;
     }
-    const tabs = document.querySelectorAll('.tab-btn');
-    const panes = document.querySelectorAll('.pane');
-    tabs.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const target = btn.getAttribute('data-tab');
-            panes.forEach(p => p.classList.remove('active-pane'));
-            document.getElementById(target).classList.add('active-pane');
-            tabs.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+
+    // Jika perlu tambahan hiasan atau efek little
+    document.addEventListener('DOMContentLoaded', () => {
+        generateCards();
+
+        // Menambahkan tooltip manis sederhana secara elegan (opsional)
+        let cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', (e) => {
+                // just for subtle decorative - no extra weight
+            });
         });
-    });
-    // biar semua body tidak collapsed di awal
-    document.querySelectorAll('.bab-body').forEach(b => b.classList.remove('collapse'));
-    document.querySelectorAll('.bab-header span:last-child').forEach(span => {
-        if(span) span.innerHTML = '▼';
     });
 </script>
 </body>
