@@ -379,4 +379,1090 @@ img{max-width:100%}
 }
 .review-status{font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:999px;letter-spacing:.4px}
 .review-status.c{background:var(--mint);color:var(--emerald-dark)}
-.
+.review-status.w{background:var(--red-light);color:#b91c1c}
+.review-status.e{background:#fffbeb;color:#b45309}
+.review-q{font-size:.88rem;font-weight:600;color:var(--gray-800);margin-bottom:10px}
+.review-answer{font-size:.8rem;margin-bottom:4px;color:var(--gray-600)}
+.review-answer b{color:var(--gray-800)}
+.review-answer.correct-ans b{color:var(--emerald-dark)}
+.review-answer.wrong-ans b{color:var(--red)}
+.review-exp{
+  background:var(--green-light);border-radius:8px;padding:10px 14px;
+  font-size:.8rem;color:var(--green-dark);margin-top:8px;
+}
+.review-exp b{font-weight:700}
+
+/* ============ MODAL ============ */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(2,44,34,.6);backdrop-filter:blur(4px);
+  z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;
+}
+.modal-overlay.active{display:flex;animation:fadeIn .25s ease}
+.modal{
+  background:var(--white);border-radius:20px;max-width:440px;width:100%;
+  padding:30px;box-shadow:var(--shadow-lg);text-align:center;animation:popIn .3s cubic-bezier(.34,1.56,.64,1);
+}
+.modal-icon{
+  width:64px;height:64px;border-radius:50%;margin:0 auto 16px;
+  background:var(--green-light);display:grid;place-items:center;font-size:30px;
+}
+.modal h3{font-size:1.1rem;font-weight:700;color:var(--green-dark);margin-bottom:8px}
+.modal p{font-size:.85rem;color:var(--gray-500);margin-bottom:22px;line-height:1.6}
+.modal-actions{display:flex;gap:10px}
+.modal-actions .btn{flex:1;padding:11px}
+.modal-summary{background:var(--green-light);border-radius:10px;padding:12px;margin-bottom:18px;font-size:.8rem;color:var(--green-dark);display:flex;justify-content:space-around}
+.modal-summary b{font-size:1.05rem;display:block}
+
+/* ============ EMPTY / MISC ============ */
+.empty-state{
+  background:var(--white);border:1px dashed var(--gray-200);border-radius:var(--radius);
+  padding:60px 24px;text-align:center;max-width:560px;margin:0 auto;
+}
+.empty-state .em-icon{font-size:44px;margin-bottom:14px}
+.empty-state h3{font-size:1.05rem;font-weight:700;color:var(--green-dark);margin-bottom:6px}
+.empty-state p{font-size:.85rem;color:var(--gray-500);margin-bottom:20px}
+
+/* ============ FOOTER ============ */
+footer{
+  background:var(--green-deep);color:#d1fae5;padding:40px 0 24px;margin-top:20px;
+}
+.footer-inner{display:flex;align-items:flex-start;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:24px}
+.footer-brand{max-width:340px}
+.footer-brand .brand-text strong{color:#fff}
+.footer-brand p{font-size:.8rem;color:#a7f3d0;margin-top:10px;line-height:1.7}
+.footer-links h5{font-size:.78rem;font-weight:700;color:#6ee7b7;margin-bottom:10px;letter-spacing:.5px}
+.footer-links ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.footer-links a{font-size:.78rem;color:#d1fae5;transition:var(--transition)}
+.footer-links a:hover{color:#6ee7b7}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;text-align:center;font-size:.72rem;color:#6ee7b7}
+
+/* ============ ANIMATIONS ============ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes popIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:980px){
+  .hero .container{grid-template-columns:1fr;gap:36px}
+  .hero-stats{grid-template-columns:repeat(3,1fr)}
+  .stat-card.wide{grid-column:auto}
+  .exam-layout{grid-template-columns:1fr}
+  .exam-side{position:static;order:-1}
+  .nav-grid{grid-template-columns:repeat(10,1fr)}
+}
+@media(max-width:800px){
+  .paket-grid{grid-template-columns:1fr}
+  .nav-links{
+    position:fixed;top:72px;left:0;right:0;background:var(--white);
+    flex-direction:column;align-items:stretch;padding:14px 20px 20px;gap:4px;
+    border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow);
+    transform:translateY(-140%);transition:transform .3s ease;z-index:999;
+  }
+  .nav-links.open{transform:translateY(0)}
+  .nav-links a{padding:12px 16px;text-align:left}
+  .menu-toggle{display:block}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .stat-card.wide{grid-column:1/-1}
+}
+@media(max-width:600px){
+  .section{padding:50px 0}
+  .hero{padding:50px 0 60px}
+  .hero h1{font-size:1.8rem}
+  .hero-actions .btn{flex:1;justify-content:center}
+  .materi-header{padding:16px 16px;gap:12px}
+  .materi-icon{width:44px;height:44px;font-size:21px;border-radius:12px}
+  .materi-body{padding:0 16px 20px}
+  .question-card{padding:20px 16px}
+  .exam-topbar{padding:14px 16px}
+  .exam-progress-wrap{max-width:100%;order:3;flex-basis:100%}
+  .nav-grid{grid-template-columns:repeat(5,1fr)}
+  .result-hero{padding:30px 18px}
+  .result-stats{grid-template-columns:repeat(3,1fr);gap:8px}
+  .res-stat .n{font-size:1.15rem}
+  .review-item{padding:16px}
+  .footer-inner{flex-direction:column;gap:24px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="container">
+    <a href="#" class="brand" onclick="showSection('beranda');return false;">
+      <div class="brand-icon">📖</div>
+      <div class="brand-text">
+        <strong>FIKIH X</strong>
+        <span>Learning Platform</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" data-nav="beranda" class="active" onclick="showSection('beranda');return false;">Beranda</a></li>
+      <li><a href="#" data-nav="materi" onclick="showSection('materi');return false;">Materi</a></li>
+      <li><a href="#" data-nav="latihan" onclick="showSection('latihan');return false;">Latihan Soal</a></li>
+      <li><a href="#" data-nav="evaluasi" onclick="showSection('evaluasi');return false;">Evaluasi</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- ================= BERANDA ================= -->
+<section id="section-beranda" class="page-section">
+  <div class="hero">
+    <div class="container">
+      <div>
+        <div class="hero-badge"><span class="dot"></span> Kelas X Madrasah Aliyah · Semester Ganjil</div>
+        <h1>Belajar <span class="accent">Fikih</span> Lebih Terstruktur &amp; Siap Ujian</h1>
+        <p>Platform belajar interaktif yang membahas lima bab utama Fikih kelas X: Taharah, Salat dalam Berbagai Keadaan, Puasa, Zakat, serta Haji dan Umrah — lengkap dengan latihan soal dan pembahasan.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="showSection('materi')">📚 Mulai Belajar</button>
+          <button class="btn btn-outline" onclick="showSection('latihan')">✏️ Kerjakan Latihan</button>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card"><div class="num">5</div><div class="lbl">Bab Materi</div></div>
+        <div class="stat-card"><div class="num">3</div><div class="lbl">Paket Ujian</div></div>
+        <div class="stat-card"><div class="num">75</div><div class="lbl">Soal Pilihan Ganda</div></div>
+        <div class="stat-card"><div class="num">25</div><div class="lbl">Soal per Paket</div></div>
+        <div class="stat-card wide"><div class="num">0–100</div><div class="lbl">Penilaian Otomatis + Pembahasan</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Mengapa Platform Ini?</span>
+        <h2>Dirancang untuk Persiapan Ujian Semester</h2>
+        <p>Materi sistematis, latihan bertingkat, dan evaluasi mandiri dalam satu tempat.</p>
+      </div>
+      <div class="paket-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="paket-card" style="cursor:default">
+          <div class="paket-num" style="background:linear-gradient(135deg,#059669,#065f46)">📘</div>
+          <h3>Materi Lengkap</h3>
+          <p class="desc">Setiap bab dilengkapi pengertian, dalil, rukun, syarat, macam-macam, tata cara, dan hikmah.</p>
+        </div>
+        <div class="paket-card" style="cursor:default">
+          <div class="paket-num" style="background:linear-gradient(135deg,#0d9488,#115e59)">🎯</div>
+          <h3>Latihan Bertingkat</h3>
+          <p class="desc">Tiga paket soal: pemahaman dasar, pendalaman materi, dan simulasi ujian tingkat tinggi.</p>
+        </div>
+        <div class="paket-card" style="cursor:default">
+          <div class="paket-num" style="background:linear-gradient(135deg,#10b981,#047857)">📊</div>
+          <h3>Evaluasi Mandiri</h3>
+          <p class="desc">Penilaian otomatis skala 0–100, rincian benar/salah/kosong, dan pembahasan setiap soal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MATERI ================= -->
+<section id="section-materi" class="page-section" style="display:none">
+  <div class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Materi Pembelajaran</span>
+        <h2>Lima Bab Fikih Kelas X</h2>
+        <p>Klik setiap bab untuk membuka subbab materi. Pelajari secara berurutan agar pemahaman lebih utuh.</p>
+      </div>
+      <div class="materi-grid" id="materiContainer"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LATIHAN ================= -->
+<section id="section-latihan" class="page-section" style="display:none">
+  <div class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Latihan Soal</span>
+        <h2>Pilih Paket Ujian</h2>
+        <p>Setiap paket berisi 25 soal pilihan ganda, mencakup lima bab secara proporsional (5 soal per bab).</p>
+      </div>
+
+      <!-- Package selection -->
+      <div id="paketSelection" class="paket-grid">
+        <div class="paket-card">
+          <div class="paket-num">1</div>
+          <h3>Paket 1 — Pemahaman Dasar</h3>
+          <p class="desc">Menguji penguasaan konsep-konsep dasar pada lima bab Fikih kelas X.</p>
+          <div class="paket-info"><span>25 soal</span><span>5 bab</span><span>Dasar</span></div>
+          <button class="btn btn-green" onclick="startExam('p1')">Mulai Paket 1 →</button>
+        </div>
+        <div class="paket-card">
+          <div class="paket-num">2</div>
+          <h3>Paket 2 — Pendalaman Materi</h3>
+          <p class="desc">Menguji pemahaman yang lebih mendalam tentang ketentuan dan istilah fikih.</p>
+          <div class="paket-info"><span>25 soal</span><span>5 bab</span><span>Menengah</span></div>
+          <button class="btn btn-green" onclick="startExam('p2')">Mulai Paket 2 →</button>
+        </div>
+        <div class="paket-card">
+          <div class="paket-num">3</div>
+          <h3>Paket 3 — Simulasi Ujian</h3>
+          <p class="desc">Tingkat kesulitan lebih tinggi dengan analisis kasus dan penerapan ketentuan fikih.</p>
+          <div class="paket-info"><span>25 soal</span><span>5 bab</span><span>Tinggi</span></div>
+          <button class="btn btn-green" onclick="startExam('p3')">Mulai Paket 3 →</button>
+        </div>
+      </div>
+
+      <!-- Exam panel -->
+      <div id="examPanel" class="exam-wrap">
+        <div class="exam-topbar">
+          <div class="exam-title">
+            <div class="icon">📝</div>
+            <div>
+              <h3 id="examTitle">Paket 1 — Pemahaman Dasar</h3>
+              <p id="examSubtitle">25 soal · Pilihan ganda · Nilai 0–100</p>
+            </div>
+          </div>
+          <div class="exam-progress-wrap">
+            <div class="progress-label"><span>Progress pengerjaan</span><b id="progressText">0 / 25</b></div>
+            <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+          </div>
+          <button class="btn btn-ghost btn-sm" onclick="backToPackages()">← Kembali</button>
+        </div>
+
+        <div class="exam-layout">
+          <div class="question-card">
+            <div class="question-head">
+              <div class="q-badge"><span class="num" id="qNumber">1</span> Soal</div>
+              <div class="q-chapter" id="qChapter">Bab 1 · Taharah</div>
+            </div>
+            <div class="question-text" id="questionText"></div>
+            <div class="options" id="optionsContainer"></div>
+            <div class="question-nav">
+              <div class="nav-buttons">
+                <button class="btn-nav" id="prevBtn" onclick="prevQuestion()">← Sebelumnya</button>
+                <button class="btn-nav" id="nextBtn" onclick="nextQuestion()">Selanjutnya →</button>
+              </div>
+              <span style="font-size:.74rem;color:var(--gray-500)" id="autoSaveInfo">Jawaban tersimpan otomatis</span>
+            </div>
+          </div>
+
+          <div class="exam-side">
+            <h4>🗂️ Navigasi Soal</h4>
+            <div class="nav-grid" id="navGrid"></div>
+            <div class="legend">
+              <span><i class="l-current"></i> Soal aktif</span>
+              <span><i class="l-answered"></i> Sudah dijawab</span>
+              <span><i class="l-empty"></i> Belum dijawab</span>
+            </div>
+            <div class="side-summary">
+              <div><span>Terjawab</span><b id="summaryAnswered">0</b></div>
+              <div><span>Belum dijawab</span><b id="summaryUnanswered">25</b></div>
+            </div>
+            <button class="btn-submit" onclick="openSubmitModal()">✅ SUBMIT JAWABAN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EVALUASI ================= -->
+<section id="section-evaluasi" class="page-section" style="display:none">
+  <div class="section">
+    <div class="container">
+      <div id="evaluasiEmpty" class="empty-state">
+        <div class="em-icon">📊</div>
+        <h3>Belum Ada Hasil Evaluasi</h3>
+        <p>Kerjakan salah satu paket latihan soal terlebih dahulu. Setelah dikumpulkan, hasil dan pembahasan akan tampil di sini.</p>
+        <button class="btn btn-green" onclick="showSection('latihan')">Kerjakan Latihan Soal →</button>
+      </div>
+
+      <div id="resultPanel" class="result-wrap">
+        <div class="result-hero">
+          <div class="inner">
+            <h3>Hasil Evaluasi</h3>
+            <p id="resultPackageName">Paket 1 — Pemahaman Dasar</p>
+            <div class="score-ring" id="scoreRing">
+              <div>
+                <div class="score-val" id="scoreValue">0</div>
+                <div class="score-lbl">Nilai</div>
+              </div>
+            </div>
+            <div class="result-stats">
+              <div class="res-stat correct"><div class="n" id="statCorrect">0</div><div class="l">Benar</div></div>
+              <div class="res-stat wrong"><div class="n" id="statWrong">0</div><div class="l">Salah</div></div>
+              <div class="res-stat empty"><div class="n" id="statEmpty">0</div><div class="l">Kosong</div></div>
+            </div>
+            <div class="result-actions">
+              <button class="btn btn-primary" id="retryBtn">🔄 Ulangi Ujian</button>
+              <button class="btn btn-outline" onclick="showSection('latihan')">📝 Pilih Paket Lain</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-head">
+          <h3>📖 Pembahasan Setiap Soal</h3>
+          <span class="pill" id="reviewCount">25 soal</span>
+        </div>
+        <div class="review-list" id="reviewList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="brand">
+          <div class="brand-icon">📖</div>
+          <div class="brand-text"><strong>FIKIH X</strong><span>Learning Platform</span></div>
+        </div>
+        <p>Platform belajar interaktif Fikih kelas X Madrasah Aliyah. Materi lima bab, 75 soal latihan, dan evaluasi mandiri untuk persiapan ujian semester.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Navigasi</h5>
+        <ul>
+          <li><a href="#" onclick="showSection('beranda');return false;">Beranda</a></li>
+          <li><a href="#" onclick="showSection('materi');return false;">Materi</a></li>
+          <li><a href="#" onclick="showSection('latihan');return false;">Latihan Soal</a></li>
+          <li><a href="#" onclick="showSection('evaluasi');return false;">Evaluasi</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Bab Materi</h5>
+        <ul>
+          <li><a href="#" onclick="showSection('materi');return false;">Taharah</a></li>
+          <li><a href="#" onclick="showSection('materi');return false;">Salat dalam Berbagai Keadaan</a></li>
+          <li><a href="#" onclick="showSection('materi');return false;">Puasa</a></li>
+          <li><a href="#" onclick="showSection('materi');return false;">Zakat</a></li>
+          <li><a href="#" onclick="showSection('materi');return false;">Haji dan Umrah</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 FIKIH X — Learning Platform · Media pembelajaran Fikih Kelas X MA</div>
+  </div>
+</footer>
+
+<!-- ================= MODAL KONFIRMASI ================= -->
+<div class="modal-overlay" id="submitModal">
+  <div class="modal">
+    <div class="modal-icon">📤</div>
+    <h3>Kumpulkan Jawaban?</h3>
+    <p>Pastikan seluruh jawaban sudah diperiksa. Setelah dikumpulkan, nilai dan pembahasan akan langsung ditampilkan.</p>
+    <div class="modal-summary">
+      <div><b id="modalAnswered">0</b>Terjawab</div>
+      <div><b id="modalUnanswered">25</b>Belum dijawab</div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeSubmitModal()">Batal</button>
+      <button class="btn btn-green" onclick="confirmSubmit()">Ya, Kumpulkan</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   DATA MATERI
+   ========================================================= */
+const materiData = [
+  {
+    id:"taharah", nomor:"Bab 1", title:"Taharah", icon:"💧",
+    desc:"Hadas, najis, jenis air, wudu, dan tayamum",
+    sections:[
+      {
+        title:"Pengertian dan Dasar Hukum Taharah",
+        html:`<p><strong>Taharah</strong> secara bahasa berarti suci dan bersih. Secara istilah fikih, taharah adalah mensucikan diri dari <strong>najis</strong> dan <strong>hadas</strong> yang menghalangi salat serta ibadah sejenisnya, dengan menggunakan air, debu, atau batu/benda padat suci lainnya.[reference:0]</p>
+        <p>Taharah mencakup badan, pakaian, dan tempat. Hukumnya wajib bagi orang yang akan melaksanakan salat.</p>
+        <div class="dalil"><div class="arabic">يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قُمْتُمْ إِلَى الصَّلَاةِ فَاغْسِلُوا وُجُوهَكُمْ وَأَيْدِيَكُمْ إِلَى الْمَرَافِقِ وَامْسَحُوا بِرُءُوسِكُمْ وَأَرْجُلَكُمْ إِلَى الْكَعْبَيْنِ</div><div class="terjemah">“Hai orang-orang yang beriman, apabila kamu hendak mengerjakan salat, maka basuhlah mukamu dan tanganmu sampai siku, dan usaplah kepalamu serta (basuhlah) kakimu sampai kedua mata kaki.”</div><span class="sumber">QS. Al-Maidah/5: 6</span></div>
+        <div class="dalil"><div class="terjemah">“Kunci salat itu adalah bersuci.”</div><span class="sumber">HR. Tirmidzi, Ibnu Majah, Ahmad, dari Ali bin Abi Thalib r.a.</span></div>`
+      },
+      {
+        title:"Hadas dan Najis: Pengertian dan Perbedaan",
+        html:`<p><strong>Hadas</strong> adalah keadaan pada diri seseorang yang menghalanginya untuk salat, sehingga ia harus bersuci dengan wudu, mandi, atau tayamum. Hadas terbagi dua:</p>
+        <ul><li><strong>Hadas kecil</strong>: seperti buang angin, buang air kecil/besar, hilang akal. Cara bersucinya dengan wudu atau tayamum.</li>
+        <li><strong>Hadas besar</strong>: seperti junub (keluar mani/hubungan suami istri), haid, dan nifas. Cara bersucinya dengan mandi wajib atau tayamum jika tidak memungkinkan.</li></ul>
+        <p><strong>Najis</strong> adalah benda kotor yang harus dihilangkan dari badan, pakaian, dan tempat. Contohnya tinja, kencing, darah, nanah, bangkai (kecuali ikan dan belalang), daging babi, liur anjing, mazi, dan wadi.</p>
+        <p><strong>Perbedaan pokok:</strong> hadas berkaitan dengan <em>keadaan tubuh</em>, sedangkan najis berkaitan dengan <em>benda kotor</em> yang menempel.</p>`
+      },
+      {
+        title:"Macam-Macam Najis dan Cara Menyucikannya",
+        html:`<ul><li><strong>Najis mughallazah (berat)</strong>: najis anjing dan babi. Cara menyucikannya: mencuci tujuh kali, salah satunya dicampur tanah/debu yang suci.</li>
+        <li><strong>Najis mutawassitah (sedang)</strong>: najis selain mughallazah dan mukhaffafah, seperti kencing, tinja, darah, nanah, dan bangkai. Cara menyucikannya: menghilangkan wujud najis lalu membasuh dengan air hingga bersih. Jika najisnya tidak berwujud (hukmiyah), cukup dibasuh dengan air.</li>
+        <li><strong>Najis mukhaffafah (ringan)</strong>: kencing bayi laki-laki yang belum makan makanan selain ASI. Cara menyucikannya cukup dengan memercikkan/menyiramkan air hingga merata.[reference:1][reference:2]</li></ul>
+        <p>Najis juga dibedakan menjadi <strong>‘ainiyah</strong> (berwujud: warna, rasa, bau) dan <strong>hukmiyah</strong> (tidak berwujud tetapi hukumnya najis).</p>`
+      },
+      {
+        title:"Jenis-Jenis Air untuk Bersuci",
+        html:`<p>Tidak semua air boleh digunakan untuk bersuci. Pembagian air dalam fikih:</p>
+        <ul><li><strong>Air mutlak</strong>: air yang suci dan mensucikan. Contoh: air hujan, air laut, air sungai, air mata air, air sumur, air salju, air embun, dan air zamzam.[reference:3]</li>
+        <li><strong>Air mustakmal</strong>: air bekas digunakan untuk wudu atau mandi. Menurut jumhur ulama, air ini suci tetapi tidak mensucikan (tidak sah untuk wudu/mandi wajib).[reference:4]</li>
+        <li><strong>Air mutanajjis</strong>: air yang terkena najis. Jika jumlahnya kurang dari dua kulah, langsung dihukumi najis. Jika dua kulah atau lebih, dihukumi najis apabila berubah warna, rasa, atau baunya; jika tidak berubah, tetap suci dan mensucikan.[reference:5][reference:6]</li>
+        <li><strong>Air suci tetapi tidak mensucikan</strong>: seperti air kelapa, air teh, air kopi, air gula, dan air susu. Boleh diminum tetapi tidak sah untuk bersuci.</li></ul>
+        <p><strong>Dua kulah</strong> kira-kira berukuran 500 liter Iraq (± 216 liter menurut sebagian ulama).</p>`
+      },
+      {
+        title:"Wudu: Syarat, Rukun, Sunnah, dan Pembatal",
+        html:`<p><strong>Wudu</strong> adalah bersuci untuk menghilangkan hadas kecil.[reference:7]</p>
+        <p><strong>Syarat wudu:</strong> Islam, tamyiz (berakal), tidak ada penghalang air ke kulit (seperti cat), tidak sedang haid/nifas, dan mengetahui cara wudu.</p>
+        <p><strong>Rukun wudu</strong> (wajib):</p>
+        <ol><li>Niat (di dalam hati bersamaan dengan membasuh wajah).</li>
+        <li>Membasuh seluruh wajah.</li>
+        <li>Membasuh kedua tangan sampai siku.</li>
+        <li>Mengusap sebagian kepala.</li>
+        <li>Membasuh kedua kaki sampai kedua mata kaki.</li>
+        <li>Tertib (berurutan sesuai urutan di atas).</li></ol>
+        <p><strong>Sunnah wudu</strong>: membaca basmalah, mencuci kedua telapak tangan, berkumur, istinsyaq (menghirup air ke hidung), mengusap seluruh kepala, mengusap kedua telinga, menyela jari-jari, mendahulukan kanan, dan berdoa setelah wudu.</p>
+        <p><strong>Hal yang membatalkan wudu</strong>: keluarnya sesuatu dari qubul/dubur (kencing, tinja, angin, mazi, wadi), hilang akal (tidur nyenyak, mabuk, gila), menyentuh kemaluan tanpa penghalang menurut mazhab Syafi’i, dan bersentuhan kulit laki-laki dan perempuan yang bukan mahram menurut sebagian ulama.</p>`
+      },
+      {
+        title:"Tayamum: Ketentuan dan Tata Cara",
+        html:`<p><strong>Tayamum</strong> adalah bersuci menggunakan debu/tanah yang suci sebagai pengganti wudu atau mandi wajib.[reference:8][reference:9]</p>
+        <p><strong>Sebab dibolehkan tayamum:</strong> tidak ada air, sakit yang membahayakan jika terkena air, perjalanan (safar), dan air hanya cukup untuk kebutuhan mendesak.</p>
+        <p><strong>Syarat tayamum:</strong> telah masuk waktu salat, tidak ada air atau ada halangan memakai air, menggunakan debu/tanah yang suci, dan telah berusaha mencari air.</p>
+        <p><strong>Rukun tayamum:</strong></p>
+        <ol><li>Niat.</li>
+        <li>Mengusap wajah dengan debu.</li>
+        <li>Mengusap kedua tangan sampai siku dengan debu.</li>
+        <li>Tertib.</li></ol>
+        <p><strong>Tata cara:</strong> niat, menepukkan kedua telapak tangan ke debu, mengusap wajah, lalu menepukkan lagi dan mengusap tangan kanan hingga siku, kemudian tangan kiri hingga siku.</p>
+        <p><strong>Hal yang membatalkan tayamum:</strong> semua yang membatalkan wudu, dan menemukan air sebelum salat (jika tayamum karena ketiadaan air).</p>`
+      },
+      {
+        title:"Hikmah Taharah",
+        html:`<ul><li>Menjaga kebersihan dan kesehatan jasmani.</li><li>Melatih kedisiplinan dan kesucian lahir-batin.</li><li>Menumbuhkan kesadaran bahwa ibadah memerlukan persiapan yang suci.</li><li>Meningkatkan kualitas salat dan kedekatan kepada Allah Swt.</li></ul>`
+      }
+    ]
+  },
+  {
+    id:"salat", nomor:"Bab 2", title:"Salat dalam Berbagai Keadaan", icon:"🕌",
+    desc:"Salat jamak, qasar, salat ketika sakit, dan di atas kendaraan",
+    sections:[
+      {
+        title:"Salat Jamak: Pengertian dan Macamnya",
+        html:`<p><strong>Salat jamak</strong> adalah menggabungkan dua salat fardhu dan mengerjakannya dalam satu waktu.[reference:10]</p>
+        <ul><li><strong>Jamak taqdim</strong>: mengerjakan dua salat pada waktu salat yang pertama. Contoh: Zuhur dan Asar dikerjakan pada waktu Zuhur.</li>
+        <li><strong>Jamak takhir</strong>: mengerjakan dua salat pada waktu salat yang kedua. Contoh: Zuhur dan Asar dikerjakan pada waktu Asar.</li></ul>
+        <p>Salat yang boleh dijamak: Zuhur dengan Asar, dan Magrib dengan Isya. Subuh tidak boleh dijamak.</p>
+        <p><strong>Sebab dibolehkan jamak:</strong> safar (perjalanan jauh), sakit, hujan lebat yang menyulitkan, ketakutan, dan kondisi darurat lainnya.[reference:11]</p>
+        <p><strong>Syarat jamak taqdim:</strong> niat jamak di awal salat pertama, tertib (salat pertama lalu kedua), dan masih dalam waktu salat pertama saat memulai salat kedua.</p>`
+      },
+      {
+        title:"Salat Qasar: Pengertian dan Syarat",
+        html:`<p><strong>Qasar</strong> adalah meringkas salat fardhu yang empat rakaat menjadi dua rakaat. Salat yang boleh diqasar: Zuhur, Asar, dan Isya. Magrib dan Subuh tidak boleh diqasar.</p>
+        <p><strong>Syarat qasar:</strong></p>
+        <ul><li>Muslim, baligh, dan berakal.</li><li>Sedang safar (perjalanan) yang mencapai dua marhalah, yaitu sekitar 81–93 km menurut mayoritas ulama.[reference:12][reference:13]</li><li>Perjalanan bukan untuk maksiat.</li><li>Tidak berniat menetap lebih dari empat hari di tempat tujuan.</li><li>Niat qasar saat takbiratul ihram.</li><li>Bukan menjadi makmum kepada orang yang mukim.</li></ul>
+        <p><strong>Jamak qasar</strong> adalah menggabungkan dua salat sekaligus meringkasnya, misalnya Zuhur dan Asar dikerjakan pada waktu Zuhur masing-masing dua rakaat.</p>`
+      },
+      {
+        title:"Salat ketika Sakit",
+        html:`<p>Orang sakit tetap wajib salat sesuai kemampuannya. Dalilnya:</p>
+        <div class="dalil"><div class="terjemah">“Salatlah sambil berdiri, jika kamu tidak mampu maka sambil duduk, dan jika tidak mampu maka dengan berbaring miring.”</div><span class="sumber">HR. Bukhari</span></div>
+        <p><strong>Urutan pelaksanaan salat orang sakit:</strong></p>
+        <ol><li>Jika mampu berdiri, salat sambil berdiri.</li>
+        <li>Jika tidak mampu berdiri, salat sambil duduk (boleh bersila atau di kursi).</li>
+        <li>Jika tidak mampu duduk, salat sambil berbaring miring menghadap kiblat.</li>
+        <li>Jika tidak mampu berbaring miring, salat sambil telentang dengan kaki menghadap kiblat.</li>
+        <li>Jika tidak mampu semua, salat dengan isyarat (misalnya isyarat mata atau hati).[reference:14][reference:15]</li></ol>
+        <p>Rukuk dan sujud dilakukan dengan isyarat; sujud hendaknya lebih rendah daripada rukuk.</p>`
+      },
+      {
+        title:"Salat di atas Kendaraan",
+        html:`<p><strong>Salat sunnah</strong> di atas kendaraan boleh dilakukan sambil duduk dan menghadap ke arah kendaraan, meskipun tidak menghadap kiblat.</p>
+        <p><strong>Salat fardhu</strong> di atas kendaraan pada dasarnya wajib menghadap kiblat dan berdiri jika mampu. Namun jika kondisi darurat (misalnya kendaraan tidak bisa berhenti, sakit, atau takut), boleh salat sesuai kemampuan.[reference:16][reference:17]</p>
+        <p>Jika tidak mampu menghadap kiblat, salat tetap sah dan tidak perlu diulang. Rukuk dan sujud dilakukan dengan isyarat menundukkan kepala.</p>`
+      },
+      {
+        title:"Hikmah Salat dalam Berbagai Keadaan",
+        html:`<ul><li>Menunjukkan bahwa Islam tidak memberatkan hamba-Nya.</li><li>Melatih rasa syukur atas kemudahan (rukhsah) dari Allah.</li><li>Menjaga kewajiban salat dalam kondisi apa pun.</li><li>Menumbuhkan kedisiplinan dan tanggung jawab ibadah.</li></ul>`
+      }
+    ]
+  },
+  {
+    id:"puasa", nomor:"Bab 3", title:"Puasa", icon:"🌙",
+    desc:"Rukun dan syarat, macam-macam, pembatal, dan awal puasa",
+    sections:[
+      {
+        title:"Pengertian dan Dasar Hukum Puasa",
+        html:`<p><strong>Puasa</strong> secara istilah adalah menahan diri dari makan, minum, dan segala hal yang membatalkan puasa mulai dari terbit fajar (subuh) hingga terbenam matahari (magrib), disertai niat.[reference:18]</p>
+        <div class="dalil"><div class="arabic">يَا أَيُّهَا الَّذِينَ آمَنُوا كُتِبَ عَلَيْكُمُ الصِّيَامُ كَمَا كُتِبَ عَلَى الَّذِينَ مِنْ قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ</div><div class="terjemah">“Hai orang-orang yang beriman, diwajibkan atas kamu berpuasa sebagaimana diwajibkan atas orang-orang sebelum kamu agar kamu bertakwa.”</div><span class="sumber">QS. Al-Baqarah/2: 183</span></div>`
+      },
+      {
+        title:"Syarat Wajib dan Rukun Puasa",
+        html:`<p><strong>Syarat wajib puasa:</strong> Islam, baligh, berakal, mampu berpuasa, mukim (tidak sedang safar), dan suci dari haid serta nifas.</p>
+        <p><strong>Rukun puasa</strong> ada dua:</p>
+        <ol><li><strong>Niat</strong>: untuk puasa wajib dilakukan sebelum terbit fajar; untuk puasa sunnah boleh dilakukan pada siang hari sebelum zuhur.</li>
+        <li><strong>Menahan diri dari hal-hal yang membatalkan</strong> mulai terbit fajar hingga terbenam matahari.[reference:19][reference:20]</li></ol>`
+      },
+      {
+        title:"Macam-Macam Puasa",
+        html:`<p><strong>Puasa wajib:</strong></p>
+        <ul><li>Puasa Ramadan.</li><li>Puasa nazar (puasa yang dijanjikan).</li><li>Puasa kafarat (denda karena melanggar sumpah, zhihar, pembunuhan tidak sengaja, atau jimak di siang Ramadan).</li></ul>
+        <p><strong>Puasa sunnah</strong>, antara lain: Senin dan Kamis, Arafah (9 Zulhijah), Asyura (10 Muharram), Tasu’a (9 Muharram), Syaban, dan puasa Dawud (sehari puasa sehari tidak).</p>
+        <p><strong>Puasa yang diharamkan:</strong> puasa pada hari Idul Fitri, Idul Adha, dan hari-hari Tasyrik (11, 12, 13 Zulhijah).</p>`
+      },
+      {
+        title:"Hal-Hal yang Membatalkan Puasa",
+        html:`<ul><li>Makan dan minum dengan sengaja.</li><li>Berhubungan suami istri (jimak) pada siang Ramadan.</li><li>Mengeluarkan mani dengan sengaja (misalnya onani).</li><li>Muntah dengan sengaja.</li><li>Haid dan nifas.</li><li>Murtad (keluar dari Islam).[reference:21][reference:22]</li></ul>
+        <p><strong>Catatan:</strong> makan/minum karena lupa tidak membatalkan puasa; ia wajib melanjutkan puasanya. Bekam, donor darah, dan suntikan yang tidak mengandung makanan menurut sebagian ulama tidak membatalkan.</p>`
+      },
+      {
+        title:"Penentuan Awal Puasa Ramadan",
+        html:`<p>Awal Ramadan ditentukan melalui dua metode:</p>
+        <ul><li><strong>Rukyat</strong>: melihat hilal (bulan sabit) pada akhir Syaban.</li><li><strong>Hisab</strong>: perhitungan astronomi untuk menentukan posisi hilal.</li></ul>
+        <p>Jika hilal tidak terlihat, bulan Syaban digenapkan menjadi 30 hari. Perbedaan metode rukyat dan hisab disikapi dengan toleransi dan mengikuti keputusan pemerintah yang berwenang agar tercipta kemaslahatan.</p>`
+      },
+      {
+        title:"Hikmah Puasa",
+        html:`<ul><li>Melatih kesabaran dan pengendalian diri.</li><li>Menumbuhkan rasa empati kepada orang miskin.</li><li>Menjaga kesehatan jasmani dan rohani.</li><li>Meningkatkan ketakwaan dan kedekatan kepada Allah Swt.</li></ul>`
+      }
+    ]
+  },
+  {
+    id:"zakat", nomor:"Bab 4", title:"Zakat", icon:"💰",
+    desc:"Rukun dan syarat, zakat fitrah, zakat mal, mustahik, dan lembaga zakat",
+    sections:[
+      {
+        title:"Pengertian dan Dasar Hukum Zakat",
+        html:`<p><strong>Zakat</strong> secara istilah adalah kadar harta tertentu yang wajib dikeluarkan oleh seorang muslim dan diberikan kepada golongan yang berhak menerimanya (mustahik) sesuai syariat.[reference:23]</p>
+        <div class="dalil"><div class="arabic">إِنَّمَا الصَّدَقَاتُ لِلْفُقَرَاءِ وَالْمَسَاكِينِ وَالْعَامِلِينَ عَلَيْهَا وَالْمُؤَلَّفَةِ قُلُوبُهُمْ وَفِي الرِّقَابِ وَالْغَارِمِينَ وَفِي سَبِيلِ اللَّهِ وَابْنِ السَّبِيلِ</div><div class="terjemah">“Sesungguhnya zakat itu hanyalah untuk orang-orang fakir, orang miskin, amil zakat, yang dilunakkan hatinya (mualaf), untuk (memerdekakan) hamba sahaya, untuk (membebaskan) orang yang berutang, untuk jalan Allah, dan untuk orang yang sedang dalam perjalanan.”</div><span class="sumber">QS. At-Taubah/9: 60</span></div>`
+      },
+      {
+        title:"Rukun dan Syarat Zakat",
+        html:`<p><strong>Rukun zakat:</strong> muzakki (pemberi zakat), mustahik (penerima), harta yang dizakati, dan niat.</p>
+        <p><strong>Syarat harta yang wajib dizakati (zakat mal):</strong></p>
+        <ul><li>Milik penuh.</li><li>Berkembang (potensial untuk bertambah).</li><li>Mencapai nisab (batas minimal).</li><li>Melewati haul (satu tahun hijriah), kecuali hasil pertanian dan rikaz.</li><li>Bebas dari utang jangka pendek.</li><li>Harta halal.[reference:24][reference:25]</li></ul>`
+      },
+      {
+        title:"Zakat Fitrah",
+        html:`<p><strong>Zakat fitrah</strong> adalah zakat yang wajib dikeluarkan setiap muslim menjelang Idul Fitri, sebesar 1 sha’ makanan pokok (± 2,5–3 kg beras) untuk setiap jiwa.[reference:26]</p>
+        <p><strong>Ketentuan:</strong></p>
+        <ul><li>Wajib bagi setiap muslim yang memiliki makanan pokok lebih untuk dirinya dan keluarganya pada malam Idul Fitri.</li><li>Waktu terbaik: sejak awal Ramadan hingga sebelum salat Idul Fitri.</li><li>Boleh berupa beras, makanan pokok, atau uang yang nilainya setara.</li><li>Penerima utama: fakir dan miskin.</li></ul>`
+      },
+      {
+        title:"Zakat Mal dan Macam-Macamnya",
+        html:`<p><strong>Zakat mal</strong> adalah zakat atas harta kekayaan yang telah memenuhi syarat. Macam-macamnya:</p>
+        <ul>
+        <li><strong>Emas dan perak</strong>: nisab emas 85 gram, perak 595 gram; kadar zakat 2,5%.</li>
+        <li><strong>Uang dan tabungan</strong>: nisab setara 85 gram emas; kadar 2,5%.</li>
+        <li><strong>Harta perdagangan</strong>: nisab setara 85 gram emas; kadar 2,5%.</li>
+        <li><strong>Hasil pertanian</strong>: nisab 653 kg gabah atau ± 522 kg beras; kadar 5% jika diairi dengan biaya, dan 10% jika diairi tanpa biaya (air hujan).[reference:27]</li>
+        <li><strong>Peternakan</strong>: nisab berbeda sesuai jenis hewan. Contoh kambing: 40 ekor; sapi: 30 ekor; unta: 5 ekor.[reference:28]</li>
+        <li><strong>Rikaz (harta temuan)</strong>: kadar zakat 20% tanpa menunggu haul.[reference:29]</li>
+        </ul>`
+      },
+      {
+        title:"Golongan Penerima Zakat (Mustahik)",
+        html:`<p>Berdasarkan QS. At-Taubah ayat 60, mustahik zakat ada delapan golongan:</p>
+        <ol><li><strong>Fakir</strong>: orang yang tidak memiliki harta dan penghasilan untuk kebutuhan pokok.</li>
+        <li><strong>Miskin</strong>: orang yang memiliki penghasilan tetapi tidak mencukupi kebutuhan pokok.</li>
+        <li><strong>Amil</strong>: petugas yang mengelola zakat.</li>
+        <li><strong>Mualaf</strong>: orang yang baru masuk Islam atau yang hatinya perlu dilunakkan.</li>
+        <li><strong>Riqab</strong>: hamba sahaya yang ingin memerdekakan diri.</li>
+        <li><strong>Gharim</strong>: orang yang berutang untuk kebutuhan yang halal dan tidak mampu melunasinya.</li>
+        <li><strong>Fisabilillah</strong>: orang yang berjuang di jalan Allah.</li>
+        <li><strong>Ibnu sabil</strong>: musafir yang kehabisan bekal dalam perjalanan yang bukan maksiat.[reference:30]</li></ol>`
+      },
+      {
+        title:"Lembaga Zakat di Indonesia",
+        html:`<p>Pengelolaan zakat di Indonesia diatur dalam <strong>UU No. 23 Tahun 2011</strong> tentang Pengelolaan Zakat.</p>
+        <ul><li><strong>BAZNAS</strong> (Badan Amil Zakat Nasional): lembaga pemerintah yang berwenang mengelola zakat secara nasional.</li>
+        <li><strong>LAZ</strong> (Lembaga Amil Zakat): lembaga masyarakat yang mendapat izin pemerintah, seperti Dompet Dhuafa, Rumah Zakat, dan PKPU.</li></ul>
+        <p>Menunaikan zakat melalui lembaga resmi membantu memastikan penyaluran tepat sasaran kepada delapan asnaf.[reference:31]</p>`
+      },
+      {
+        title:"Hikmah Zakat",
+        html:`<ul><li>Membersihkan harta dan jiwa dari sifat kikir.</li><li>Membantu kesejahteraan kaum lemah.</li><li>Mengurangi kesenjangan sosial.</li><li>Menumbuhkan solidaritas dan kepedulian sosial.</li><li>Meningkatkan rasa syukur atas rezeki Allah.</li></ul>`
+      }
+    ]
+  },
+  {
+    id:"haji", nomor:"Bab 5", title:"Haji dan Umrah", icon:"🕋",
+    desc:"Dasar hukum, rukun dan syarat, serta macam-macam haji",
+    sections:[
+      {
+        title:"Pengertian dan Dasar Hukum",
+        html:`<p><strong>Haji</strong> adalah menyengaja mengunjungi Baitullah (Ka’bah) di Makkah untuk melaksanakan ibadah tertentu pada waktu tertentu (bulan Zulhijah).</p>
+        <p><strong>Umrah</strong> adalah mengunjungi Baitullah untuk melaksanakan ibadah tertentu yang dapat dilakukan kapan saja.</p>
+        <div class="dalil"><div class="arabic">وَلِلَّهِ عَلَى النَّاسِ حِجُّ الْبَيْتِ مَنِ اسْتَطَاعَ إِلَيْهِ سَبِيلًا</div><div class="terjemah">“Dan (diwajibkan) atas manusia untuk melaksanakan haji ke Baitullah, yaitu bagi orang yang mampu mengadakan perjalanan ke sana.”</div><span class="sumber">QS. Ali Imran/3: 97</span></div>`
+      },
+      {
+        title:"Hukum dan Syarat Wajib Haji",
+        html:`<p><strong>Hukum haji</strong>: wajib sekali seumur hidup bagi muslim yang mampu (istitha’ah). Jika sudah pernah haji, hukumnya sunnah.</p>
+        <p><strong>Syarat wajib haji:</strong></p>
+        <ul><li>Islam.</li><li>Baligh (dewasa).</li><li>Berakal.</li><li>Merdeka.</li><li><strong>Istitha’ah</strong> (mampu), meliputi: mampu secara fisik, finansial, transportasi, keamanan perjalanan, dan memiliki bekal serta nafkah bagi keluarga yang ditinggalkan.[reference:32][reference:33]</li></ul>`
+      },
+      {
+        title:"Rukun dan Syarat Umrah",
+        html:`<p><strong>Syarat umrah</strong> sama dengan syarat haji: Islam, baligh, berakal, merdeka, dan istitha’ah.</p>
+        <p><strong>Rukun umrah</strong> ada empat:</p>
+        <ol><li><strong>Ihram</strong>: berniat memulai umrah dengan memakai pakaian ihram.</li>
+        <li><strong>Tawaf</strong>: mengelilingi Ka’bah sebanyak tujuh kali.</li>
+        <li><strong>Sa’i</strong>: berjalan antara bukit Safa dan Marwah sebanyak tujuh kali.</li>
+        <li><strong>Tahallul</strong>: mencukur atau memendekkan rambut.[reference:34][reference:35]</li></ol>`
+      },
+      {
+        title:"Rukun Haji dan Perbedaannya dengan Umrah",
+        html:`<p><strong>Rukun haji</strong> ada enam:</p>
+        <ol><li><strong>Ihram</strong> (niat haji).</li>
+        <li><strong>Wukuf di Arafah</strong> pada 9 Zulhijah.</li>
+        <li><strong>Tawaf ifadah</strong>.</li>
+        <li><strong>Sa’i</strong> antara Safa dan Marwah.</li>
+        <li><strong>Tahallul</strong> (mencukur/memendekkan rambut).</li>
+        <li><strong>Tertib</strong> (berurutan).[reference:36][reference:37]</li></ol>
+        <p><strong>Perbedaan pokok:</strong> haji memiliki rukun <strong>wukuf di Arafah</strong>, sedangkan umrah tidak. Jika wukuf ditinggalkan, haji tidak sah dan harus diulang.</p>`
+      },
+      {
+        title:"Macam-Macam Haji",
+        html:`<ul>
+        <li><strong>Haji Ifrad</strong>: mendahulukan haji kemudian umrah. Pelaksana ifrad tidak wajib membayar dam (hewan sembelihan).[reference:38][reference:39]</li>
+        <li><strong>Haji Tamattu’</strong>: mendahulukan umrah kemudian haji pada bulan haji. Pelaksana tamattu’ wajib membayar dam.[reference:40]</li>
+        <li><strong>Haji Qiran</strong>: melaksanakan haji dan umrah secara bersamaan dalam satu ihram. Pelaksana qiran juga wajib membayar dam.[reference:41]</li>
+        </ul>`
+      },
+      {
+        title:"Hikmah Haji dan Umrah",
+        html:`<ul><li>Menumbuhkan kesadaran akan kesetaraan umat manusia.</li><li>Melatih kesabaran, disiplin, dan tawakal.</li><li>Mempererat persaudaraan sesama muslim.</li><li>Menghapus dosa dan meningkatkan ketakwaan.</li><li>Mendekatkan diri kepada Allah Swt. di tanah suci.</li></ul>`
+      }
+    ]
+  }
+];
+
+/* =========================================================
+   DATA SOAL — 3 PAKET, 25 SOAL/PAKET, 5 SOAL/BAB
+   ========================================================= */
+const questionBank = {
+  p1: [
+    // BAB 1 — TAHARAH (5)
+    {q:"Thaharah secara istilah adalah …",opts:["Membersihkan diri dari kotoran lahir saja","Mensucikan diri dari najis dan hadas yang menghalangi salat","Mandi setiap hari","Menghilangkan bau badan","Mencuci pakaian"],ans:1,exp:"Thaharah secara istilah adalah mensucikan diri dari najis dan hadas yang menghalangi salat serta ibadah sejenisnya, mencakup badan, pakaian, dan tempat."},
+    {q:"Air yang suci dan mensucikan disebut …",opts:["Air mustakmal","Air mutanajjis","Air mutlak","Air musyammas","Air suci tidak mensucikan"],ans:2,exp:"Air mutlak adalah air yang suci sekaligus mensucikan, seperti air hujan, air laut, air sungai, dan air sumur."},
+    {q:"Najis yang cara menyucikannya dengan mencuci tujuh kali dan salah satunya menggunakan tanah adalah …",opts:["Mukhaffafah","Mutawassitah","Mughallazah","Ma’fu","Ainiah"],ans:2,exp:"Najis mughallazah (berat) berasal dari anjing dan babi. Cara menyucikannya dicuci tujuh kali, salah satunya dicampur tanah/debu suci."},
+    {q:"Rukun wudu yang pertama adalah …",opts:["Membasuh kedua tangan","Niat","Mengusap kepala","Membasuh kaki","Tertib"],ans:1,exp:"Rukun wudu dimulai dari niat, lalu membasuh wajah, kedua tangan sampai siku, mengusap kepala, membasuh kaki, dan tertib."},
+    {q:"Tayamum menggunakan …",opts:["Air hujan","Debu yang suci","Air laut","Sabun","Tisu basah"],ans:1,exp:"Tayamum menggunakan debu atau tanah yang suci sebagai pengganti air ketika tidak ada air atau ada halangan memakai air."},
+
+    // BAB 2 — SALAT (5)
+    {q:"Salat jamak adalah …",opts:["Meringkas salat","Menggabungkan dua salat fardhu dalam satu waktu","Salat tanpa wudu","Salat sambil duduk","Salat di kendaraan"],ans:1,exp:"Salat jamak adalah menggabungkan dua salat fardhu dan mengerjakannya dalam satu waktu, seperti Zuhur dengan Asar."},
+    {q:"Salat Zuhur dan Asar dikerjakan pada waktu Zuhur disebut jamak …",opts:["Takhir","Taqdim","Qasar","Ifrad","Jama’"],ans:1,exp:"Jamak taqdim adalah mengerjakan dua salat pada waktu salat yang pertama. Zuhur dan Asar pada waktu Zuhur adalah contoh jamak taqdim."},
+    {q:"Salat yang boleh diqasar adalah …",opts:["Magrib","Subuh","Zuhur, Asar, dan Isya","Semua salat fardhu","Salat sunnah"],ans:2,exp:"Salat yang boleh diqasar adalah salat empat rakaat: Zuhur, Asar, dan Isya. Magrib tiga rakaat dan Subuh dua rakaat tidak boleh diqasar."},
+    {q:"Orang sakit yang tidak mampu berdiri boleh salat …",opts:["Tidak salat","Sambil duduk","Sambil tidur tengkurap","Dengan isyarat mata saja","Mengganti dengan sedekah"],ans:1,exp:"Orang sakit tetap wajib salat sesuai kemampuan. Jika tidak mampu berdiri, boleh salat sambil duduk."},
+    {q:"Salat fardhu di atas kendaraan wajib menghadap …",opts:["Arah kendaraan","Kiblat","Timur","Barat","Arah pulang"],ans:1,exp:"Salat fardhu di atas kendaraan pada dasarnya wajib menghadap kiblat dan berdiri jika mampu. Keringanan menghadap arah kendaraan berlaku untuk salat sunnah atau kondisi darurat."},
+
+    // BAB 3 — PUASA (5)
+    {q:"Puasa secara istilah menahan diri dari pembatal mulai …",opts:["Terbit fajar sampai terbenam matahari","Subuh sampai Zuhur","Magrib sampai Subuh","Pagi sampai malam","Terbenam matahari sampai terbit fajar"],ans:0,exp:"Puasa adalah menahan diri dari makan, minum, dan pembatal lainnya sejak terbit fajar (subuh) hingga terbenam matahari (magrib), disertai niat."},
+    {q:"Hukum puasa Ramadan adalah …",opts:["Sunnah","Mubah","Wajib","Makruh","Haram"],ans:2,exp:"Puasa Ramadan hukumnya wajib bagi setiap muslim yang memenuhi syarat, berdasarkan QS. Al-Baqarah ayat 183."},
+    {q:"Rukun puasa ada dua, yaitu niat dan …",opts:["Sahur","Menahan diri dari pembatal","Tarawih","Berbuka dengan kurma","Membaca Al-Qur’an"],ans:1,exp:"Rukun puasa ada dua: niat dan menahan diri dari hal-hal yang membatalkan puasa sejak terbit fajar hingga terbenam matahari."},
+    {q:"Orang yang sedang haid …",opts:["Wajib puasa","Boleh puasa","Tidak boleh puasa dan wajib qada","Tidak boleh puasa dan tidak wajib qada","Puasanya sah"],ans:2,exp:"Wanita yang sedang haid atau nifas tidak boleh berpuasa, dan wajib mengganti (qada) puasa yang ditinggalkan setelah suci."},
+    {q:"Penentuan awal Ramadan dilakukan dengan …",opts:["Melihat hilal dan hisab","Melihat kalender biasa","Mendengar kabar hoaks","Menunggu imbauan tetangga","Menghitung sendiri tanpa dasar"],ans:0,exp:"Awal Ramadan ditentukan melalui rukyat (melihat hilal) dan hisab (perhitungan astronomi), kemudian ditetapkan oleh pemerintah."},
+
+    // BAB 4 — ZAKAT (5)
+    {q:"Zakat fitrah wajib ditunaikan sebelum …",opts:["Salat Idul Fitri","Bulan Ramadan","Salat Tarawih pertama","Nisfu Syaban","Akhir tahun"],ans:0,exp:"Zakat fitrah wajib ditunaikan sebelum salat Idul Fitri. Waktu terbaiknya sejak awal Ramadan hingga sebelum salat Id."},
+    {q:"Kadar zakat fitrah adalah …",opts:["1 sha’ makanan pokok","2 sha’","5 kg kurma","10 liter beras","1 mud"],ans:0,exp:"Kadar zakat fitrah adalah 1 sha’ makanan pokok, kira-kira setara 2,5–3 kg beras untuk setiap jiwa."},
+    {q:"Nisab emas adalah …",opts:["20 gram","50 gram","85 gram","100 gram","200 gram"],ans:2,exp:"Nisab emas adalah 85 gram dengan kadar zakat 2,5% setelah mencapai haul (satu tahun)."},
+    {q:"Golongan yang berhak menerima zakat ada …",opts:["5","6","7","8","10"],ans:3,exp:"Mustahik zakat ada delapan golongan (asnaf tsamaniah) sebagaimana disebutkan dalam QS. At-Taubah ayat 60."},
+    {q:"Lembaga zakat resmi di Indonesia adalah …",opts:["BAZNAS","BPJS","KPK","DPR","MPR"],ans:0,exp:"BAZNAS (Badan Amil Zakat Nasional) adalah lembaga pemerintah yang berwenang mengelola zakat secara nasional berdasarkan UU No. 23 Tahun 2011."},
+
+    // BAB 5 — HAJI & UMRAH (5)
+    {q:"Hukum haji bagi yang mampu adalah …",opts:["Sunnah","Wajib sekali seumur hidup","Mubah","Makruh","Wajib setiap tahun"],ans:1,exp:"Haji wajib sekali seumur hidup bagi muslim yang mampu (istitha’ah). Jika sudah pernah, hukumnya sunnah."},
+    {q:"Rukun haji yang tidak ada pada umrah adalah …",opts:["Ihram","Tawaf","Sa’i","Wukuf di Arafah","Tahallul"],ans:3,exp:"Wukuf di Arafah adalah rukun haji yang tidak ada dalam umrah. Tanpa wukuf, haji tidak sah."},
+    {q:"Haji yang menggabungkan haji dan umrah dalam satu ihram disebut …",opts:["Ifrad","Tamattu’","Qiran","Mabrur","Wada’"],ans:2,exp:"Haji qiran adalah melaksanakan haji dan umrah secara bersamaan dalam satu ihram, dan wajib membayar dam."},
+    {q:"Syarat wajib haji yang berkaitan dengan kemampuan disebut …",opts:["Islam","Baligh","Berakal","Istitha’ah","Merdeka"],ans:3,exp:"Istitha’ah adalah kemampuan secara fisik, finansial, transportasi, dan keamanan untuk melaksanakan haji."},
+    {q:"Rukun umrah ada …",opts:["3","4","5","6","7"],ans:1,exp:"Rukun umrah ada empat: ihram, tawaf, sa’i, dan tahallul."}
+  ],
+  p2: [
+    // BAB 1 (5)
+    {q:"Air bekas wudu yang masih suci tetapi tidak mensucikan disebut …",opts:["Air mutlak","Air mustakmal","Air mutanajjis","Air musyammas","Air suling"],ans:1,exp:"Air mustakmal adalah air bekas digunakan untuk wudu atau mandi. Menurut jumhur ulama, air ini suci tetapi tidak mensucikan."},
+    {q:"Najis kencing bayi laki-laki yang belum makan selain ASI termasuk …",opts:["Mughallazah","Mutawassitah","Mukhaffafah","Ainiah","Hukmiyah"],ans:2,exp:"Kencing bayi laki-laki yang belum makan selain ASI termasuk najis mukhaffafah (ringan), cukup disucikan dengan memercikkan air."},
+    {q:"Salah satu syarat sah tayamum adalah …",opts:["Ada air","Tidak ada air atau ada halangan memakai air","Sehat","Di masjid","Berwudu dulu"],ans:1,exp:"Tayamum disyariatkan ketika tidak ada air atau ada halangan memakai air, seperti sakit yang membahayakan jika terkena air."},
+    {q:"Membasuh kedua tangan sampai siku termasuk …",opts:["Sunnah wudu","Rukun wudu","Pembatal wudu","Syarat wudu","Adab wudu"],ans:1,exp:"Membasuh kedua tangan sampai siku adalah salah satu rukun wudu yang wajib dilakukan."},
+    {q:"Air dua kulah jika terkena najis dan tidak berubah warna, rasa, bau maka hukumnya …",opts:["Najis","Suci mensucikan","Suci tidak mensucikan","Mustakmal","Haram"],ans:1,exp:"Air dua kulah atau lebih yang terkena najis tetap suci mensucikan selama tidak berubah warna, rasa, dan baunya."},
+
+    // BAB 2 (5)
+    {q:"Salat jamak takhir adalah …",opts:["Mengerjakan salat di waktu pertama","Mengerjakan salat di waktu kedua","Meringkas salat","Menggabungkan tanpa qasar","Salat di kendaraan"],ans:1,exp:"Jamak takhir adalah mengerjakan dua salat pada waktu salat yang kedua, misalnya Zuhur dan Asar dikerjakan pada waktu Asar."},
+    {q:"Jarak perjalanan yang membolehkan qasar menurut mayoritas ulama adalah …",opts:["10 km","20 km","2 marhalah (± 81–93 km)","500 km","1 km"],ans:2,exp:"Mayoritas ulama menetapkan jarak safar yang membolehkan qasar adalah dua marhalah, sekitar 81–93 km."},
+    {q:"Salat Asar dan Magrib tidak boleh dijamak karena …",opts:["Bukan salat 4 rakaat","Waktunya berurutan tetapi tidak ada sebab","Tidak boleh sama sekali","Harus qasar","Magrib 3 rakaat"],ans:1,exp:"Salat yang boleh dijamak adalah Zuhur-Asar dan Magrib-Isya. Asar dan Magrib tidak boleh dijamak karena bukan pasangan yang ditetapkan syariat."},
+    {q:"Orang sakit yang tidak mampu duduk boleh salat …",opts:["Berbaring miring","Berdiri","Duduk di kursi","Berjalan","Tidak salat"],ans:0,exp:"Jika tidak mampu berdiri dan duduk, orang sakit boleh salat sambil berbaring miring menghadap kiblat."},
+    {q:"Salat sunnah di atas kendaraan boleh menghadap …",opts:["Kiblat","Arah kendaraan","Timur","Barat","Bebas"],ans:1,exp:"Salat sunnah di atas kendaraan boleh dilakukan sambil duduk dan menghadap ke arah kendaraan."},
+
+    // BAB 3 (5)
+    {q:"Puasa nazar hukumnya …",opts:["Sunnah","Wajib","Makruh","Mubah","Haram"],ans:1,exp:"Puasa nazar hukumnya wajib karena merupakan janji yang diikrarkan kepada Allah dan harus ditunaikan."},
+    {q:"Puasa yang diharamkan adalah …",opts:["Puasa Senin-Kamis","Puasa Arafah","Puasa pada hari Idul Fitri","Puasa Asyura","Puasa Syaban"],ans:2,exp:"Puasa pada hari Idul Fitri dan Idul Adha serta hari Tasyrik hukumnya haram."},
+    {q:"Muntah dengan sengaja …",opts:["Tidak membatalkan","Membatalkan puasa","Sunnah","Makruh","Wajib qada saja"],ans:1,exp:"Muntah dengan sengaja membatalkan puasa. Adapun muntah tanpa sengaja tidak membatalkan."},
+    {q:"Orang yang sakit dan tidak mampu puasa boleh …",opts:["Tidak puasa dan tidak qada","Tidak puasa dan qada di hari lain","Puasa terus","Membayar fidyah saja tanpa qada","Meninggalkan salat"],ans:1,exp:"Orang sakit yang tidak mampu puasa boleh tidak berpuasa, tetapi wajib mengganti (qada) di hari lain setelah sembuh."},
+    {q:"Metode penentuan awal Ramadan dengan perhitungan astronomi disebut …",opts:["Rukyat","Hisab","Tafsir","Takwil","Ijtihad"],ans:1,exp:"Hisab adalah metode penentuan awal bulan dengan perhitungan astronomi, sedangkan rukyat adalah melihat hilal secara langsung."},
+
+    // BAB 4 (5)
+    {q:"Syarat harta yang wajib dizakati adalah …",opts:["Milik penuh, mencapai nisab, haul","Sedikit","Haram","Dipinjam","Belum dewasa"],ans:0,exp:"Syarat zakat mal antara lain milik penuh, mencapai nisab, melewati haul (kecuali pertanian dan rikaz), serta harta halal dan berkembang."},
+    {q:"Zakat perdagangan kadar zakatnya …",opts:["2,5%","5%","10%","20%","1%"],ans:0,exp:"Zakat harta perdagangan kadar zakatnya 2,5% setelah mencapai nisab setara 85 gram emas dan melewati haul."},
+    {q:"Nisab hasil pertanian adalah …",opts:["85 gram emas","653 kg gabah","40 ekor kambing","20 dinar","100 gram"],ans:1,exp:"Nisab hasil pertanian adalah 653 kg gabah atau sekitar 522 kg beras. Kadarnya 5% atau 10% tergantung sistem pengairan."},
+    {q:"Amil zakat adalah …",opts:["Orang yang menerima zakat karena fakir","Petugas pengelola zakat","Pemberi zakat","Orang yang berutang","Mualaf"],ans:1,exp:"Amil adalah petugas yang mengelola zakat, mulai dari pengumpulan, pencatatan, hingga penyaluran."},
+    {q:"Zakat rikaz kadar zakatnya …",opts:["2,5%","5%","10%","20%","50%"],ans:3,exp:"Rikaz (harta temuan) kadar zakatnya 20% dan tidak disyaratkan menunggu haul."},
+
+    // BAB 5 (5)
+    {q:"Rukun haji ada …",opts:["4","5","6","7","8"],ans:2,exp:"Rukun haji ada enam: ihram, wukuf di Arafah, tawaf ifadah, sa’i, tahallul, dan tertib."},
+    {q:"Haji tamattu’ wajib membayar …",opts:["Dam","Fidyah","Kafarat","Sedekah","Zakat"],ans:0,exp:"Haji tamattu’ dan qiran wajib membayar dam (menyembelih hewan), sedangkan haji ifrad tidak wajib dam."},
+    {q:"Ihram ditandai dengan …",opts:["Memakai pakaian ihram dan niat","Tawaf","Sa’i","Wukuf","Tahallul"],ans:0,exp:"Ihram adalah berniat memulai haji atau umrah, ditandai dengan memakai pakaian ihram bagi laki-laki."},
+    {q:"Perbedaan haji dan umrah terletak pada …",opts:["Ihram","Tawaf","Sa’i","Wukuf","Tahallul"],ans:3,exp:"Perbedaan pokok haji dan umrah adalah wukuf di Arafah. Wukuf hanya ada dalam haji, tidak ada dalam umrah."},
+    {q:"Haji ifrad adalah …",opts:["Mendahulukan umrah","Mendahulukan haji","Haji dan umrah bersamaan","Haji tanpa ihram","Haji tanpa wukuf"],ans:1,exp:"Haji ifrad adalah mendahulukan haji kemudian umrah. Pelaksana ifrad tidak wajib membayar dam."}
+  ],
+  p3: [
+    // BAB 1 (5)
+    {q:"Air yang telah berubah warna, rasa, dan baunya karena terkena najis meskipun jumlahnya lebih dari dua kulah hukumnya …",opts:["Suci mensucikan","Suci tidak mensucikan","Najis","Mustakmal","Makruh"],ans:2,exp:"Air dua kulah atau lebih yang terkena najis dan berubah warna, rasa, atau baunya hukumnya najis (mutanajjis)."},
+    {q:"Najis mutawassitah yang tidak berwujud (hukmiyah) cara menyucikannya adalah …",opts:["Cukup dengan membasuh sekali","Menghilangkan wujudnya lalu membasuh sampai air mengalir","Mencuci 7 kali","Memercikkan air","Menjemur"],ans:1,exp:"Najis hukmiyah adalah najis yang tidak berwujud. Cara menyucikannya dengan membasuh bagian yang terkena najis menggunakan air hingga bersih."},
+    {q:"Salah satu hal yang membatalkan tayamum adalah …",opts:["Makan","Minum","Menemukan air sebelum salat","Tidur","Berbicara"],ans:2,exp:"Tayamum batal jika menemukan air sebelum salat (bagi yang tayamum karena ketiadaan air), selain juga batal karena hal-hal yang membatalkan wudu."},
+    {q:"Jika seseorang berwudu lalu menyentuh kemaluannya tanpa penghalang, menurut mazhab Syafi’i wudunya …",opts:["Tetap sah","Batal","Sunnah diulang","Makruh","Wajib tayamum"],ans:1,exp:"Menurut mazhab Syafi’i, menyentuh kemaluan dengan telapak tangan tanpa penghalang membatalkan wudu."},
+    {q:"Perbedaan hadas dan najis adalah …",opts:["Hadas dapat dibersihkan dengan air saja","Hadas berkaitan dengan keadaan tubuh, najis berkaitan dengan benda kotor","Najis tidak perlu dibersihkan","Hadas hanya pada pakaian","Tidak ada perbedaan"],ans:1,exp:"Hadas adalah keadaan pada tubuh yang menghalangi salat, sedangkan najis adalah benda kotor yang menempel pada badan, pakaian, atau tempat."},
+
+    // BAB 2 (5)
+    {q:"Syarat jamak taqdim adalah …",opts:["Niat jamak di awal salat pertama dan tertib","Niat di salat kedua","Tidak perlu niat","Harus qasar","Harus sakit"],ans:0,exp:"Jamak taqdim disyaratkan niat jamak di awal salat pertama, tertib (salat pertama lalu kedua), dan masih dalam waktu salat pertama."},
+    {q:"Orang yang berniat mukim lebih dari 4 hari di tempat tujuan maka …",opts:["Boleh qasar","Tidak boleh qasar","Boleh jamak","Wajib qasar","Boleh tayamum"],ans:1,exp:"Jika musafir berniat menetap lebih dari empat hari di tempat tujuan, ia tidak boleh mengqasar salat karena status safarnya berakhir."},
+    {q:"Salat Magrib dan Isya dijamak taqdim, maka jumlah rakaatnya …",opts:["Magrib 3, Isya 4","Magrib 3, Isya 2","Magrib 2, Isya 2","Magrib 3, Isya 4 tanpa qasar","Magrib 2, Isya 4"],ans:0,exp:"Jamak taqdim Magrib dan Isya tanpa qasar: Magrib tetap 3 rakaat dan Isya tetap 4 rakaat, dikerjakan pada waktu Magrib."},
+    {q:"Salat orang sakit dengan isyarat dilakukan jika …",opts:["Mampu berdiri","Tidak mampu duduk dan berbaring","Mampu duduk","Sehat","Di rumah sakit"],ans:1,exp:"Jika orang sakit tidak mampu berdiri, duduk, maupun berbaring, ia salat dengan isyarat, misalnya isyarat mata atau hati."},
+    {q:"Jika tidak mampu menghadap kiblat saat salat fardhu di kendaraan, maka …",opts:["Salat tidak sah","Tetap salat sesuai kemampuan dan tidak mengulang","Wajib turun","Mengganti dengan qada","Menunda selamanya"],ans:1,exp:"Dalam kondisi darurat yang benar-benar tidak mampu menghadap kiblat, salat tetap wajib dilaksanakan sesuai kemampuan dan tidak perlu diulang."},
+
+    // BAB 3 (5)
+    {q:"Puasa kafarat akibat jimak di siang Ramadan adalah …",opts:["Puasa 2 bulan berturut-turut atau memberi makan 60 orang miskin","Puasa 3 hari","Fidyah 1 mud","Sedekah 10 kg","Tidak ada kafarat"],ans:0,exp:"Kafarat jimak di siang Ramadan adalah memerdekakan hamba, atau puasa dua bulan berturut-turut, atau memberi makan 60 orang miskin."},
+    {q:"Orang tua renta yang tidak mampu puasa wajib …",opts:["Qada","Fidyah","Kafarat","Nazar","Tidak apa-apa"],ans:1,exp:"Orang tua renta atau orang sakit permanen yang tidak mampu puasa wajib membayar fidyah, yaitu memberi makan orang miskin untuk setiap hari puasa yang ditinggalkan."},
+    {q:"Puasa Syaban termasuk puasa …",opts:["Wajib","Sunnah","Makruh","Haram","Nazar"],ans:1,exp:"Puasa Syaban hukumnya sunnah, sebagaimana dicontohkan Rasulullah Saw. yang memperbanyak puasa di bulan Syaban."},
+    {q:"Jika seseorang lupa makan di siang Ramadan, puasanya …",opts:["Batal","Sah dan melanjutkan","Wajib qada","Wajib kafarat","Haram"],ans:1,exp:"Makan atau minum karena lupa tidak membatalkan puasa. Ia wajib menyempurnakan puasanya hingga magrib."},
+    {q:"Ikhtilaf penentuan awal Ramadan antara rukyat dan hisab sebaiknya disikapi dengan …",opts:["Saling mencela","Toleransi dan mengikuti keputusan pemerintah","Memaksakan pendapat sendiri","Tidak puasa","Meninggalkan ibadah"],ans:1,exp:"Perbedaan metode rukyat dan hisab disikapi dengan toleransi, saling menghormati, dan mengikuti keputusan pemerintah agar tercipta kemaslahatan."},
+
+    // BAB 4 (5)
+    {q:"Zakat mal wajib dikeluarkan jika harta telah dimiliki selama …",opts:["1 bulan","1 tahun hijriah (haul)","1 minggu","5 tahun","Tidak ada batas"],ans:1,exp:"Salah satu syarat zakat mal adalah mencapai haul, yaitu kepemilikan harta selama satu tahun hijriah, kecuali hasil pertanian dan rikaz."},
+    {q:"Nisab zakat perak adalah …",opts:["85 gram","595 gram","653 kg","40 ekor","20 gram"],ans:1,exp:"Nisab perak adalah 200 dirham atau setara 595 gram perak, dengan kadar zakat 2,5%."},
+    {q:"Zakat pertanian yang diairi dengan biaya (irigasi) kadar zakatnya …",opts:["10%","5%","2,5%","20%","1%"],ans:1,exp:"Hasil pertanian yang diairi dengan biaya (irigasi) kadar zakatnya 5%, sedangkan yang diairi tanpa biaya (air hujan) kadar zakatnya 10%."},
+    {q:"Mustahik zakat yang berjuang di jalan Allah disebut …",opts:["Gharim","Fisabilillah","Ibnu sabil","Riqab","Mualaf"],ans:1,exp:"Fisabilillah adalah golongan yang berjuang di jalan Allah, termasuk salah satu dari delapan asnaf penerima zakat."},
+    {q:"Lembaga zakat yang dibentuk pemerintah berdasarkan UU No. 23 Tahun 2011 adalah …",opts:["BAZNAS","LAZ","Dompet Dhuafa","Rumah Zakat","PKPU"],ans:0,exp:"BAZNAS adalah badan amil zakat nasional yang dibentuk pemerintah berdasarkan UU No. 23 Tahun 2011 tentang Pengelolaan Zakat."},
+
+    // BAB 5 (5)
+    {q:"Miqat adalah …",opts:["Batas waktu dan tempat memulai ihram","Tempat wukuf","Tempat tawaf","Tempat sa’i","Tempat tahallul"],ans:0,exp:"Miqat adalah batas waktu dan tempat bagi jamaah haji/umrah untuk memulai ihram."},
+    {q:"Haji qiran adalah …",opts:["Haji dan umrah dalam satu ihram","Haji dulu lalu umrah","Umrah dulu lalu haji","Haji tanpa umrah","Haji dua kali"],ans:0,exp:"Haji qiran adalah melaksanakan haji dan umrah secara bersamaan dalam satu ihram, dan wajib membayar dam."},
+    {q:"Thawaf yang termasuk rukun haji adalah …",opts:["Thawaf qudum","Thawaf ifadah","Thawaf wada’","Thawaf sunnah","Thawaf tahiyyah"],ans:1,exp:"Thawaf ifadah adalah thawaf yang termasuk rukun haji. Tanpa thawaf ifadah, haji tidak sah."},
+    {q:"Syarat istitha’ah dalam haji meliputi …",opts:["Kesehatan, biaya, keamanan, dan transportasi","Hanya biaya","Hanya kesehatan","Hanya keamanan","Hanya transportasi"],ans:0,exp:"Istitha’ah mencakup kemampuan fisik/kesehatan, biaya, transportasi, keamanan perjalanan, serta bekal bagi keluarga yang ditinggalkan."},
+    {q:"Jika seseorang melaksanakan haji tanpa wukuf di Arafah maka hajinya …",opts:["Sah","Tidak sah dan wajib mengulang","Sah dengan dam","Sah dengan fidyah","Makruh"],ans:1,exp:"Wukuf di Arafah adalah rukun haji. Jika ditinggalkan, haji tidak sah dan tidak dapat diganti dengan dam; ia wajib mengulang haji."}
+  ]
+};
+
+const packageMeta = {
+  p1:{title:"Paket 1 — Pemahaman Dasar",subtitle:"25 soal · 5 bab · Tingkat dasar"},
+  p2:{title:"Paket 2 — Pendalaman Materi",subtitle:"25 soal · 5 bab · Tingkat menengah"},
+  p3:{title:"Paket 3 — Simulasi Ujian",subtitle:"25 soal · 5 bab · Tingkat tinggi"}
+};
+
+const chapterNames = ["Bab 1 · Taharah","Bab 2 · Salat dalam Berbagai Keadaan","Bab 3 · Puasa","Bab 4 · Zakat","Bab 5 · Haji dan Umrah"];
+
+/* =========================================================
+   STATE
+   ========================================================= */
+let currentSection = "beranda";
+let exam = {
+  packageId:null,
+  currentIndex:0,
+  answers:[],
+  submitted:false,
+  score:0,
+  correct:0,
+  wrong:0,
+  empty:0
+};
+
+/* =========================================================
+   NAVIGASI SECTION
+   ========================================================= */
+function showSection(name){
+  currentSection = name;
+  document.querySelectorAll(".page-section").forEach(s=>s.style.display="none");
+  const sec = document.getElementById("section-"+name);
+  if(sec) sec.style.display="block";
+
+  document.querySelectorAll(".nav-links a").forEach(a=>{
+    a.classList.toggle("active", a.dataset.nav === name);
+  });
+
+  // close mobile menu
+  document.getElementById("navLinks").classList.remove("open");
+
+  if(name==="evaluasi"){
+    renderEvaluasiSection();
+  }
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+/* =========================================================
+   RENDER MATERI
+   ========================================================= */
+function renderMateri(){
+  const container = document.getElementById("materiContainer");
+  if(!container) return;
+  container.innerHTML = materiData.map((bab, i)=>`
+    <div class="materi-card" id="materi-${bab.id}">
+      <div class="materi-header" onclick="toggleMateri('${bab.id}')">
+        <div class="materi-icon">${bab.icon}</div>
+        <div class="materi-meta">
+          <div class="bab">${bab.nomor}</div>
+          <h3>${bab.title}</h3>
+          <p>${bab.desc}</p>
+        </div>
+        <div class="materi-chevron">▾</div>
+      </div>
+      <div class="materi-body">
+        ${bab.sections.map((s,j)=>`
+          <div class="accordion-item ${j===0?'open':''}" id="acc-${bab.id}-${j}">
+            <button class="accordion-btn" onclick="toggleAccordion('${bab.id}',${j})">
+              <span>${s.title}</span><span class="sign">+</span>
+            </button>
+            <div class="accordion-content">${s.html}</div>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+  `).join("");
+}
+
+function toggleMateri(id){
+  const card = document.getElementById("materi-"+id);
+  const isOpen = card.classList.contains("open");
+  document.querySelectorAll(".materi-card").forEach(c=>c.classList.remove("open"));
+  if(!isOpen) card.classList.add("open");
+  if(!isOpen) setTimeout(()=>card.scrollIntoView({behavior:"smooth",block:"start"}),150);
+}
+
+function toggleAccordion(babId, idx){
+  const item = document.getElementById(`acc-${babId}-${idx}`);
+  const wasOpen = item.classList.contains("open");
+  // close siblings in same chapter
+  item.parentElement.querySelectorAll(".accordion-item").forEach(x=>x.classList.remove("open"));
+  if(!wasOpen) item.classList.add("open");
+}
+
+/* =========================================================
+   EXAM ENGINE
+   ========================================================= */
+function startExam(packageId){
+  exam = {
+    packageId,
+    currentIndex:0,
+    answers:new Array(25).fill(null),
+    submitted:false,
+    score:0, correct:0, wrong:0, empty:0
+  };
+  document.getElementById("paketSelection").style.display="none";
+  document.getElementById("examPanel").classList.add("active");
+  document.getElementById("examTitle").textContent = packageMeta[packageId].title;
+  document.getElementById("examSubtitle").textContent = packageMeta[packageId].subtitle;
+  renderQuestion();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function backToPackages(){
+  if(exam.answers.some(a=>a!==null) && !exam.submitted){
+    if(!confirm("Jawaban yang sudah dipilih akan hilang. Kembali ke daftar paket?")) return;
+  }
+  exam = {packageId:null,currentIndex:0,answers:[],submitted:false,score:0,correct:0,wrong:0,empty:0};
+  document.getElementById("examPanel").classList.remove("active");
+  document.getElementById("paketSelection").style.display="grid";
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function renderQuestion(){
+  const qs = questionBank[exam.packageId];
+  const idx = exam.currentIndex;
+  const q = qs[idx];
+
+  document.getElementById("qNumber").textContent = idx+1;
+  document.getElementById("qChapter").textContent = chapterNames[Math.floor(idx/5)];
+  document.getElementById("questionText").textContent = q.q;
+
+  const letters = ["A","B","C","D","E"];
+  const optsHtml = q.opts.map((opt,i)=>{
+    const selected = exam.answers[idx]===i;
+    return `<button class="option ${selected?'selected':''}" onclick="selectOption(${i})">
+      <span class="option-letter">${letters[i]}</span>
+      <span class="option-text">${opt}</span>
+    </button>`;
+  }).join("");
+  document.getElementById("optionsContainer").innerHTML = optsHtml;
+
+  document.getElementById("prevBtn").disabled = idx===0;
+  document.getElementById("nextBtn").disabled = idx===qs.length-1;
+
+  renderNavGrid();
+  updateProgress();
+}
+
+function selectOption(optIdx){
+  if(exam.submitted) return;
+  exam.answers[exam.currentIndex] = optIdx;
+  renderQuestion();
+}
+
+function nextQuestion(){
+  const qs = questionBank[exam.packageId];
+  if(exam.currentIndex < qs.length-1){
+    exam.currentIndex++;
+    renderQuestion();
+  }
+}
+function prevQuestion(){
+  if(exam.currentIndex > 0){
+    exam.currentIndex--;
+    renderQuestion();
+  }
+}
+function jumpToQuestion(idx){
+  exam.currentIndex = idx;
+  renderQuestion();
+}
+
+function renderNavGrid(){
+  const grid = document.getElementById("navGrid");
+  if(!grid) return;
+  grid.innerHTML = exam.answers.map((ans,i)=>{
+    let cls = "nav-num";
+    if(i===exam.currentIndex) cls += " current";
+    if(ans!==null) cls += " answered";
+    return `<button class="${cls}" onclick="jumpToQuestion(${i})">${i+1}</button>`;
+  }).join("");
+}
+
+function updateProgress(){
+  const answered = exam.answers.filter(a=>a!==null).length;
+  const total = exam.answers.length;
+  const pct = (answered/total)*100;
+  document.getElementById("progressFill").style.width = pct+"%";
+  document.getElementById("progressText").textContent = `${answered} / ${total}`;
+  document.getElementById("summaryAnswered").textContent = answered;
+  document.getElementById("summaryUnanswered").textContent = total-answered;
+}
+
+/* =========================================================
+   SUBMIT & RESULT
+   ========================================================= */
+function openSubmitModal(){
+  const answered = exam.answers.filter(a=>a!==null).length;
+  document.getElementById("modalAnswered").textContent = answered;
+  document.getElementById("modalUnanswered").textContent = exam.answers.length-answered;
+  document.getElementById("submitModal").classList.add("active");
+}
+function closeSubmitModal(){
+  document.getElementById("submitModal").classList.remove("active");
+}
+
+function confirmSubmit(){
+  closeSubmitModal();
+  const qs = questionBank[exam.packageId];
+  let correct=0, wrong=0, empty=0;
+
+  qs.forEach((q,i)=>{
+    if(exam.answers[i]===null) empty++;
+    else if(exam.answers[i]===q.ans) correct++;
+    else wrong++;
+  });
+
+  exam.correct = correct;
+  exam.wrong = wrong;
+  exam.empty = empty;
+  exam.score = Math.round((correct/qs.length)*100);
+  exam.submitted = true;
+
+  // hide exam panel, show evaluation
+  document.getElementById("examPanel").classList.remove("active");
+  showSection("evaluasi");
+  renderResult();
+}
+
+function renderResult(){
+  if(!exam.submitted || !exam.packageId){
+    document.getElementById("evaluasiEmpty").style.display="block";
+    document.getElementById("resultPanel").classList.remove("active");
+    return;
+  }
+  document.getElementById("evaluasiEmpty").style.display="none";
+  document.getElementById("resultPanel").classList.add("active");
+
+  document.getElementById("resultPackageName").textContent = packageMeta[exam.packageId].title;
+  document.getElementById("scoreValue").textContent = exam.score;
+  document.getElementById("statCorrect").textContent = exam.correct;
+  document.getElementById("statWrong").textContent = exam.wrong;
+  document.getElementById("statEmpty").textContent = exam.empty;
+
+  const ring = document.getElementById("scoreRing");
+  ring.style.setProperty("--score-deg", (exam.score/100*360)+"deg");
+
+  document.getElementById("retryBtn").onclick = ()=>{
+    const pkg = exam.packageId;
+    startExam(pkg);
+    showSection("latihan");
+  };
+
+  renderReview();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function renderReview(){
+  const qs = questionBank[exam.packageId];
+  const letters = ["A","B","C","D","E"];
+  const container = document.getElementById("reviewList");
+  document.getElementById("reviewCount").textContent = qs.length+" soal";
+
+  container.innerHTML = qs.map((q,i)=>{
+    const userAns = exam.answers[i];
+    const isCorrect = userAns === q.ans;
+    const isEmpty = userAns === null;
+    let statusClass = isCorrect?"correct":(isEmpty?"empty":"wrong");
+    let statusLabel = isCorrect?"BENAR":(isEmpty?"KOSONG":"SALAH");
+    let statusBadge = isCorrect?"c":(isEmpty?"e":"w");
+
+    return `<div class="review-item ${statusClass}">
+      <div class="review-top">
+        <div class="review-num">${i+1}</div>
+        <span class="review-status ${statusBadge}">${statusLabel}</span>
+        <span class="pill" style="font-size:.65rem">${chapterNames[Math.floor(i/5)]}</span>
+      </div>
+      <div class="review-q">${q.q}</div>
+      <div class="review-answer ${isCorrect?'correct-ans':''}">
+        <b>Jawaban Anda:</b> ${isEmpty?'<em>Tidak dijawab</em>':letters[userAns]+'. '+q.opts[userAns]}
+      </div>
+      <div class="review-answer correct-ans">
+        <b>Jawaban Benar:</b> ${letters[q.ans]}. ${q.opts[q.ans]}
+      </div>
+      <div class="review-exp"><b>Pembahasan:</b> ${q.exp}</div>
+    </div>`;
+  }).join("");
+}
+
+function renderEvaluasiSection(){
+  if(exam.submitted){
+    document.getElementById("evaluasiEmpty").style.display="none";
+    document.getElementById("resultPanel").classList.add("active");
+    renderResult();
+  }else{
+    document.getElementById("evaluasiEmpty").style.display="block";
+    document.getElementById("resultPanel").classList.remove("active");
+  }
+}
+
+/* =========================================================
+   INIT
+   ========================================================= */
+document.addEventListener("DOMContentLoaded",()=>{
+  renderMateri();
+
+  // mobile menu
+  const toggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+  toggle.addEventListener("click",()=>navLinks.classList.toggle("open"));
+
+  // klik overlay modal untuk menutup
+  document.getElementById("submitModal").addEventListener("click",(e)=>{
+    if(e.target.id==="submitModal") closeSubmitModal();
+  });
+
+  // keyboard: escape tutup modal
+  document.addEventListener("keydown",(e)=>{
+    if(e.key==="Escape") closeSubmitModal();
+  });
+
+  showSection("beranda");
+});
+</script>
+</body>
+</html>
